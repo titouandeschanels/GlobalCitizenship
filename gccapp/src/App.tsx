@@ -1,10 +1,14 @@
-import ExampleComponent from "./components/exampleComponent";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import Home from "./pages/home";
 
 function App() {
   return (
-    <div>
-      <ExampleComponent text="Hello, World!" />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+
   );
 }
 
