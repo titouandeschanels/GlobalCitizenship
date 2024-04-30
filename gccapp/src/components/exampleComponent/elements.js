@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Yellow } from "../../color";
+import { Black } from "../../colors";
 
 export const ExampleComponentContainer = styled.div`
     display: flex;
@@ -7,5 +7,5 @@ export const ExampleComponentContainer = styled.div`
     align-items: center;
     height: 100px;
     width: 100%;
-    background-color: ${Yellow};
+    background-color: ${Black};
 `;

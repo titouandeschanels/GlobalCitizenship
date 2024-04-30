@@ -1,4 +1,5 @@
 import ExampleComponent from "../components/exampleComponent";
+import Page from "./page";
 
 interface HomeProps {
 
@@ -6,9 +7,9 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = () => {
     return (
-        <div>
+        <Page>
             <ExampleComponent text="Hello World!" />
-        </div>
+        </Page>
     );
 }
 
