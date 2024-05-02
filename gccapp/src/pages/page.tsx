@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Footer from '../components/footer';
+import Header from '../components/header';
 
 interface PageProps {
     children: ReactNode;
@@ -8,7 +9,10 @@ interface PageProps {
 const Page: React.FC<PageProps> = ({ children }) => {
     return (
         <div>
-            {children}
+            <Header />
+            <div style={{ marginTop: '100px' }}>
+                {children}
+            </div>
             <Footer />
         </div>
     );

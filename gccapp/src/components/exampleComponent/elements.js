@@ -8,4 +8,6 @@ export const ExampleComponentContainer = styled.div`
     height: 100px;
     width: 100%;
     background-color: ${Black};
+    opacity: 0.8;
+    color: white;
 `;
