@@ -1,12 +1,15 @@
 // code color shortcut
 
-export const Black = '#2A2B2A';
-export const White = '#F9F9F9';
-export const Indigo = '#3f3d57';
-export const Blue = '#5a8fef';
-export const Green = '#bcdd62';
-export const Orange = '#f7a547';
-export const Pink = '#f9b6b4';
+export const Black = '#212427';
+export const White = '#F5F5F5';
+export const LightGrey = '#bec5c9';
+export const Grey = '#757f8c';
+export const Indigo = '#3f3d56';
+export const Blue = '#518ded';
+export const Green = '#b7de6a';
+export const Orange = '#ffa553';
+export const Pink = '#ffb6b6';
+
 
 
 /* for the opacity: 
