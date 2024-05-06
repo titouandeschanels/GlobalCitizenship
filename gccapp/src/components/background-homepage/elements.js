@@ -13,23 +13,23 @@ export const BackgroundPicture = styled.div`
 
 export const TextStyleSmall = styled.div`
     font-family: Arial, sans-serif;
-    font-size: 24px;
+    font-size: calc(1vw + 5px);
     font-weight: lighter;
     color: ${Gray};
     position: absolute;
-    top: 7rem;
-    left: 10rem;
+    top: 7vh;
+    left: 10vw;
     user-select: none;
 `;
 
 export const TextStyleBig = styled.div`
     font-family: Arial, sans-serif;
-    font-size: 45px;
+    font-size: calc(2vw + 10px);
     font-weight: bold;
     color: ${Indigo};
     position: absolute;
-    top: 9rem;
-    left: 10rem;
+    top: 12vh;
+    left: 10vw;
     user-select: none;
 `;
 
