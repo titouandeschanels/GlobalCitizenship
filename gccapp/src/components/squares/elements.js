@@ -67,18 +67,6 @@ export const SquareText = styled.p`
     margin-top: 0;
 `;
 
-export const GlobeImage = styled.div`
-    display: flex;
-    position: relative;
-    left: 60px;
-    top: 31px;
-    img {
-        width: 78%;
-        height: 78%;
-        object-fit: scale-down;
-    }
-`;
-
 export const BooksImage = styled.div`
     display: flex;
     position: relative;
