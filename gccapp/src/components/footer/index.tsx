@@ -17,9 +17,11 @@ const Footer: React.FC<FooterProps> = () => {
             </FooterDecoration>
             <FooterContainer>
                 <FooterColumn>
-                    <FooterLogo>
-                        <img src="https://via.placeholder.com/100" alt="logo" />
-                    </FooterLogo>
+                    <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <FooterLogo>
+                            <img src="https://via.placeholder.com/100" alt="logo" />
+                        </FooterLogo>
+                    </Link>
                     <FooterText>
                         <span dangerouslySetInnerHTML={{__html: "Platform of the Global Citizenship Certificate <br/>program established by Adela Garbal Gо́mez"}} />
                     </FooterText>
