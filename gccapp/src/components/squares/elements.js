@@ -18,8 +18,8 @@ export const SquareContainer = styled.div`
 export const SquareItem = styled.div`
     display: flex;
     flex-direction: column;
-    height: 277px;
-    width: 260px;
+    height: 90%;
+    width: 20%;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -37,8 +37,7 @@ export const SquareItem = styled.div`
 export const ImageRow = styled.div`
     flex: 1;
     display: flex;
-    min-height: 110px;
-    min-width: 160px;
+    min-height: 60%;
 `;
 
 export const TextRow = styled.div`
@@ -46,9 +45,9 @@ export const TextRow = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    height: 220px;
-    padding-top: 100px;
+    /*justify-content: flex-start;
+    height: 220px;*/
+    padding-top: 10px;
     padding-left: 6px;
 `;
 

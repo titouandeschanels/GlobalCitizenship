@@ -1,4 +1,4 @@
-import { TextStyleSmall, TextStyleBig, BackgroundPicture, ColoredText } from "./elements";
+import { TextStyleSmall,TextStyleBig, BackgroundPicture, ColoredText } from "./elements";
 
 interface BackgroundHomepageProps {
     name: string;
