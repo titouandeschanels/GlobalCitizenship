@@ -5,7 +5,7 @@ import { Orange } from "../../colors";
 import { Indigo } from "../../colors";
 
 export const BackgroundPicture = styled.div`
-    position: relative; /* Setze die Position auf relativ */
+    position: relative;
     background-image: url("${backgroundHomepage}");
     background-size: cover;
     background-position: center;
@@ -20,6 +20,7 @@ export const TextStyleSmall = styled.div`
     position: absolute;
     top: 7rem;
     left: 10rem;
+    user-select: none;
 `;
 
 export const TextStyleBig = styled.div`
@@ -30,9 +31,11 @@ export const TextStyleBig = styled.div`
     position: absolute;
     top: 9rem;
     left: 10rem;
+    user-select: none;
 `;
 
 export const ColoredText = styled.span`
     color: ${Orange};
     text-decoration: underline;
+    user-select: none;
 `;

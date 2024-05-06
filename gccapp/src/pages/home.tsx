@@ -1,4 +1,3 @@
-import ExampleComponent from "../components/exampleComponent";
 import BackgroundHomepage from "../components/background-homepage";
 import Squares from '../components/squares';
 import Page from "./page";
