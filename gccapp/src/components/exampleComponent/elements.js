@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Black } from "../../colors";
 
 export const ExampleComponentContainer = styled.div`
     display: flex;
@@ -6,4 +7,7 @@ export const ExampleComponentContainer = styled.div`
     align-items: center;
     height: 100px;
     width: 100%;
+    background-color: ${Black};
+    opacity: 0.8;
+    color: white;
 `;

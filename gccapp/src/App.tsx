@@ -1,14 +1,18 @@
-import ExampleComponent from "./components/exampleComponent";
-import BackgroundHomepage from "./components/background-homepage";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import Home from "./pages/home";
+import Journey from "./pages/journey";
 
 function App() {
   const backendName: string = "John Doe"; // mock name implemenatation, will be changed later on
 
   return (
-    <div>
-      <ExampleComponent text="Hello, World!" />
-      <BackgroundHomepage name={backendName} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/journey" element={<Journey />} />
+      </Routes>
+    </Router>
+
   );
 }
 
