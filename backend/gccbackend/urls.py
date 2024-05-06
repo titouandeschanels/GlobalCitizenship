@@ -23,16 +23,13 @@ from gccbackend.server import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-# router.register(r'journeymap', views.JourneyMapView)
 router.register(r'chapter', views.ChapterView)
 router.register(r'lesson', views.LessonView)
 router.register(r'student', views.StudentView, 'student')
 router.register(r'position', views.GetStudentPosition, 'position')
-# router.register(r'position', views.GetStudentPosition)
 
 
 urlpatterns = [
-    path('', include('gccbackend.server.urls')),
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
