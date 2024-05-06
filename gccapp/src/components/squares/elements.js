@@ -12,7 +12,7 @@ export const SquareContainer = styled.div`
     font-weight: 600;
     gap : 5vw;
     position : absolute;
-    top : 630px;
+    top : 65vh;
 `;
 
 export const SquareItem = styled.div`
