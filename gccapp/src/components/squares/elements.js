@@ -18,8 +18,8 @@ export const SquareContainer = styled.div`
 export const SquareItem = styled.div`
     display: flex;
     flex-direction: column;
-    height: 90%;
-    width: 20%;
+    height: 100%;
+    width: 18%;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -47,7 +47,7 @@ export const TextRow = styled.div`
     align-items: flex-start;
     /*justify-content: flex-start;
     height: 220px;*/
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 6px;
 `;
 
