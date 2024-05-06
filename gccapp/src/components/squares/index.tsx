@@ -12,17 +12,6 @@ const Squares: React.FC<SquaresProps> = () => {
         <SquareContainer>
             <SquareItem>
                 <ImageRow>
-                    <BooksImage>
-                        <img src={books} alt="books" />
-                    </BooksImage>
-                </ImageRow>
-                <TextRow>
-                    <SquareTitle>About</SquareTitle>
-                    <SquareText>Reading Content</SquareText>
-                </TextRow>
-            </SquareItem>
-            <SquareItem>
-                <ImageRow>
                     <PathImage>
                         <img src={path} alt="path" />
                     </PathImage>
@@ -30,6 +19,17 @@ const Squares: React.FC<SquaresProps> = () => {
                 <TextRow>
                     <SquareTitle>E-learning Journey</SquareTitle>
                     <SquareText>To-do Content</SquareText>
+                </TextRow>
+            </SquareItem>
+            <SquareItem>
+                <ImageRow>
+                    <BooksImage>
+                        <img src={books} alt="books" />
+                    </BooksImage>
+                </ImageRow>
+                <TextRow>
+                    <SquareTitle>About</SquareTitle>
+                    <SquareText>Reading Content</SquareText>
                 </TextRow>
             </SquareItem>
             <SquareItem>

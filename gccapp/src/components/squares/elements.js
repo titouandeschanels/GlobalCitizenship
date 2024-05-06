@@ -26,6 +26,12 @@ export const SquareItem = styled.div`
     user-select: none;
     box-shadow: 1px 1px 1px ${Gray};
     background: linear-gradient(to bottom, ${White}, ${White} 60%, ${Indigo} 60%, ${Indigo} 63%, ${Blue} 63%);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 2px 2px 2px ${Gray};
+    }
+    transition: 0.3s;
 `;
 
 export const ImageRow = styled.div`
