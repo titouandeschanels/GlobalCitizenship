@@ -1,6 +1,9 @@
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/home";
 import Journey from "./pages/journey";
+import MyPage from "./pages/mypage";
+import Cloud from "./pages/cloud";
+import Community from "./pages/community";
 
 function App() {
   const backendName: string = "John Doe"; // mock name implemenatation, will be changed later on
@@ -10,6 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/journey" element={<Journey />} />
+        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/cloud" element={<Cloud />} />
+        <Route path="/community" element={<Community />} />
       </Routes>
     </Router>
 
