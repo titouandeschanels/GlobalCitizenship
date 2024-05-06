@@ -13,17 +13,6 @@ const Squares: React.FC<SquaresProps> = () => {
         <SquareContainer>
             <SquareItem>
                 <ImageRow>
-                    <GlobeImage>
-                        <img src={globe} alt="globe" />
-                    </GlobeImage>
-                </ImageRow>
-                <TextRow>
-                    <SquareTitle>Global EU Programme</SquareTitle>
-                    <SquareText>Reading Content</SquareText>
-                </TextRow>
-            </SquareItem>
-            <SquareItem>
-                <ImageRow>
                     <BooksImage>
                         <img src={books} alt="books" />
                     </BooksImage>
