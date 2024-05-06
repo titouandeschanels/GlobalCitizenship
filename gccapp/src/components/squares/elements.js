@@ -1,5 +1,9 @@
 import styled from 'styled-components';
+<<<<<<< HEAD
 import {Gray, Indigo, White, LightGray, Blue} from '../../colors';
+=======
+import {Grey, Indigo, White, Blue} from '../../colors';
+>>>>>>> 9149bad54bac0b09346b176d2756f297e9223fc2
 
 export const SquareContainer = styled.div`
     display: flex;
@@ -8,17 +12,22 @@ export const SquareContainer = styled.div`
     height: 250px;
     width: 100%;
     padding: 0 10px;
+<<<<<<< HEAD
     background-color: ${LightGray};
+=======
+>>>>>>> 9149bad54bac0b09346b176d2756f297e9223fc2
     font-size: 20px;
     font-weight: 600;
     gap : 5vw;
+    position : absolute;
+    top : 640px;
 `;
 
 export const SquareItem = styled.div`
     display: flex;
     flex-direction: column;
-    height: 177px;
-    width: 160px;
+    height: 277px;
+    width: 260px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -38,10 +47,10 @@ export const TextRow = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: flex-start;
-    height: 120px;
-    padding-top: 6px;
+    height: 220px;
+    padding-top: 100px;
     padding-left: 6px;
 `;
 
