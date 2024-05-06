@@ -48,17 +48,18 @@ export const TextRow = styled.div`
 
 export const SquareTitle = styled.h1`
     color: ${White};
-    font-size: 13px;
+    font-size: 16px;
     text-align: left;
     font-weight: 540;
     user-select: none;
     margin-bottom: 3px;
     margin-top: 0;
+    font-weight: 600;
 `;
 
 export const SquareText = styled.p`
     color: ${White};
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 400;
     user-select: none;
     height: 55px;
