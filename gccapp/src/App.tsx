@@ -3,6 +3,8 @@ import Home from "./pages/home";
 import Journey from "./pages/journey";
 
 function App() {
+  const backendName: string = "John Doe"; // mock name implemenatation, will be changed later on
+
   return (
     <Router>
       <Routes>
