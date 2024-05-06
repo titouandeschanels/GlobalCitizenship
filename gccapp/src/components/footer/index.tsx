@@ -1,4 +1,4 @@
-import { FooterContainer, FooterColumn, FooterTitle, FooterText, FooterButton, FooterLogo, FooterDecoration, FooterDecorationBox } from './elements';
+import { FooterContainer, FooterColumn, FooterTitle, FooterText, FooterLogo, FooterDecoration, FooterDecorationBox } from './elements';
 import { Blue, Green, Orange, Pink } from '../../colors';
 import { Link } from 'react-router-dom';
 

@@ -6,7 +6,6 @@ import Cloud from "./pages/cloud";
 import Community from "./pages/community";
 
 function App() {
-  const backendName: string = "John Doe"; // mock name implemenatation, will be changed later on
 
   return (
     <Router>
