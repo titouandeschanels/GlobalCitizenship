@@ -8,9 +8,14 @@ interface SquaresProps {
 }
 
 const Squares: React.FC<SquaresProps> = () => {
+
+    const handleClick = ( path : string ) => {
+        window.location.href = path;
+    };
+
     return (
         <SquareContainer>
-            <SquareItem>
+            <SquareItem onClick={() => handleClick('/journey')}>
                 <ImageRow>
                     <PathImage>
                         <img src={path} alt="path" />
@@ -32,7 +37,7 @@ const Squares: React.FC<SquaresProps> = () => {
                     <SquareText>Reading Content</SquareText>
                 </TextRow>
             </SquareItem>
-            <SquareItem>
+            <SquareItem onClick={() => handleClick('/badges')}>
                 <ImageRow>
                     <PicsImage>
                         <img src={pics} alt="pics" />
