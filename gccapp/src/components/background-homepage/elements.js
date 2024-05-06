@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import backgroundHomepage from '../../assets/homepage/backgroundHomepage.png';
-import { Gray } from "../../colors";
-import { Orange } from "../../colors";
-import { Indigo } from "../../colors";
+import { Gray, Indigo, Orange, White } from '../../colors';
 
 export const BackgroundPicture = styled.div`
     position: relative;
@@ -10,6 +8,7 @@ export const BackgroundPicture = styled.div`
     background-size: cover;
     background-position: center;
     height: 100vh;
+    background-color: ${White};
 `;
 
 export const TextStyleSmall = styled.div`
