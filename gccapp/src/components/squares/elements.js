@@ -18,7 +18,7 @@ export const SquareContainer = styled.div`
 export const SquareItem = styled.div`
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 100%;
     width: 20%;
     border: none;
     border-radius: 10px;
@@ -38,6 +38,8 @@ export const ImageRow = styled.div`
     flex: 1;
     display: flex;
     min-height: 60%;
+    justify-content: center;
+
 `;
 
 export const TextRow = styled.div`
@@ -74,38 +76,25 @@ export const SquareText = styled.p`
 
 export const BooksImage = styled.div`
     display: flex;
-    position: relative;
-    right: 1px;
-    top: 43px;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
     img {
-        width: 88%;
-        height: 88%;
-        object-fit: scale-down;
+        max-height: 100%;
     }
 `;
 
+
 export const PathImage = styled.div`
-    display: flex;
-    position: relative;
-    left: 29px;
-    top: 4px;
+    max-height: 100%;
     img {
-        width: 97%;
-        height: 97%;
-        object-fit: scale-down;
+        max-height: 100%;
     }
-    user-select: none;
 `;
 
 export const PicsImage = styled.div`
-    display: flex;
-    position: relative;
-    left: 31px;
-    top: 16px;
+    max-height: 100%;
     img {
-        width: 89%;
-        height: 89%;
-        object-fit: scale-down;
+        max-height: 100%;
     }
-    user-select: none;
 `;
