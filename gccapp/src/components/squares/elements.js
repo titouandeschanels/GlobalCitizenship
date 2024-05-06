@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-<<<<<<< HEAD
-import {Gray, Indigo, White, LightGray, Blue} from '../../colors';
-=======
-import {Grey, Indigo, White, Blue} from '../../colors';
->>>>>>> 9149bad54bac0b09346b176d2756f297e9223fc2
+import {Gray, Indigo, White, Blue} from '../../colors';
 
 export const SquareContainer = styled.div`
     display: flex;
@@ -12,10 +8,6 @@ export const SquareContainer = styled.div`
     height: 250px;
     width: 100%;
     padding: 0 10px;
-<<<<<<< HEAD
-    background-color: ${LightGray};
-=======
->>>>>>> 9149bad54bac0b09346b176d2756f297e9223fc2
     font-size: 20px;
     font-weight: 600;
     gap : 5vw;
