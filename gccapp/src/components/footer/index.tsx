@@ -31,8 +31,9 @@ const Footer: React.FC<FooterProps> = () => {
                     <Link to="/journey" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <FooterText>Journey</FooterText>
                     </Link>
-                    <FooterText>About</FooterText>
-                    {/* <FooterText>Badges Collection</FooterText> */}
+                    <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <FooterText>About</FooterText>
+                    </Link>
                     <Link to="/badges" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <FooterText>Badges Collection</FooterText>
                     </Link>

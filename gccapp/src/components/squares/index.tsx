@@ -26,7 +26,7 @@ const Squares: React.FC<SquaresProps> = () => {
                     <SquareText>To-do Content</SquareText>
                 </TextRow>
             </SquareItem>
-            <SquareItem>
+            <SquareItem onClick={() => handleClick('/about')}>
                 <ImageRow>
                     <BooksImage>
                         <img src={books} alt="books" />

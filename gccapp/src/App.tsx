@@ -5,6 +5,7 @@ import MyPage from "./pages/mypage";
 import Cloud from "./pages/cloud";
 import Community from "./pages/community";
 import Badges from "./pages/badges";
+import About from "./pages/about";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/cloud" element={<Cloud />} />
         <Route path="/community" element={<Community />} />
         <Route path="/badges" element={<Badges />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
