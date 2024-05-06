@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = () => {
                 <img src="https://via.placeholder.com/100" alt="logo" />
             </HeaderLogo>
             <HeaderMenu>
-                <HeaderItem>Community</HeaderItem>
+                <HeaderButton>Community</HeaderButton>
                 <HeaderItem>Cloud</HeaderItem>
                 <HeaderItem>My Page</HeaderItem>
             </HeaderMenu>
