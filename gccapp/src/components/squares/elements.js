@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Grey, Indigo, White, LightGrey, Blue} from '../../colors';
+import {Gray, Indigo, White, LightGray, Blue} from '../../colors';
 
 export const SquareContainer = styled.div`
     display: flex;
@@ -8,7 +8,7 @@ export const SquareContainer = styled.div`
     height: 250px;
     width: 100%;
     padding: 0 10px;
-    background-color: ${LightGrey};
+    background-color: ${LightGray};
     font-size: 20px;
     font-weight: 600;
     gap : 5vw;
@@ -23,7 +23,7 @@ export const SquareItem = styled.div`
     border-radius: 10px;
     cursor: pointer;
     user-select: none;
-    box-shadow: 1px 1px 1px ${Grey};
+    box-shadow: 1px 1px 1px ${Gray};
     background: linear-gradient(to bottom, ${White}, ${White} 60%, ${Indigo} 60%, ${Indigo} 63%, ${Blue} 63%);
 `;
 

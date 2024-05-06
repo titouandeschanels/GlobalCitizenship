@@ -2,8 +2,8 @@
 
 export const Black = '#212427';
 export const White = '#F5F5F5';
-export const LightGrey = '#bec5c9';
-export const Grey = '#757f8c';
+export const LightGray = '#bec5c9';
+export const Gray = '#757f8c';
 export const Indigo = '#3f3d56';
 export const Blue = '#518ded';
 export const Green = '#b7de6a';

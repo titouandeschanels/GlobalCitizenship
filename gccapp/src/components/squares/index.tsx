@@ -1,8 +1,8 @@
 import {SquareContainer, SquareItem, ImageRow, TextRow, SquareTitle, SquareText, GlobeImage, BooksImage, PathImage, PicsImage} from './elements';
-import globe from './img/globe.png';
-import books from './img/books.png';
-import path from './img/path.png';
-import pics from './img/pics.png';
+import globe from '../../assets/homepage/globe.png';
+import books from '../../assets/homepage/books.png';
+import path from '../../assets/homepage/path.png';
+import pics from '../../assets/homepage/pics.png';
 
 interface SquaresProps {
 

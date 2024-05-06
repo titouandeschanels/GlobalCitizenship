@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import backgroundHomepage from '../../assets/backgroundHomepage.png';
-import { GrayBlue } from "../../color";
-import { Orange } from "../../color";
-import { MediumBlue } from "../../color";
+import backgroundHomepage from '../../assets/homepage/backgroundHomepage.png';
+import { Gray } from "../../colors";
+import { Orange } from "../../colors";
+import { Indigo } from "../../colors";
 
 export const BackgroundPicture = styled.div`
     position: relative; /* Setze die Position auf relativ */
@@ -16,7 +16,7 @@ export const TextStyleSmall = styled.div`
     font-family: Arial, sans-serif;
     font-size: 24px;
     font-weight: lighter;
-    color: ${GrayBlue};
+    color: ${Gray};
     position: absolute;
     top: 7rem;
     left: 10rem;
@@ -26,7 +26,7 @@ export const TextStyleBig = styled.div`
     font-family: Arial, sans-serif;
     font-size: 45px;
     font-weight: bold;
-    color: ${MediumBlue};
+    color: ${Indigo};
     position: absolute;
     top: 9rem;
     left: 10rem;
