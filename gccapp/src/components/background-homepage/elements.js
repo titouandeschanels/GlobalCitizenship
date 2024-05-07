@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundHomepage from '../../assets/homepage/backgroundHomepage.png';
+import backgroundHomepage from '../../assets/homepage/background-wave.png';
 import { Gray, Indigo, Orange, White } from '../../colors';
 
 export const BackgroundPicture = styled.div`
@@ -9,6 +9,17 @@ export const BackgroundPicture = styled.div`
     background-position: center;
     height: 100vh;
     background-color: ${White};
+`;
+
+export const ImageContainer = styled.div`
+    position: absolute;
+    top: 5vh;
+    left: 50vw;
+`;
+
+export const Image = styled.img`
+    width: 90%;
+    height: 50%;
 `;
 
 export const TextStyleSmall = styled.div`
