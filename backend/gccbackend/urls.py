@@ -27,6 +27,8 @@ router.register(r'chapter', views.ChapterView)
 router.register(r'lesson', views.LessonView)
 router.register(r'student', views.StudentView, 'student')
 router.register(r'position', views.GetStudentPosition, 'position')
+router.register(r'submission', views.SubmissionView, 'submission')
+router.register(r'submission/(?P<student>\d+)/(?P<lesson_id>\d+)', views.SubmissionView, 'get_submission')
 
 
 urlpatterns = [

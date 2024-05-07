@@ -42,3 +42,13 @@ class PositionSerializer(serializers.HyperlinkedModelSerializer):
     
     def get_chapter_num(self, student):
         return student.current_lesson.chapter.number
+    
+class SubmissionSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Submission
+        fields = '__all__'
+
+class GetSubmissionSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Submission
+        fields = ['content']
