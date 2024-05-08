@@ -1,4 +1,6 @@
-import { TextStyleSmall,TextStyleBig, BackgroundPicture, ColoredText } from "./elements";
+import React from "react";
+import { BackgroundPicture, TextStyleSmall, TextStyleBig, ColoredText, ImageContainer, Image } from "./elements";
+import backgroundMap from '../../assets/homepage/background-map.png';
 
 interface BackgroundHomepageProps {
     name: string;
@@ -8,6 +10,9 @@ interface BackgroundHomepageProps {
 const BackgroundHomepage: React.FC<BackgroundHomepageProps> = ({ name }) => {
     return (
         <BackgroundPicture>
+            <ImageContainer>
+                <Image src={backgroundMap} alt="Background Image" />
+            </ImageContainer>
             <div>
                 <TextStyleSmall>Welcome, {name}!</TextStyleSmall>
             </div>

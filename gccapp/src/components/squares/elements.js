@@ -12,7 +12,7 @@ export const SquareContainer = styled.div`
     font-weight: 600;
     gap : 5vw;
     position : absolute;
-    top : 65vh;
+    top : 63vh;
 `;
 
 export const SquareItem = styled.div`
@@ -24,12 +24,12 @@ export const SquareItem = styled.div`
     border-radius: 10px;
     cursor: pointer;
     user-select: none;
-    box-shadow: 1px 1px 1px ${Gray};
-    background: linear-gradient(to bottom, ${White}, ${White} 60%, ${Indigo} 60%, ${Indigo} 63%, ${Blue} 63%);
+    box-shadow: 1px 1px 4px ${Gray};
+    background: linear-gradient(to bottom, #ffffff, #ffffff 60%, ${Indigo} 60%, ${Indigo} 63%, ${Blue} 63%);
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 2px 2px 2px ${Gray};
+        box-shadow: 2px 2px 4px ${Gray};
     }
     transition: 0.3s;
 `;
