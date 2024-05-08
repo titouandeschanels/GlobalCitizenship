@@ -1,4 +1,4 @@
-import BackgroundHomepage from "../components/background-homepage";
+import BackgroundHomepage from "../components/backgroundHomepage";
 import Squares from '../components/squares';
 import Page from "./page";
 
