@@ -29,15 +29,10 @@ router.register(r'student', views.StudentView, 'student')
 router.register(r'position', views.GetStudentPosition, 'position')
 router.register(r'submission', views.SubmissionView, 'submission')
 router.register(r'submission/(?P<student>\d+)/(?P<lesson_id>\d+)', views.SubmissionView, 'unique_submission')
-router.register(r'test2', views.TestViewClass, 'test2')
-# router.register(r'custom', views.view_custom, 'custom')
 
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('custom/', views.view_custom),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('test/', views.TestView),
-    path('test/<int:pk>/', views.TestView)
 ]

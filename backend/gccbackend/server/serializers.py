@@ -71,16 +71,7 @@ class PositionSerializer(serializers.HyperlinkedModelSerializer):
             return instance
         else:
             raise serializers.ValidationError("Lesson not found")
-    
-# class UpdatePositionSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = Student
-#         fields = ['current_lesson']
-    
-#     def update(self):
-#         lesson = Lesson.objects.get(number = self.data['lesson_num'], chapter__number = self.data['chapter_num'])
-#         print(f'LESSON\n{lesson}')
-    
+
 class SubmissionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Submission
@@ -90,10 +81,5 @@ class GetSubmissionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Submission
         fields = ['content']
-
-class TestSerializer1(serializers.ModelSerializer):
-    class Meta:
-        model = Test
-        fields = ['id', 'int_1', 'string_1']
 
     
