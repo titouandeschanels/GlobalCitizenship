@@ -2,7 +2,7 @@ import {SquareContainer, SquareItem, ImageRow, TextRow, SquareTitle, BooksImage,
 import computer from '../../assets/aboutpage/computer.png';
 import paper from '../../assets/aboutpage/paper.png';
 import plant from '../../assets/aboutpage/plant.png';
-import questionmark from '../../assets/aboutpage/questionmark.png';
+import questionmark from '../../assets/aboutpage/bigquestionmark.png';
 
 interface SquaresProps {
 
