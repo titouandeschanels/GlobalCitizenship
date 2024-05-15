@@ -7,7 +7,7 @@ interface SquaresProps {
 
 }
 
-const Squares: React.FC<SquaresProps> = () => {
+const SquaresHome: React.FC<SquaresProps> = () => {
 
     const handleClick = ( path : string ) => {
         window.location.href = path;
@@ -52,4 +52,4 @@ const Squares: React.FC<SquaresProps> = () => {
     );
 }
 
-export default Squares;
+export default SquaresHome;

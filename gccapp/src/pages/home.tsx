@@ -1,5 +1,5 @@
 import BackgroundHomepage from "../components/background-homepage";
-import Squares from '../components/squares';
+import SquaresHome from '../components/squares/index-home';
 import Page from "./page";
 
 interface HomeProps {
@@ -10,7 +10,7 @@ const Home: React.FC<HomeProps> = () => {
     return (
         <Page>
             <BackgroundHomepage name="Marina" />
-            <Squares />
+            <SquaresHome />
         </Page>
     );
 }
