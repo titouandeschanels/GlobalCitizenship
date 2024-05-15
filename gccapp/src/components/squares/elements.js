@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Gray, Indigo, White, Blue} from '../../colors';
+import { Indigo, White, Blue } from '../../colors';
 
 export const SquareContainer = styled.div`
     display: flex;
@@ -24,12 +24,12 @@ export const SquareItem = styled.div`
     border-radius: 10px;
     cursor: pointer;
     user-select: none;
-    box-shadow: 1px 1px 4px ${Gray};
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to bottom, #ffffff, #ffffff 60%, ${Indigo} 60%, ${Indigo} 63%, ${Blue} 63%);
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 2px 2px 4px ${Gray};
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
     transition: 0.3s;
 `;

@@ -6,23 +6,23 @@ import Cloud from "./pages/cloud";
 import Community from "./pages/community";
 import Badges from "./pages/badges";
 import About from "./pages/about";
+import FirstExercise from "./pages/first-exercise";
 
 function App() {
-
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/journey" element={<Journey />} />
+        <Route path="/journey" element={<Journey />}/>
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/cloud" element={<Cloud />} />
         <Route path="/community" element={<Community />} />
         <Route path="/badges" element={<Badges />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Home />} />
+        <Route path="first-exercise" element={<FirstExercise />} />
       </Routes>
     </Router>
-
   );
 }
 
