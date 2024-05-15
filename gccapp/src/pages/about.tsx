@@ -1,6 +1,8 @@
 import Page from "./page";
-import BackgroundHomepage from "../components/background-homepage";
 import SquaresAbout from "../components/squares/index-about";
+import WaveBackground from "../components/waveBackground";
+import {Indigo} from "../colors";
+import BackgroundAboutpage from "../components/background/index-about";
 
 interface AboutProps {
 
@@ -9,7 +11,7 @@ interface AboutProps {
 const About: React.FC<AboutProps> = () => {
     return (
         <Page>
-            <BackgroundHomepage name="Marina" />
+            <BackgroundAboutpage name="Marina" />
             <SquaresAbout />
         </Page>
     );

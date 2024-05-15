@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import backgroundHomepage from '../../assets/homepage/background-wave.png';
-import { Gray, Indigo, Orange, White } from '../../colors';
+import { Gray, Indigo, Orange, White, Black } from '../../colors';
 
 export const BackgroundPicture = styled.div`
     position: relative;
@@ -47,5 +47,22 @@ export const TextStyleBig = styled.div`
 export const ColoredText = styled.span`
     color: ${Orange};
     text-decoration: underline;
+    user-select: none;
+`;
+
+export const UnderlinedText = styled.span`
+    color: ${Black};
+    text-decoration: underline;
+    user-select: none;
+`;
+
+export const Subtitle = styled.div`
+    font-family: Arial, sans-serif;
+    font-size: calc(1vw + 5px);
+    font-weight: lighter;
+    color: ${Gray};
+    position: absolute;
+    top: 21vh;
+    left: 10vw;
     user-select: none;
 `;

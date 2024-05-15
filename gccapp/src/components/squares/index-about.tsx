@@ -1,4 +1,4 @@
-import {SquareContainer, SquareItem, ImageRow, TextRow, SquareTitle, BooksImage, PathImage, PicsImage} from './elements';
+import {SquareContainer, WaveContainer, SquareItemAbout, ImageRow, TextRow, SquareTitleAbout, BooksImage, PathImage, PicsImage} from './elements';
 import computer from '../../assets/aboutpage/computer.png';
 import paper from '../../assets/aboutpage/paper.png';
 import plant from '../../assets/aboutpage/plant.png';
@@ -16,46 +16,46 @@ const SquaresAbout: React.FC<SquaresProps> = () => {
 
     return (
         <SquareContainer>
-            <SquareItem onClick={() => handleClick('/journey')}>
+            <SquareItemAbout onClick={() => handleClick('/journey')}>
                 <ImageRow>
                     <PathImage>
                         <img src={questionmark} alt="questionmark" />
                     </PathImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitle>About the GCC Program</SquareTitle>
+                    <SquareTitleAbout>About the GCC Program</SquareTitleAbout>
                 </TextRow>
-            </SquareItem>
-            <SquareItem onClick={() => handleClick('/about')}>
+            </SquareItemAbout>
+            <SquareItemAbout onClick={() => handleClick('/about')}>
                 <ImageRow>
                     <BooksImage>
                         <img src={plant} alt="plant" />
                     </BooksImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitle>About the Workshop Flow</SquareTitle>
+                    <SquareTitleAbout>About the Workshop Flow</SquareTitleAbout>
                 </TextRow>
-            </SquareItem>
-            <SquareItem onClick={() => handleClick('/badges')}>
+            </SquareItemAbout>
+            <SquareItemAbout onClick={() => handleClick('/badges')}>
                 <ImageRow>
                     <PicsImage>
                         <img src={paper} alt="paper" />
                     </PicsImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitle>About the Global Case Study Challenge</SquareTitle>
+                    <SquareTitleAbout>About the Global Case Study Challenge</SquareTitleAbout>
                 </TextRow>
-            </SquareItem>
-            <SquareItem onClick={() => handleClick('/journey')}>
+            </SquareItemAbout>
+            <SquareItemAbout onClick={() => handleClick('/journey')}>
                 <ImageRow>
                     <PathImage>
                         <img src={computer} alt="computer" />
                     </PathImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitle>About the GCC Resit</SquareTitle>
+                    <SquareTitleAbout>About the GCC Resit</SquareTitleAbout>
                 </TextRow>
-            </SquareItem>
+            </SquareItemAbout>
         </SquareContainer>
     );
 }
