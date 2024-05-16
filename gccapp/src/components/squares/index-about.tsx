@@ -1,16 +1,11 @@
-import {SquareContainer, WaveContainer, SquareItemAbout, ImageRow, TextRow, SquareTitleAbout, BooksImage, PathImage, PicsImage} from './elements';
+import {SquareContainer, SquareItemAbout, ImageRow, TextRow, SquareTitleAbout, QuestionImage, PlantImage, PaperImage, ComputerImage} from './elements';
 import computer from '../../assets/aboutpage/computer.png';
 import paper from '../../assets/aboutpage/paper.png';
 import plant from '../../assets/aboutpage/plant.png';
 import questionmark from '../../assets/aboutpage/bigquestionmark.png';
 
-interface SquaresProps {
-
-}
-
-const SquaresAbout: React.FC<SquaresProps> = () => {
-
-    const handleClick = ( path : string ) => {
+const SquaresHome = () => {
+    const handleClick = (path : string) => {
         window.location.href = path;
     };
 
@@ -18,9 +13,9 @@ const SquaresAbout: React.FC<SquaresProps> = () => {
         <SquareContainer>
             <SquareItemAbout onClick={() => handleClick('/journey')}>
                 <ImageRow>
-                    <PathImage>
-                        <img src={questionmark} alt="questionmark" />
-                    </PathImage>
+                    <QuestionImage>
+                        <img src={questionmark} alt="questionmark"/>
+                    </QuestionImage>
                 </ImageRow>
                 <TextRow>
                     <SquareTitleAbout>About the GCC Program</SquareTitleAbout>
@@ -28,9 +23,9 @@ const SquaresAbout: React.FC<SquaresProps> = () => {
             </SquareItemAbout>
             <SquareItemAbout onClick={() => handleClick('/about')}>
                 <ImageRow>
-                    <BooksImage>
-                        <img src={plant} alt="plant" />
-                    </BooksImage>
+                    <PlantImage>
+                        <img src={plant} alt="plant"/>
+                    </PlantImage>
                 </ImageRow>
                 <TextRow>
                     <SquareTitleAbout>About the Workshop Flow</SquareTitleAbout>
@@ -38,19 +33,19 @@ const SquaresAbout: React.FC<SquaresProps> = () => {
             </SquareItemAbout>
             <SquareItemAbout onClick={() => handleClick('/badges')}>
                 <ImageRow>
-                    <PicsImage>
-                        <img src={paper} alt="paper" />
-                    </PicsImage>
+                    <PaperImage>
+                        <img src={paper} alt="paper"/>
+                    </PaperImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitleAbout>About the Global Case Study Challenge</SquareTitleAbout>
+                    <SquareTitleAbout>Badge Collection</SquareTitleAbout>
                 </TextRow>
             </SquareItemAbout>
-            <SquareItemAbout onClick={() => handleClick('/journey')}>
+            <SquareItemAbout onClick={() => handleClick('/badges')}>
                 <ImageRow>
-                    <PathImage>
-                        <img src={computer} alt="computer" />
-                    </PathImage>
+                    <ComputerImage>
+                        <img src={computer} alt="computer"/>
+                    </ComputerImage>
                 </ImageRow>
                 <TextRow>
                     <SquareTitleAbout>About the GCC Resit</SquareTitleAbout>
@@ -60,4 +55,4 @@ const SquaresAbout: React.FC<SquaresProps> = () => {
     );
 }
 
-export default SquaresAbout;
+export default SquaresHome;

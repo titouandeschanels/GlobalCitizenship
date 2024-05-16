@@ -1,7 +1,5 @@
 import Page from "./page";
 import SquaresAbout from "../components/squares/index-about";
-import WaveBackground from "../components/waveBackground";
-import {Indigo} from "../colors";
 import BackgroundAboutpage from "../components/background/index-about";
 
 interface AboutProps {
