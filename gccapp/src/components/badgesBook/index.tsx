@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BadgesBookContainer, BookClosedImage, BookClosedButton, BookClosedTitle } from './elements';
+import { BadgesBookContainer, BookClosedImage, BookClosedButton, BookClosedTitle, BookOpenImage } from './elements';
 
 const BadgesBook = () => {
     const [bookOpen, setBookOpen] = useState(false);
@@ -7,7 +7,8 @@ const BadgesBook = () => {
     return (
         <BadgesBookContainer>
             {bookOpen ? (
-                <h1>Book open</h1>
+                <BookOpenImage>
+                </BookOpenImage>
             ) : (
                 <BookClosedImage>
                     <BookClosedTitle>

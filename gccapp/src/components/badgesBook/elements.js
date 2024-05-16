@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BookClosed from '../../assets/bookclosed.png';
+import BookOpen from '../../assets/bookopen.png';
 import { White } from '../../colors';
 import Inika from '../../assets/Inika-Regular.ttf';
 
@@ -45,4 +46,14 @@ export const BookClosedTitle = styled.h1`
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+`;
+
+export const BookOpenImage = styled.div`
+    display: flex;
+    position: relative;
+    background-image: url("${BookOpen}");
+    height: 75vh;
+    width: 60vw;
+    background-size: 100% 100%;
+    text-align: center;
 `;
