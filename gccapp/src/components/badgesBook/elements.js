@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import BookClosed from '../../assets/bookclosed.png';
 import BookOpen from '../../assets/bookopen.png';
-import { White } from '../../colors';
+import { White, Black } from '../../colors';
 import Inika from '../../assets/Inika-Regular.ttf';
 
 
@@ -56,4 +56,59 @@ export const BookOpenImage = styled.div`
     width: 60vw;
     background-size: 100% 100%;
     text-align: center;
+`;
+
+export const BookOpenTitle = styled.h1`
+    position: absolute;
+    font-size: calc(1vw + 1vh + 1vmin);
+    font-family: ${Inika};
+    color: ${Black};
+    top: 5%;
+    left: 25%;
+    transform: translateX(-50%);
+    width: 100%;
+`;
+
+export const BookOpenBadgesContainerLeft = styled.div`
+    position: absolute;
+    height : 80%;
+    width : 43%;
+    top: 15%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const BookOpenBadgesLine = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+`;
+
+
+export const BookOpenBadgesButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
