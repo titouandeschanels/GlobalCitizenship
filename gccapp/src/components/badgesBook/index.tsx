@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BadgesBookContainer, BookClosedImage, BookClosedButton, BookClosedTitle, BookOpenImage, BookOpenTitle, BookOpenBadgesContainerLeft, BookOpenBadgesLine, BookOpenBadgesButton } from './elements';
+import { BookContainer, BookClosedImage, BookClosedButton, BookClosedTitle, BookOpenImage, BookOpenTitle, BookOpenContainerLeft, BookOpenLine, BookOpenButton, BookOpenContainerRight, BookOpenBadgeTitle } from './elements';
 import Blue from '../../assets/badges/blue.png';
 import Red from '../../assets/badges/red.png';
 import Yellow from '../../assets/badges/yellow.png';
@@ -9,34 +9,74 @@ import DarkGreen from '../../assets/badges/darkgreen.png';
 const BadgesBook = () => {
     const [bookOpen, setBookOpen] = useState(false);
 
+    const [badges, setBadges] = useState([
+        {
+            badge: {Blue},
+            title: "Blue Badge",
+            description: "You have",
+        },
+        {
+            badge: {Red},
+            title: "Red Badge",
+            description: "You have",
+        },
+        {
+            badge: {Yellow},
+            title: "Yellow Badge",
+            description: "You have",
+        },
+        {
+            badge: {Green},
+            title: "Green Badge",
+            description: "You have",
+        },
+        {
+            badge: {DarkGreen},
+            title: "Dark Green Badge",
+            description: "You have",
+        },
+    ]);
+
+    const [cuurentBadge, setCurrentBadge] = useState(0);
+
+
+
     return (
-        <BadgesBookContainer>
+        <BookContainer>
             {bookOpen ? (
                 <BookOpenImage>
                     <BookOpenTitle>
                         Emma's Journey
                     </BookOpenTitle>
-                    <BookOpenBadgesContainerLeft>
-                        <BookOpenBadgesLine>
-                            <BookOpenBadgesButton>
+
+                    <BookOpenContainerLeft>
+                        <BookOpenLine>
+                            <BookOpenButton onClick={() => setCurrentBadge(0)}>
                                 <img src={Blue} alt="Blue Badge" />
-                            </BookOpenBadgesButton>
-                            <BookOpenBadgesButton>
+                            </BookOpenButton>
+                            <BookOpenButton onClick={() => setCurrentBadge(1)}>
                                 <img src={Red} alt="Red Badge" />
-                            </BookOpenBadgesButton>
-                            <BookOpenBadgesButton>
+                            </BookOpenButton>
+                            <BookOpenButton onClick={() => setCurrentBadge(2)}>
                                 <img src={Yellow} alt="Yellow Badge" />
-                            </BookOpenBadgesButton>
-                        </BookOpenBadgesLine>
-                        <BookOpenBadgesLine>
-                            <BookOpenBadgesButton>
+                            </BookOpenButton>
+                        </BookOpenLine>
+                        <BookOpenLine>
+                            <BookOpenButton onClick={() => setCurrentBadge(3)}>
                                 <img src={Green} alt="Green Badge" />
-                            </BookOpenBadgesButton>
-                            <BookOpenBadgesButton>
+                            </BookOpenButton>
+                            <BookOpenButton onClick={() => setCurrentBadge(4)}>
                                 <img src={DarkGreen} alt="Dark Green Badge" />
-                            </BookOpenBadgesButton>
-                        </BookOpenBadgesLine>
-                    </BookOpenBadgesContainerLeft>
+                            </BookOpenButton>
+                        </BookOpenLine>
+                    </BookOpenContainerLeft>
+
+                    <BookOpenContainerRight>
+                        <BookOpenBadgeTitle>
+                            {badges[cuurentBadge].title}
+                        </BookOpenBadgeTitle>
+                    </BookOpenContainerRight>
+
                 </BookOpenImage>
             ) : (
                 <BookClosedImage>
@@ -46,7 +86,7 @@ const BadgesBook = () => {
                     <BookClosedButton onClick={() => setBookOpen(true)} />
                 </BookClosedImage>
             )}
-        </BadgesBookContainer>
+        </BookContainer>
     );
 }
 

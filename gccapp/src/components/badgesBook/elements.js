@@ -5,7 +5,7 @@ import { White, Black } from '../../colors';
 import Inika from '../../assets/Inika-Regular.ttf';
 
 
-export const BadgesBookContainer = styled.div`
+export const BookContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +69,7 @@ export const BookOpenTitle = styled.h1`
     width: 100%;
 `;
 
-export const BookOpenBadgesContainerLeft = styled.div`
+export const BookOpenContainerLeft = styled.div`
     position: absolute;
     height : 80%;
     width : 43%;
@@ -81,7 +81,7 @@ export const BookOpenBadgesContainerLeft = styled.div`
     align-items: center;
 `;
 
-export const BookOpenBadgesLine = styled.div`
+export const BookOpenLine = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -93,7 +93,7 @@ export const BookOpenBadgesLine = styled.div`
 `;
 
 
-export const BookOpenBadgesButton = styled.div`
+export const BookOpenButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,4 +111,23 @@ export const BookOpenBadgesButton = styled.div`
     &:hover {
         cursor: pointer;
     }
+`;
+
+export const BookOpenContainerRight = styled.div`
+    position: absolute;
+    height : 80%;
+    width : 43%;
+    top: 15%;
+    right: 6%;
+    display: flex;
+`;
+
+export const BookOpenBadgeTitle = styled.h1`
+    font-size: calc(1vw + 1vh + 1vmin);
+    font-family: ${Inika};
+    color: ${Black};
+    margin-bottom: 2%;
+    top: 5%;
+    left: 5%;
+    width: 100%;
 `;
