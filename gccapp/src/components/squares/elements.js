@@ -200,7 +200,6 @@ export const SquareTitleAbout = styled.h1`
 `;
 
 export const QuestionImage = styled.div`
-    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;

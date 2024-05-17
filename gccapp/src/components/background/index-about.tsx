@@ -1,5 +1,5 @@
 import React from "react";
-import { BackgroundPicture, Subtitle, TextStyleBig, UnderlinedText } from "./elements";
+import { BackgroundPictureAbout, Subtitle, TextStyleBig, UnderlinedText} from "./elements";
 
 interface BackgroundAboutpageProps {
     name: string;
@@ -7,7 +7,7 @@ interface BackgroundAboutpageProps {
 
 const BackgroundAboutpage: React.FC<BackgroundAboutpageProps> = () => {
     return (
-        <BackgroundPicture>
+        <BackgroundPictureAbout>
             <div>
                 <TextStyleBig>
                     <UnderlinedText>About!</UnderlinedText>
@@ -20,7 +20,7 @@ const BackgroundAboutpage: React.FC<BackgroundAboutpageProps> = () => {
                     program, upcoming classes, and related matters.
                 </Subtitle>
             </div>
-        </BackgroundPicture>
+        </BackgroundPictureAbout>
     )
 };
 
