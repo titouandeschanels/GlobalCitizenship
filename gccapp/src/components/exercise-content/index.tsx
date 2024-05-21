@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { StyledContainer } from './elements';
+import { ButtonNavigate, StyledContainer, ButtonContainer } from './elements';
 import CreativeFrames from './creative-frames';
 import SelfAwareness from './self-awareness';
 import SacredBullsOne from './sacred-bulls-1';
+import SacredBullsTwo from './sacred-bulls-2';
+import GlobalCompetence from './global-competence-model';
+import ArrowLeft from '../../assets/first-exercise/arrow-left.png';
+import ArrowRight from '../../assets/first-exercise/arrow-right.png';
 
 const Carousel: React.FC = () => {
     const cardLength: number = 5;
@@ -25,17 +29,28 @@ const Carousel: React.FC = () => {
         cardContentComponent = <SelfAwareness />;
     } else if (currentCard === 2) {
         cardContentComponent = <SacredBullsOne />;
+    } else if (currentCard === 3) {
+        cardContentComponent = <SacredBullsTwo />;
+    } else if (currentCard === 4) {
+        cardContentComponent = <GlobalCompetence />;
     }
-
 
     return (
         <StyledContainer>
             <h2>This is me</h2>
-            {cardContentComponent}
-            <div>
-                <button onClick={prevCard}>Back</button>
-                <button onClick={nextCard}>Next</button>
-            </div>
+            <ButtonContainer>
+                {currentCard !== 0 && (
+                    <ButtonNavigate onClick={prevCard}>
+                        <img src={ArrowLeft} alt="ArrowLeft" />
+                    </ButtonNavigate>
+                )}
+                {cardContentComponent}
+                {currentCard !== cardLength - 1 && (
+                    <ButtonNavigate onClick={nextCard}>
+                        <img src={ArrowRight} alt="ArrowRight" />
+                    </ButtonNavigate>
+                )}
+            </ButtonContainer>
         </StyledContainer>
     );
 }

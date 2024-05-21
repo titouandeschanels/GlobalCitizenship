@@ -1,6 +1,7 @@
 import React from 'react';
-import { CenteredImage, StyledCardContent } from '../elements';
+import { StyledCardContent } from '../elements';
 import selfA from '../../../assets/first-exercise/self-awareness.png'
+import { CenteredImage } from './elements';
 
 const SelfAwareness: React.FC = () => {
     return (

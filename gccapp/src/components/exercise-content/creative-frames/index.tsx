@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyledCardContent, Box1, Box2, Box3, TextBold } from '../elements';
+import { StyledCardContent, TextBold } from '../elements';
+import { Box1, Box2, Box3 } from './elements'
 import bookshelf from '../../../assets/first-exercise/bookshelf.png'
 
 const CreativeFrames: React.FC = () => {

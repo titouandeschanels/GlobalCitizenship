@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { StyledCardContent, TextBold, ExpandedContent, ExpandableButton, ButtonTest, ButtonClicked } from '../elements';
+import { StyledCardContent, TextBold } from '../elements';
 import { Pink, Green, Orange, Blue, Purple } from '../../../colors';
 import pink from '../../../assets/first-exercise/pink.png';
 import green from '../../../assets/first-exercise/green.png';
 import orange from '../../../assets/first-exercise/orange.png';
 import blue from '../../../assets/first-exercise/blue.png';
 import purple from '../../../assets/first-exercise/purple.png';
+import { ButtonClicked, ButtonStyled, ExpandableButton, ExpandedContent } from './elements';
 
 const SacredBullsOne: React.FC = () => {
         // state variables for managing component state
@@ -57,7 +58,7 @@ const SacredBullsOne: React.FC = () => {
                             <h2>Sacred Bulls 1</h2>
                             <h4>Activity 1</h4>
                             <ExpandableButton onClick={handleDutchButtonClick} style={{ height: isExpandedDutch ? '130px' : '40px' }}>
-                                {isExpandedDutch ? 'Dutch Speakers' : 'Dutch Speakers'}
+                                Dutch-Speakers
                                 {isExpandedDutch && (
                                     <ExpandedContent>
                                         <TextBold>"Doe maar gewoon, doe maar normaal."</TextBold>
@@ -72,7 +73,7 @@ const SacredBullsOne: React.FC = () => {
                     <tr>
                         <td>
                             <ExpandableButton onClick={handleNonDutchButtonClick} style={{ height: isExpandedNonDutch ? '240px' : '40px' }}>
-                                {isExpandedNonDutch ? 'Non-Dutch Speakers' : 'Non-Dutch Speakers'}
+                                Non-Dutch Speakers
                                 {isExpandedNonDutch && (
                                     <ExpandedContent>
                                         <TextBold>Find a well-known, common expression in your own language and culture that everybody uses which is accepted by everyone as "how are you expected to behave"</TextBold>
@@ -93,42 +94,42 @@ const SacredBullsOne: React.FC = () => {
                             <div style={{ display: 'flex' }}>
                                 {pinkClickedState ?
                                     <ButtonClicked style={{ borderColor: Pink }}>
-                                        <h4>I come from a family...</h4>
+                                        <h2>I come from a family...</h2>
                                     </ButtonClicked> :
-                                    <ButtonTest style={{ backgroundColor: Pink }} onClick={handlePinkCardClick}>
+                                    <ButtonStyled style={{ backgroundColor: Pink }} onClick={handlePinkCardClick}>
                                         <img src={pink} alt="pink" />
-                                    </ButtonTest>}
+                                    </ButtonStyled>}
                                 {greenClickedState ?
                                     <ButtonClicked style={{ borderColor: Green }}>
-                                        <h4>I come from an<br />environment...</h4>
+                                        <h2>I come from an<br />environment...</h2>
                                     </ButtonClicked> :
-                                    <ButtonTest style={{ backgroundColor: Green }} onClick={handleGreenCardClick}>
+                                    <ButtonStyled style={{ backgroundColor: Green }} onClick={handleGreenCardClick}>
                                         <img src={green} alt="green" />
-                                    </ButtonTest>}
+                                    </ButtonStyled>}
                                 {orangeClickedState ?
                                     <ButtonClicked style={{ borderColor: Orange }}>
-                                        <h4>I come from a<br />culture that...</h4>
+                                        <h2>I come from a<br />culture that...</h2>
                                         <p>specify different culture by<br />repeating this prompt</p>
                                     </ButtonClicked> :
-                                    <ButtonTest style={{ backgroundColor: Orange }} onClick={handleOrangeCardClick}>
+                                    <ButtonStyled style={{ backgroundColor: Orange }} onClick={handleOrangeCardClick}>
                                         <img src={orange} alt="orange" />
-                                    </ButtonTest>}
+                                    </ButtonStyled>}
                                 {blueClickedState ?
                                     <ButtonClicked style={{ borderColor: Blue }}>
-                                        <h4>I come from a<br />background that...</h4>
-                                        <p>ex. community, religion,<br />upbringing,. etc</p>
+                                        <h2>I come from a<br />background that...</h2>
+                                        <p>ex. community, religion,<br />upbringing, etc</p>
                                     </ButtonClicked> :
-                                    <ButtonTest style={{ backgroundColor: Blue }} onClick={handleBlueCardClick}>
+                                    <ButtonStyled style={{ backgroundColor: Blue }} onClick={handleBlueCardClick}>
                                         <img src={blue} alt="blue" />
-                                    </ButtonTest>}
+                                    </ButtonStyled>}
                                 {purpleClickedState ?
                                     <ButtonClicked style={{ borderColor: Purple }}>
-                                        <h4>I feel...</h4>
+                                        <h2>I feel...</h2>
                                         <p>ex. nationality, ethnicity</p>
                                     </ButtonClicked> :
-                                    <ButtonTest style={{ backgroundColor: Purple }} onClick={handlePurpleCardClick}>
+                                    <ButtonStyled style={{ backgroundColor: Purple }} onClick={handlePurpleCardClick}>
                                         <img src={purple} alt="purple" />
-                                    </ButtonTest>}
+                                    </ButtonStyled>}
                             </div>
                         </td>
                     </tr>
