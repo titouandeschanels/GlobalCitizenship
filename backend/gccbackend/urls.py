@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from gccbackend.server import views
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 
 router = routers.DefaultRouter()
@@ -29,8 +30,6 @@ router.register(r'student', views.StudentView, 'student')
 router.register(r'position', views.GetStudentPosition, 'position')
 router.register(r'submission', views.SubmissionView, 'submission')
 router.register(r'submission/(?P<student>\d+)/(?P<lesson_id>\d+)', views.SubmissionView, 'unique_submission')
-
-from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 urlpatterns = [
     path('', include(router.urls)),
