@@ -30,9 +30,14 @@ router.register(r'position', views.GetStudentPosition, 'position')
 router.register(r'submission', views.SubmissionView, 'submission')
 router.register(r'submission/(?P<student>\d+)/(?P<lesson_id>\d+)', views.SubmissionView, 'unique_submission')
 
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    # Optional UI:
+    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
