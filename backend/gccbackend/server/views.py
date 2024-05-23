@@ -1,7 +1,9 @@
 from django.contrib.auth.models import Group, User
-from rest_framework import permissions, viewsets
+from rest_framework import permissions, viewsets, status
 from .serializers import *
 from .models import Chapter, Lesson, Lesson, Student
+from rest_framework.decorators import action
+from rest_framework.response import Response
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -26,6 +28,35 @@ class ChapterView(viewsets.ModelViewSet):
 class LessonView(viewsets.ModelViewSet):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
+    
+    # http_method_names = ['get', 'post', 'put', 'delete']
+
+    @action(detail=False, methods=['get'])
+    def get_lesson_by_chapter(self, request):
+        get_lesson = request.query_params.get('get_lesson')
+        get_chapter = request.query_params.get('get_chapter')
+
+        queryset = self.get_queryset().filter(number=get_lesson, chapter__number=get_chapter).first()
+
+        serializer = self.get_serializer(queryset)
+        return Response(serializer.data)
+    
+    def create(self, request):
+        print('REQUEST: ', request)
+        print('DATA', request.data)
+        serializer = LessonSerializer(data=request.data)
+        print('VALID: ', serializer.is_valid())
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response({"error": "Couldn't create the new lesson"}, status=422)
+        
+    # # @action(detail=False, methods=['put'])
+    # def update(self, request):
+    #     print('IN UPDATE')
+    #     pass
+
 
 class GetStudentPosition(viewsets.ModelViewSet):
     queryset = Student.objects.all()

@@ -15,9 +15,54 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'name']
 
 class LessonSerializer(serializers.ModelSerializer):
+    in_chapter = serializers.IntegerField(write_only=True)
+    get_chapter = serializers.IntegerField(read_only=True)
+    get_lesson = serializers.IntegerField(read_only=True)
+    
     class Meta:
         model = Lesson
-        fields = ['number', 'title', 'content', 'chapter']
+        fields = ['number', 'title', 'content', 'in_chapter', 'get_chapter', 'get_lesson']
+
+    def get(self, validated_data):
+        print('IN GET')
+        return Lesson.objects.filter(number=validated_data.pop('get_lesson'), chapter__number=validated_data.pop('get_chapter')).first()
+        lesson = Lesson.objects.filter(number=validated_data.pop('set_lesson'), chapter__number=validated_data.pop('set_chapter')).first()
+        
+        if lesson:
+            instance.current_lesson = lesson
+            instance.save()
+            return instance
+        else:
+            raise serializers.ValidationError("Lesson not found")
+
+    def get_in_chapter(self, lesson):
+        return lesson.chapter.number
+    
+    def set_in_chapter(self, lesson):
+        return Chapter.objects.filter(number=self.in_chapter)
+
+    def create(self, validated_data):
+        try:
+            c = Chapter.objects.get(number=validated_data.get('in_chapter'))
+            l = Lesson.objects.get(in_chapter=c, number=validated_data.get('number'))
+        except:
+            l = None
+        if (l == None):
+            chapter_number = validated_data.pop('in_chapter')
+            
+            chapter = Chapter.objects.get(number=chapter_number)
+            
+            validated_data['in_chapter'] = chapter
+            
+            return Lesson.objects.create(**validated_data)
+        else:
+            l.content = validated_data.get('content', l.content)
+            l.title = validated_data.get('title', l.title)
+            l.save()
+            return l
+        
+
+    
 
 class ChapterSerializer(serializers.HyperlinkedModelSerializer):
     lessons = serializers.HyperlinkedRelatedField(many = True, read_only = True, view_name = 'lesson-detail')
@@ -25,6 +70,7 @@ class ChapterSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Chapter
         fields = ['number', 'title', 'content', 'lessons']
+
 
 class StudentSerializer(serializers.HyperlinkedModelSerializer):
     username = serializers.SerializerMethodField()
@@ -71,6 +117,17 @@ class PositionSerializer(serializers.HyperlinkedModelSerializer):
             return instance
         else:
             raise serializers.ValidationError("Lesson not found")
+        
+    # def create(self, instance, validated_data):
+    #     lesson = Lesson.objects.filter(number=validated_data.pop('set_lesson'), chapter__number=validated_data.pop('set_chapter')).first()
+        
+    #     if lesson:
+    #         instance.current_lesson = lesson
+    #         instance.save()
+    #         return instance
+    #     else:
+    #         raise serializers.ValidationError("Lesson not found")
+
 
 class SubmissionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
