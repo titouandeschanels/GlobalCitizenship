@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
-import { White, Pink, Blue, Black } from "../../colors";
+import { White, Pink, Blue } from "../../colors";
 
 export const JourneyLayout = styled.div`
     margin: 0px 0px;
@@ -17,15 +17,13 @@ export const Title = styled.div`
     font-weight: 600;
     font-size: 45px;
     height: 75px;
-    & > svg {
-    width: 604px;
-    }
+    width: 217px;
 `;
 export const TitleIconWrapper = styled(TitleIcon)`
     position: absolute;
-    width: 60%;
+    width: 100%;
     height: auto;
-    padding-top: 50px;
+    padding-top: 55px;
     left: 0;
 `;
 export const JourneyBox = styled.div`
@@ -45,73 +43,11 @@ export const JourneyContainer = styled.div`
     margin: 300px 50px;
     padding-left: 150px;
 `;
-export const StepBox = styled.div`
-    display: flex;
-    width: 550px;
-`;
 
-export const DescriptionBox = styled.div`
-    position: relative;
-    opacity: 0;
-    & > svg {
-        position: absolute;
-        right: 0px;
-        top: -50px;
-        z-index: 100;
-    }
-    ${StepBox}:hover & {
-        opacity: 1;
-    }
-`;
-
-export const Description = styled.div`
-    & > div {
-        width: 120px;
-        z-index: 150;
-        padding-top: 20px;
-        padding-left: 40px;
-        font-size: 22px;
-        color: ${Black};
-        position: relative;
-    :last-child {
-        padding-top: 30px;
-        padding-left: 40px;
-    }
-    }
-    & > p {
-        width: 309px;
-        padding: 5px 40px;
-        color: #898888;
-        z-index: 150;
-        font-size: 15px;
-        font-family: Arial, sans-serif;
-        line-height: 1.2;
-    }
-    position: absolute;
-    z-index: 100;
-    width: 500px;
-    height: 200px;
-    top: -250px;
-    right: -10px;
-    background-color: #ffffff;
-    color: white;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px #d9d9d9;
-    transition: opacity 0.3s;
-    pointer-events: none;
-    ${StepBox}:hover & {
-        opacity: 1;
-    }
-`;
-export const DescriptionImage = styled.div`
-    position: absolute;
-    top: -220px;
-    right: 10px;
-    z-index: 150;
-`;
 export const IDGStepBox = styled.div`
     display: flex;
     flex-direction: column;
+    background-color: ${ $props => $props.color };
     gap: 70px;
     :nth-child(2) {
         justify-content: center;
@@ -126,6 +62,9 @@ export const IDGStepBox = styled.div`
         fill: ${Pink};
         }
     }
+    & > div{
+            display: flex;
+    }
     :nth-child(3) {
         margin-left: 0px;
         :nth-child(2) {
@@ -138,6 +77,7 @@ export const IDGStepBox = styled.div`
     }
     }
 `;
+
 export const SDGStepBox = styled.div`
     display: flex;
     flex-direction: column;
@@ -164,6 +104,9 @@ export const SDGStepBox = styled.div`
         }
     }
     }
+    & > div{
+            display: flex;
+    }
     :nth-child(1) {
         justify-content: right;
     }
@@ -179,22 +122,8 @@ export const SDGStepBox = styled.div`
     :nth-child(5) {
         justify-content: right;
     }
-`;
-export const StepAndFlag = styled.div`
-    position: relative;
-    width: 156px;
     height: 80px;
     :nth-child(1) {
-        position: absolute;
-        top: -90px;
-        left: 0;
-        z-index: 1;
-    }  
-    :last-child {
-        z-index: 0;
-        top: 0;
-    }
-`;
 
-export const Flag = styled.div``
-export const Step = styled.div``
+`; 
+

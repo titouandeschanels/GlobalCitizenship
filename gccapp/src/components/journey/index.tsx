@@ -5,23 +5,19 @@ import {
     JourneyContainer,
     JourneyBox,
     IDGStepBox,
-    StepBox,
-    DescriptionBox,
-    Description,
-    DescriptionImage,
-    StepAndFlag,
-    Flag,
-    Step,
     SDGStepBox,
 } from "../journey/elements";
+import StepBox from "../step";
 import React from "react";
-import { ReactComponent as StepIcon } from "../../assets/icons/journey-step-icon.svg";
 import { ReactComponent as TrophyIcon } from "../../assets/icons/trophy-icon.svg";
-import { ReactComponent as FlagIcon } from "../../assets/icons/journey-flag-icon.svg";
-import { ReactComponent as SpeechBubbleIcon } from "../../assets/icons/speechbubble-icon.svg";
 import { ReactComponent as TisismeIcon } from "../../assets/icons/speechbubble-thisisme-icon.svg";
+import {ReactComponent as TrophyLockIcon} from "../../assets/icons/trophy-lock-icon.svg"
+//import {useLevelStore} from "../store/useLevelStore";
 
-interface JourneyComponentProps {}
+interface JourneyComponentProps {
+    currentLevel : number;
+}
+
 
 interface StepItem {
     id: number;
@@ -36,7 +32,8 @@ const idgitem: StepItem[] = [
         id: 1,
         mode: "IDG",
         title: "This is me",
-        description: " ",
+        description:
+            "Module description Module description Module description Module description Module description Module description Module description Module description Module description ",
         image: TisismeIcon,
     },
     {
@@ -44,7 +41,7 @@ const idgitem: StepItem[] = [
         mode: "IDG",
         title: "Me and my circles",
         description: " ",
-        image: TisismeIcon,
+        image: TisismeIcon, //example image
     },
     {
         id: 3,
@@ -91,87 +88,39 @@ const sdgitem: StepItem[] = [
         image: TisismeIcon,
     },
 ];
-
 const Journeylayout: React.FC<JourneyComponentProps> = () => {
-    const currentStep = 1; /*A temporary number*/
+    const currentLevel = 1; /*A temporary number*/
+    //const {currentLevel}  = useLevelStore();
     return (
         <JourneyLayout>
             <Title>
-                Start Modules - E-learning
+                Journey
                 <TitleIconWrapper />
             </Title>
             <JourneyContainer>
                 <JourneyBox>
                     <IDGStepBox>
-                        {idgitem.map((item: any) => {
+                        {idgitem.map((item: StepItem) => {
                             return (
-                                <StepBox>
-                                    <DescriptionBox>
-                                        <Description>
-                                            <div>
-                                                {item.title}
-                                                <TitleIconWrapper />
-                                            </div>
-                                            <p>{item.description} </p>
-                                        </Description>
-                                        <SpeechBubbleIcon />
-                                        <DescriptionImage>
-                                            {item.image && <item.image />}
-                                        </DescriptionImage>
-                                    </DescriptionBox>
-                                    <StepAndFlag>
-                                        <Flag
-                                            style={{
-                                                display:
-                                                    currentStep === item.id
-                                                        ? "block"
-                                                        : "none",
-                                            }}
-                                        >
-                                            <FlagIcon />
-                                        </Flag>
-                                        <Step>
-                                            <StepIcon />
-                                        </Step>
-                                    </StepAndFlag>
-                                </StepBox>
+                                <StepBox
+                                    idx={item.id}
+                                    title={item.title}
+                                    description={item.description}
+                                    image={item.image}
+                                ></StepBox>
                             );
                         })}
                     </IDGStepBox>
-                    <TrophyIcon />
+                    {currentLevel < 4 ? <TrophyLockIcon /> : <TrophyIcon />}
                     <SDGStepBox>
-                        {sdgitem.map((item: any, index: number) => {
+                        {sdgitem.map((item: StepItem) => {
                             return (
-                                <StepBox>
-                                    <DescriptionBox>
-                                        <Description>
-                                            <div>
-                                                {item.title}
-                                                <TitleIconWrapper />
-                                            </div>
-                                            <p>{item.description} </p>
-                                        </Description>
-                                        <SpeechBubbleIcon />
-                                        <DescriptionImage>
-                                            {item.image && <item.image />}
-                                        </DescriptionImage>
-                                    </DescriptionBox>
-                                    <StepAndFlag>
-                                        <Flag
-                                            style={{
-                                                display:
-                                                    currentStep === item.id
-                                                        ? "block"
-                                                        : "none",
-                                            }}
-                                        >
-                                            <FlagIcon />
-                                        </Flag>
-                                        <Step>
-                                            <StepIcon />
-                                        </Step>
-                                    </StepAndFlag>
-                                </StepBox>
+                                <StepBox
+                                    idx={item.id}
+                                    title={item.title}
+                                    description={item.description}
+                                    image={item.image}
+                                ></StepBox>
                             );
                         })}
                     </SDGStepBox>
