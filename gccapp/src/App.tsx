@@ -1,6 +1,7 @@
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/home";
 import Journey from "./pages/journey";
+
 import MyPage from "./pages/mypage";
 import Cloud from "./pages/cloud";
 import Community from "./pages/community";
@@ -30,7 +31,6 @@ function App() {
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
-
   );
 }
 

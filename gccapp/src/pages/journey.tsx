@@ -1,15 +1,15 @@
 import Page from "./page";
-
-interface JourneyProps {
-
-}
+import Journeylayout from "../components/journey";
+import Navigation from "../components/navigation";
+interface JourneyProps {}
 
 const Journey: React.FC<JourneyProps> = () => {
-    return (
-        <Page>
-            <h1>Journey map page</h1>
-        </Page>
-    );
-}
+  return (
+    <Page>
+        <Journeylayout></Journeylayout>
+        <Navigation/>
+    </Page>
+  );
+};
 
 export default Journey;
