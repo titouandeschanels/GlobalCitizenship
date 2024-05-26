@@ -1,4 +1,5 @@
-import ExampleComponent from "../components/exampleComponent";
+import BackgroundHomepage from "../components/background/index-home";
+import SquaresHome from '../components/squares/index-home';
 import Page from "./page";
 
 interface HomeProps {
@@ -8,7 +9,8 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = () => {
     return (
         <Page>
-            <ExampleComponent text="Hello World!" />
+            <BackgroundHomepage name="Marina" />
+            <SquaresHome />
         </Page>
     );
 }
