@@ -4,15 +4,16 @@ import { White, Pink, Blue } from "../../colors";
 
 export const JourneyLayout = styled.div`
     margin: 0px 0px;
-    padding-left: 240px;
     background-color: ${White};
-    z-index: 3;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    overflow-y : scroll;
 `;
 
 export const Title = styled.div`
     position: relative;
+    margin-left: 300px;
     padding-top: 200px;
     font-weight: 600;
     font-size: 45px;
@@ -38,10 +39,12 @@ export const JourneyBox = styled.div`
 
 export const JourneyContainer = styled.div`
     display: flex;
+    padding-left: 400px;
     align-items: center;
     justify-content: center;
     margin: 300px 50px;
-    padding-left: 150px;
+    //padding-left: 150px;
+    height: 1556px;
 `;
 
 export const IDGStepBox = styled.div`
@@ -123,7 +126,5 @@ export const SDGStepBox = styled.div`
         justify-content: right;
     }
     height: 80px;
-    :nth-child(1) {
-
 `; 
 

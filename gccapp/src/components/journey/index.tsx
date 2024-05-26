@@ -15,7 +15,6 @@ import {ReactComponent as TrophyLockIcon} from "../../assets/icons/trophy-lock-i
 //import {useLevelStore} from "../store/useLevelStore";
 
 interface JourneyComponentProps {
-    currentLevel : number;
 }
 
 
