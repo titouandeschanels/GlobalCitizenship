@@ -3,7 +3,7 @@ import { Green, Black, Blue } from "../../colors";
 
 export const NavigationLayout = styled.div`
     display: flex;
-    z-index: 50;
+    z-index: 100;
     flex-direction: column;
     position: fixed;
     margin: 0 auto;
