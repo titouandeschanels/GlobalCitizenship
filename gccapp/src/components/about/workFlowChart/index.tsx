@@ -1,6 +1,7 @@
 import React from "react";
-import { Header, ContentWrapper, CenteredImage, ImageWrapper } from "./elements";
-import workflowImg from '../../assets/aboutpage/workshopflow/WorkshopFlow.png';
+import { CenteredImage, ImageWrapper } from "./elements";
+import { Header, ContentWrapper } from "../elements"
+import workflowImg from '../../../assets/aboutpage/workshopflow/WorkshopFlow.png';
 
 interface WorkFlowChartProps {
 }

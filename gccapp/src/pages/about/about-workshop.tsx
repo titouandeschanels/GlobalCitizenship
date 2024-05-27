@@ -1,8 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import Page from '../page';
-import workshopFlowImg from '../../assets/aboutpage/workshopflow/WorkshopFlow.png';
-import WorkFlowChart from "../../components/workFlowChart/index";
+import WorkFlowChart from "../../components/about/workFlowChart/index";
 
 interface AboutWorkshopProps {}
 
