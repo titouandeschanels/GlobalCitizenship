@@ -96,6 +96,7 @@ export const BookOpenLine = styled.div`
 export const BookOpenButton = styled.div`
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 33%;
     height: 100%;
@@ -123,11 +124,24 @@ export const BookOpenContainerRight = styled.div`
 `;
 
 export const BookOpenBadgeTitle = styled.h1`
+    position: absolute;
     font-size: calc(1vw + 1vh + 1vmin);
     font-family: ${Inika};
     color: ${Black};
     margin-bottom: 2%;
     top: 5%;
-    left: 5%;
+    left: 50%;
     width: 100%;
+    transform: translateX(-50%);
+`;
+
+export const BookOpenBadgeDescription = styled.h1`
+    position: absolute;
+    font-size: calc(0.5vw + 0.5vh + 0.5vmin);
+    font-family: ${Inika};
+    color: ${Black};
+    top: 25%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
 `;
