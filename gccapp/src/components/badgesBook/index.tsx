@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BookContainer, BookClosedImage, BookClosedButton, BookClosedTitle, BookOpenImage, BookOpenTitle, BookOpenContainerLeft, BookOpenLine, BookOpenButton, BookOpenContainerRight, BookOpenBadgeTitle } from './elements';
+import { BookContainer, BookClosedImage, BookClosedButton, BookClosedTitle, BookOpenImage, BookOpenTitle, BookOpenContainerLeft, BookOpenLine, BookOpenButton, BookOpenContainerRight, BookOpenBadgeTitle, BookOpenBadgeDescription } from './elements';
 import Blue from '../../assets/badges/blue.png';
 import Red from '../../assets/badges/red.png';
 import Yellow from '../../assets/badges/yellow.png';
@@ -12,29 +12,34 @@ const BadgesBook = () => {
     const [badges, setBadges] = useState([
         {
             badge: {Blue},
-            title: "Blue Badge",
-            description: "You have",
+            title: "This is me",
+            description: "You have completed the This is me Badge, congratulations! You have learned about yourself.",
         },
         {
             badge: {Red},
-            title: "Red Badge",
-            description: "You have",
+            title: "Me and my circles",
+            description: "You have completed the Me and my circles Badge, congratulations! You have learned about your family and friends.",
         },
         {
             badge: {Yellow},
-            title: "Yellow Badge",
-            description: "You have",
+            title: "The influence of perceptions",
+            description: "You have completed the The influence of perceptions Badge, congratulations! You have learned about the importance of perceptions.",
         },
         {
             badge: {Green},
-            title: "Green Badge",
-            description: "You have",
+            title: "Dilemnas",
+            description: "You have completed the Dilemnas Badge, congratulations! You have learned about dilemnas and how to solve them.",
         },
         {
             badge: {DarkGreen},
-            title: "Dark Green Badge",
-            description: "You have",
+            title: "Challenge and Goal Setting",
+            description: "You have completed the Challenge and Goal Setting Badge, congratulations! You have learned about setting goals and how to achieve them.",
         },
+        {
+            badge: {Blue},
+            title: "Value-based challenge creation",
+            description: "You have completed the Value-based challenge creation Badge, congratulations! You have learned about creating challenges based on your values.",
+        }
     ]);
 
     const [cuurentBadge, setCurrentBadge] = useState(0);
@@ -75,6 +80,9 @@ const BadgesBook = () => {
                         <BookOpenBadgeTitle>
                             {badges[cuurentBadge].title}
                         </BookOpenBadgeTitle>
+                        <BookOpenBadgeDescription>
+                            {badges[cuurentBadge].description}
+                        </BookOpenBadgeDescription>
                     </BookOpenContainerRight>
 
                 </BookOpenImage>
