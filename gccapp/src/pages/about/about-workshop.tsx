@@ -1,13 +1,15 @@
-import Page from ".././page";
+import React from 'react';
+import styled from 'styled-components';
+import Page from '../page';
+import workshopFlowImg from '../../assets/aboutpage/workshopflow/WorkshopFlow.png';
+import WorkFlowChart from "../../components/workFlowChart/index";
 
-interface AboutWorkshopProps {
-
-}
+interface AboutWorkshopProps {}
 
 const AboutWorkshop: React.FC<AboutWorkshopProps> = () => {
     return (
         <Page>
-            <h1>About the Workshop Flow</h1>
+            <WorkFlowChart></WorkFlowChart>
         </Page>
     );
 }
