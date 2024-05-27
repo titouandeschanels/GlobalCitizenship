@@ -12,7 +12,7 @@ import React from "react";
 import { ReactComponent as TrophyIcon } from "../../assets/icons/trophy-icon.svg";
 import { ReactComponent as TisismeIcon } from "../../assets/icons/speechbubble-thisisme-icon.svg";
 import {ReactComponent as TrophyLockIcon} from "../../assets/icons/trophy-lock-icon.svg"
-//import {useLevelStore} from "../store/useLevelStore";
+import {useLevelStore} from "../../position_store"; /*offline*/
 
 interface JourneyComponentProps {
 }
@@ -88,8 +88,8 @@ const sdgitem: StepItem[] = [
     },
 ];
 const Journeylayout: React.FC<JourneyComponentProps> = () => {
-    const currentLevel = 1; /*A temporary number*/
-    //const {currentLevel}  = useLevelStore();
+    // const currentLevel = 4; /*A temporary number*/
+    const { currentLevel } = useLevelStore(); /*offline*/
     return (
         <JourneyLayout>
             <Title>

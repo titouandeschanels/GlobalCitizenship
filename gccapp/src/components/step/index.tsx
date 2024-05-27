@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components"
 import {
     Description,
     DescriptionBox,
@@ -9,7 +10,7 @@ import {
     Step,
     Flag,
 } from "./element";
-//import { useLevelStore } from "../store/useLevelStore";
+import { useLevelStore } from "../../position_store"; /*offline*/
 import { ReactComponent as SpeechBubbleIcon } from "../../assets/icons/speechbubble-icon.svg";
 import { ReactComponent as FlagIcon } from "../../assets/icons/journey-flag-icon.svg";
 import { ReactComponent as StepIcon } from "../../assets/icons/journey-step-icon.svg";
@@ -26,8 +27,8 @@ const StepBox: React.FC<StepBoxProps> = ({
     description,
     image: Image,
 }) => {
-    const currentLevel = 1; 
-    //const { currentLevel } = useLevelStore();
+    //const currentLevel = 4;
+    const { currentLevel } = useLevelStore(); /*offline*/
     return (
         <>
             <StepContainer>
@@ -60,3 +61,5 @@ const StepBox: React.FC<StepBoxProps> = ({
 };
 
 export default StepBox;
+
+
