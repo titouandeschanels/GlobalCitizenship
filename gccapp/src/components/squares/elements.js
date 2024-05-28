@@ -20,7 +20,7 @@ export const SquareContainer = styled.div`
     padding: 0 10px;
     font-size: 20px;
     font-weight: 600;
-    gap: 4vw; /* Adjust gap as needed */
+    gap: 4vw;
     position: absolute;
     top: 63vh;
 `;

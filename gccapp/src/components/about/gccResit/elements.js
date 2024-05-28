@@ -13,12 +13,3 @@ export const CenteredImage = styled.img`
     height: auto;
     object-fit: contain;
 `;
-
-export const Text = styled.p`
-    font-size: small;
-    margin-top: 60px;
-    margin-left: 50px;
-    margin-bottom: 50px;
-    line-height: 1.5;
-`;
-

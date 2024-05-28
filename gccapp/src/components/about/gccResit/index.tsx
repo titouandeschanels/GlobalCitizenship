@@ -1,6 +1,6 @@
 import React from "react";
-import { CenteredImage, ImageWrapper, Text } from "./elements";
-import { Header, ContentWrapper } from "../elements"
+import { CenteredImage, ImageWrapper } from "./elements";
+import { Header, ContentWrapper, Text } from "../elements"
 import gccResitImg from '../../../assets/aboutpage/gccResit/gccResit.png';
 
 interface GCCResitProps {
