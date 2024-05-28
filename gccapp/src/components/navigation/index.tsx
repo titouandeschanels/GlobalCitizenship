@@ -7,9 +7,17 @@ import {
 } from "./elements";
 import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
 import { ReactComponent as Arrow } from "../../assets/icons/arrow.svg";
+import { useNavigate } from "react-router-dom";
 
 interface NavigationProps {}
 const Navigation: React.FC<NavigationProps> = () => {
+
+    const navigate = useNavigate(); 
+    const onClickHandler = (path: string) => {
+        navigate(path, { replace: false });
+        return;
+    };
+
     return (
         <NavigationLayout>
             <Title>
@@ -17,34 +25,34 @@ const Navigation: React.FC<NavigationProps> = () => {
                 <TitleIcon />
             </Title>
             <NavigationContainer>
-            <List>
-                <button>
-                    <Arrow />
-                </button>
-                <p>Introduction</p>
-            </List>
-            <List>
-                <button>
-                    <Arrow />
-                </button>
-                <p>Background</p>
-            </List>
-            <List>
-                <button>
-                    <Arrow />
-                </button>
-                <p>Framework</p>
-            </List>
-            <List>
-                <button>
-                    <Arrow />
-                </button>
-                <p>Submission</p>
-            </List>
-            <NavigateLink href="">Extra materials / links</NavigateLink>
-            <div />
-        </NavigationContainer>
-    </NavigationLayout>
+                <List>
+                    <button onClick={() => onClickHandler("/introduction")}>
+                        <Arrow />
+                    </button>
+                    <p>Introduction</p>
+                </List>
+                <List>
+                    <button onClick={() => onClickHandler("/background")}>
+                        <Arrow />
+                    </button>
+                    <p>Background</p>
+                </List>
+                <List>
+                    <button onClick={() => onClickHandler("/framework")}>
+                        <Arrow />
+                    </button>
+                    <p>Framework</p>
+                </List>
+                <List>
+                    <button onClick={() => onClickHandler("/submission")}>
+                        <Arrow />
+                    </button>
+                    <p>Submission</p>
+                </List>
+                <NavigateLink href="">Extra materials / links</NavigateLink>
+                <div />
+            </NavigationContainer>
+        </NavigationLayout>
     );
 };
 

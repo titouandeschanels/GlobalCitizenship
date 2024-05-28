@@ -32,7 +32,9 @@ const idgitem: StepItem[] = [
         mode: "IDG",
         title: "This is me",
         description:
-            "Module description Module description Module description Module description Module description Module description Module description Module description Module description ",
+            `You will be shaping your own definition of what Global Citizenship means to you and what kind of impact you want to make! 
+            
+            Here starts your journey into becoming an active global citizen!`,
         image: TisismeIcon,
     },
     {
