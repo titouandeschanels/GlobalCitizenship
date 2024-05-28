@@ -11,6 +11,7 @@ import AboutGCC from "./pages/about/aboutGCC";
 import AboutGCCResit from "./pages/about/aboutGCC-resit";
 import AboutWorkshop from "./pages/about/about-workshop";
 import AboutGlobalCase from "./pages/about/about-global-case";
+import SubmissionPage from "./pages/submission";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/journey" element={<Journey />} />
+        <Route path="/submission" element={<SubmissionPage />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/cloud" element={<Cloud />} />
         <Route path="/community" element={<Community />} />
