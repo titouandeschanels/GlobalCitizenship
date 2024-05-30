@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { White, Blue, Indigo, Gray } from '../../../colors';
+import { White, Blue, Gray } from '../../../colors';
 
 export const ImageWrapper = styled.div`
     display: flex;
@@ -13,6 +13,7 @@ export const CenteredImage = styled.img`
     max-width: 55%;
     height: auto;
     object-fit: contain;
+    padding-top: 20px;
     padding-bottom: 30px;
     border-bottom: 1px solid lightgrey;
 `;

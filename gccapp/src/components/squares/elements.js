@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Gray, Indigo, White, Blue, Black, Green} from '../../colors';
+import { Gray, Indigo, White, Blue, Black } from '../../colors';
 
 // Responsive breakpoints
 const breakpoints = {
@@ -250,35 +250,5 @@ export const ComputerImage = styled.div`
         width: 75%;
         height: 75%;
         object-fit: contain;
-    }
-`;
-
-export const DownloadButton = styled.button`
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: ${Green};
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${White};
-    font-size: 16px;
-    font-weight: bold;
-    z-index: 10;
-
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 2px 2px 4px ${Gray};
-    }
-    transition: 0.3s;
-
-    img {
-        width: 16px;
-        height: 16px;
     }
 `;

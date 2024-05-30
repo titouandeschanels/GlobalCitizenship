@@ -1,5 +1,5 @@
 import React from "react";
-import { CenteredImage, ImageWrapper, List, ListItem, ButtonWrapper, StyledButton, ChecklistTitle } from "./elements";
+import { CenteredImage, ImageWrapper, List, ListItem, ButtonWrapper, StyledButton } from "./elements";
 import { Header, SubHeader, SmallTitle, ContentWrapper, TextAll } from "../elements"
 import { FaLightbulb } from 'react-icons/fa';
 import globalCaseImg from '../../../assets/aboutpage/globalCase/globalCase.png';

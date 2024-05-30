@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { White, Blue, LightGray } from '../../../colors';
+import { White, LightGray } from '../../../colors';
 
 export const BoxContainer = styled.div`
     display: flex;

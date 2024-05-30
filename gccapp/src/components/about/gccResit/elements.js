@@ -12,4 +12,5 @@ export const CenteredImage = styled.img`
     max-width: 50%;
     height: auto;
     object-fit: contain;
+    padding-bottom: 20px;
 `;
