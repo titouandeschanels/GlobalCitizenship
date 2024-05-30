@@ -1,6 +1,6 @@
 import React from "react";
 import { CenteredImage, ImageWrapper, List, ListItem, ButtonWrapper, StyledButton, ChecklistTitle } from "./elements";
-import { Header, SubHeader, SmallTitle, ContentWrapper, Text } from "../elements"
+import { Header, SubHeader, SmallTitle, ContentWrapper, TextAll } from "../elements"
 import { FaLightbulb } from 'react-icons/fa';
 import globalCaseImg from '../../../assets/aboutpage/globalCase/globalCase.png';
 import deadlineImg from '../../../assets/aboutpage/globalCase/DeadlinesLiveSessions.png';
@@ -13,25 +13,25 @@ const GlobalCaseStudy: React.FC<GlobalCaseProps> = () => {
         <ContentWrapper>
             <Header>About the Global Case Study Challenge</Header>
             <SubHeader>Global Citizenship Certificate (GCC) & Global Case Study Challenge (GCSC)</SubHeader>
-            <Text>
+            <TextAll>
                 We are looking for students who want impact as Global Citizen and earn extra credits
                 (could be part of your electives - vrije ruimte, honours program or as extra-curricular activity).
                 Do you dare to take the Global Citizenship Challenge with us?
-            </Text>
+            </TextAll>
             <SubHeader>Program semester 1 (3 ECTS):</SubHeader>
             <ImageWrapper>
                 <CenteredImage src={globalCaseImg}/>
             </ImageWrapper>
             <SubHeader>Deadlines and live sessions</SubHeader>
-            <Text>
+            <TextAll>
                 GCSC staring 4th of October: 1st virtual session with +400 students from about 22 universities around the
                 gobe and different guiding sessions to help you work on your case.
-            </Text>
+            </TextAll>
             <ImageWrapper>
                 <CenteredImage src={deadlineImg}/>
             </ImageWrapper>
             <SubHeader>Explanation of the Global Case Study Challenge</SubHeader>
-            <Text>
+            <TextAll>
                 More under this link:
                 <a href="https://www.globalcasestudychallenge.com/global-virtual-teams-challenge/">Click here</a>
                 <br/><br/>
@@ -49,19 +49,19 @@ const GlobalCaseStudy: React.FC<GlobalCaseProps> = () => {
                     <ListItem>Corporate Social Responsibility</ListItem>
                     <ListItem>Change management within a merge</ListItem>
                 </List>
-            </Text>
+            </TextAll>
             <SmallTitle>SDGs Integration:</SmallTitle>
-            <Text>
+            <TextAll>
                 Integrate Sustainable Development Goals (SDGs) into decision making to contribute to sustainable and
                 inclusive growth.
-            </Text>
+            </TextAll>
             <ButtonWrapper>
                 <StyledButton>
                     <FaLightbulb style={{ marginRight: '8px' }} />
                     Click here to learn about SDGs!
                 </StyledButton>
             </ButtonWrapper>
-            <Text>
+            <TextAll>
                 The Global Case Study Challenge (#GCSC) is a real intercultural and virtual experience, which provides
                 the participants with invaluable experience for their private and professional lives to make an impact
                 as Global Citizens. Educators from 30 universities across the globe with more than 1450 students
@@ -72,16 +72,16 @@ const GlobalCaseStudy: React.FC<GlobalCaseProps> = () => {
                 within the global context of business and society. We are committed to preparing global leaders that will
                 integrate sustainability and Sustainable Development Goals (SDGs) into their decision-making at all
                 levels to contribute to inclusive growth and prosperity around the world (GCSC team).
-            </Text>
+            </TextAll>
             <SmallTitle>Key learning objectives of the GCSC 2023:</SmallTitle>
-            <Text>
+            <TextAll>
                 The GCSC is designed to help participants develop their intercultural and digital communication
                 competencies, and at the same time raise their awareness of Sustainable Development Goals and their
                 place in the organizational context. Experiential learning takes place throughout the interaction in
                 virtual intercultural teams; with students assigned to work together as a group, apply their knowledge,
                 and digital communication skills in self-directed and self-organized virtual teams. Over the two months
                 of the GCSC program students will practice their Global Citizenship by:
-            </Text>
+            </TextAll>
         </ContentWrapper>
     )
 };

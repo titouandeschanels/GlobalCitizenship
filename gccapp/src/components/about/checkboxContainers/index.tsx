@@ -1,11 +1,9 @@
 import React from "react";
 import { Container, Header, Column, Item, IconWrapper, TextWrapper, SectionWrapper,} from "./elements";
-import { ContentWrapper} from "../elements";
-import { FaCheckCircle } from "react-icons/fa";
-import checkmarkImage from '../../../assets/aboutpage/globalCase/checkmarkIcon.png';
+import checkmarkImage from '../../../assets/aboutpage/gccProgram/checkmarkIcon.png';
 
 
-const LearningObjectives = () => {
+const CheckboxContainer = () => {
     return (
         <Container>
             <SectionWrapper>
@@ -78,5 +76,4 @@ const LearningObjectives = () => {
     );
 };
 
-export default LearningObjectives;
-
+export default CheckboxContainer;

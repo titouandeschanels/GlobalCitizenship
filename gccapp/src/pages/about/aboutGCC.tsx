@@ -1,4 +1,6 @@
 import Page from ".././page";
+import GCCProgram from "../../components/about/gccProgram/index"
+import AssignmentsChecklist from "../../components/about/assignmentChecklist";
 
 interface AboutGCCProps {
 
@@ -7,7 +9,8 @@ interface AboutGCCProps {
 const AboutGCC: React.FC<AboutGCCProps> = () => {
     return (
         <Page>
-            <h1>About the GCC Program</h1>
+            <GCCProgram></GCCProgram>
+            <AssignmentsChecklist></AssignmentsChecklist>
         </Page>
     );
 }
