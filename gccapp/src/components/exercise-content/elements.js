@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Orange } from '../../colors';
+import { Gray, Orange } from '../../colors';
 
 export const StyledContainer = styled.div`
     padding: 30px;
@@ -60,4 +60,9 @@ export const ButtonSubmissionPoint = styled.button`
   &:hover {
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
   }
+`;
+
+export const Navigation = styled.text`
+  color: ${Gray};
+  font-size: 14px
 `;

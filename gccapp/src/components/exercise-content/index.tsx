@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ButtonNavigate, StyledContainer, ButtonContainer, ButtonSubmissionPoint } from './elements';
+import { ButtonNavigate, StyledContainer, ButtonContainer, ButtonSubmissionPoint, Navigation as CurrentNavigation } from './elements';
 import CreativeFrames from './creative-frames';
 import SelfAwareness from './self-awareness';
 import SacredBullsOne from './sacred-bulls-1';
@@ -38,6 +38,9 @@ const Carousel: React.FC = () => {
 
     return (
         <StyledContainer>
+            <CurrentNavigation>
+                Home {'>'} Journey {'>'} This is Me
+            </CurrentNavigation>
             <h2>This is me</h2>
             <ButtonContainer>
                 {currentCard !== 0 && (
@@ -51,7 +54,7 @@ const Carousel: React.FC = () => {
                         <img src={ArrowRight} alt="ArrowRight" />
                     </ButtonNavigate>
                 ) : (
-                    <Link to="/"> {/* There is no submission point yet */}
+                    <Link to="/submission">
                         <ButtonSubmissionPoint>
                             <h3>Submission<br />Point</h3>
                             <p>Get your badge!</p>
