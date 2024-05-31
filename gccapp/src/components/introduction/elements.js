@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { Green, Gray } from '../../colors';
+import { Green, Gray, Blue} from '../../colors';
 
 export const IntroductionLayout = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    padding: 50px;
     height: 100vh;
     overflow-y: scroll;
 `;
@@ -114,3 +114,48 @@ export const ProgressBox = styled.div`
     justify-content: space-between;
     position: relative;
 `;
+export const ModuleButton = styled.div`
+    display: flex;
+    width : 95%;
+    margin-top : 20px;
+    justify-content: flex-end;
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+`;
+
+export const NextModuleButton = styled.button`
+display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 183px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: ${Blue};
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px #d9d9d9;
+    `;
+export const AllModuleButton = styled.button`
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 183px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px #d9d9d9;
+    `;

@@ -10,16 +10,20 @@ const Intro2: React.FC<Intro2Props> = () => {
             <p>
                 The acquired knowledge (KNOWING), skills (DOING) and
                 dispositions (BEING) needed to promote sustainable development
-                are the ground zero of <span style = {{color :Blue }}> active citizens</span>.
+                are the ground zero of{" "}
+                <span style={{ color: Blue }}> active citizens</span>.
             </p>
             <ImageBox>
                 <Intro2SVG />
             </ImageBox>
             <p>
-                According to Bridge 47 active citizens make a better world:
+                <p>
+                    According to <span>Bridge 47 </span>active citizens make a
+                    better world:
+                </p>
                 <li>
                     where individual citizens understand that they have
-                    <span>active roles</span>to play in changing big issues
+                    <span> active roles </span>to play in changing big issues
                 </li>
                 <li>
                     where people seek and find the things that connect them
@@ -35,8 +39,7 @@ const Intro2: React.FC<Intro2Props> = () => {
                 education provides us with new possibilities to envision a
                 world,
                 <span>
-                    where problems are systematically resolved and transformed
-                </span>
+                    where problems are systematically resolved and transformed </span>
                 into new possibilities for reaching humanity's potential.
             </p>
             <p>

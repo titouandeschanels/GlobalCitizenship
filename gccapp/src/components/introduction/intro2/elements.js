@@ -9,6 +9,9 @@ export const Intro2Layout = styled.div`
         font-size: 22px;
         font-weight: 550;
     }
+    & > p  >  p > span {
+            text-decoration-line :underline ;
+    }
     & > p > span {
         font-size: 16px;
         font-weight: bold;

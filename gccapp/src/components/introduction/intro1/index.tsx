@@ -1,5 +1,6 @@
 import  {Intro1Layout, ImageBox, Notification} from "./elements";
 import {ReactComponent as Intro1SVG} from "../../../assets/icons/Intro/intro1-icon.svg"
+import {ReactComponent as NotificationIcon} from "../../../assets/icons/Intro/intro1-notification.svg"
 interface Intro1Props {}
 
 const Intro1: React.FC<Intro1Props> = () => {
@@ -13,18 +14,16 @@ const Intro1: React.FC<Intro1Props> = () => {
             </p>
             <p>
                 The Sustainable Development Goals' target 4, item 4.7. points
-                out the relevance of education for Global Citizenship: 
-                <br/>"4.7. By
-                2030, we have to ensure that all learners
-                <span>
+                out the relevance of education for Global Citizenship:
+                <br />
+                "4.7. By 2030, we have to ensure that all learners <span>
                     acquire the knowledge and skills needed to promote
-                    sustainable development
+                    sustainable development,
                 </span>
-                , including, among others, through education for sustainable
+                including, among others, through education for sustainable
                 development and sustainable lifestyles, human rights, gender
-                equality, promotion of a culture of peace and non-violence,
-                <span>
-                    global citizenship , and appreciation of cultural diversity
+                equality, promotion of a culture of peace and non-violence, <span>
+                    global citizenship, and appreciation of cultural diversity
                     and of culture’s contribution to sustainable development
                 </span>
                 ” (UNESCO, Education 2030, 2021).
@@ -32,7 +31,10 @@ const Intro1: React.FC<Intro1Props> = () => {
             <ImageBox>
                 <Intro1SVG />
             </ImageBox>
-            <Notification />
+            <Notification href="https://brightspace.hhs.nl/content/enforced/74916-THUAS-GBBP-20232023_HM/SDGs_Learning%20objectives%20x%20SDG_UNESCO.pdf">
+                <NotificationIcon />
+                Click here to learn more about Sustainable Development Goals!
+            </Notification>
         </Intro1Layout>
     );
 };

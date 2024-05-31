@@ -19,4 +19,17 @@ export const ImageBox = styled.div`
     justify-content: center;
     align-items: center;
 `;
-export const Notification = styled.div``;
+
+export const ModuleButton = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    & > div {
+        flex-direction: column;
+    }
+`;
+
+export const NextModuleButton = styled.button`
+
+`;
+
+export const AllModuleButton = styled.button``;

@@ -5,21 +5,27 @@ import {
     IntroNavigation,
     TitleAndProgress,
     TitleBox,
-    ButtonNavigation, 
     ButtonBox,
-    ContentCardStyled,
+    ButtonNavigation,
     ContentBox,
+    ContentCardStyled,
     ProgressBar,
     ProgressBarActive,
     Circle,
     CircleActive,
     ProgressBox,
+    ModuleButton,
+    NextModuleButton,
+    AllModuleButton,
 } from "./elements";
+import { useNavigate } from "react-router-dom";
 import Intro1 from "./intro1";
 import Intro2 from "./intro2";
 import Intro3 from "./intro3";
 import Intro4 from "./intro4";
 import Intro5 from "./intro5";
+import {ReactComponent as AllModuleArrow} from "../../assets/icons/Intro/all-module-arrow.svg"
+import {ReactComponent as NextModuleArrow} from "../../assets/icons/Intro/next-module-arrow.svg"
 import {ReactComponent as ArrowRight } from "../../assets/icons/Intro/ArrowRight.svg"
 import {ReactComponent as ArrowLeft} from "../../assets/icons/Intro/ArrowLeft.svg";
 import { ReactComponent as NavArrow } from "../../assets/icons/intro-navigate-arrow.svg";
@@ -27,12 +33,19 @@ interface IntroductionProps {
 }
 
 const Introduction: React.FC<IntroductionProps> = () => {
+    const navigate = useNavigate();
     const cardLength: number = 5;
     const [currentCard, setCurrentCard] = useState<number>(0);
     const progressArr = [1,2,3,4,5];
     const circle = useRef<HTMLDivElement | null>(null);
     const progressBar = useRef<HTMLDivElement | null>(null);
 
+    const onClickNextModule = () =>{
+        navigate('/background')
+    }   
+    const onClickAllModule = () => {
+        navigate("/journey");
+    };   
     const nextCard = () => {
         setCurrentCard((prevCard) => (prevCard + 1) % cardLength);
     };
@@ -54,6 +67,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
             progressBar.current.style.width = `${(progressCount + 1) * 25}%`;
         }
     };
+
     let cardContentComponent: JSX.Element | null = null;
     if (currentCard === 0) {
         cardContentComponent = <Intro1 />;
@@ -71,7 +85,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
             <IntroNavigation>
                 <p>Home</p>
                 <NavArrow />
-                <p>Global Citizenship Programme</p>
+                <p>journey</p>
                 <NavArrow />
                 <p>Introduction</p>
             </IntroNavigation>
@@ -100,7 +114,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
                     <ButtonBox>
                         {currentCard === 0 && (
                             <ButtonNavigation style={{ visibility: "hidden" }}>
-                                <ArrowRight/>
+                                <ArrowRight />
                             </ButtonNavigation>
                         )}
                         {currentCard !== 0 && (
@@ -110,7 +124,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
                                     MinusStep();
                                 }}
                             >
-                                <ArrowLeft/>
+                                <ArrowLeft />
                             </ButtonNavigation>
                         )}
                         {currentCard !== cardLength - 1 && (
@@ -120,13 +134,28 @@ const Introduction: React.FC<IntroductionProps> = () => {
                                     AddStep();
                                 }}
                             >
-                                <ArrowRight/>
+                                <ArrowRight />
                             </ButtonNavigation>
                         )}
                     </ButtonBox>
                     {cardContentComponent}
                 </ContentCardStyled>
             </ContentBox>
+            {currentCard === 4 && (
+                <ModuleButton>
+                    <div>
+                        <NextModuleButton onClick={onClickNextModule}>
+                            Next module
+                            <NextModuleArrow />
+                        </NextModuleButton>
+                        <AllModuleButton onClick={onClickAllModule}>
+                            <AllModuleArrow />
+                            <AllModuleArrow />
+                            All modules
+                        </AllModuleButton>
+                    </div>
+                </ModuleButton>
+            )}
         </IntroductionLayout>
     );
 }

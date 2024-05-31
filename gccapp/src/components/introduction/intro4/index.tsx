@@ -3,7 +3,7 @@ import { ReactComponent as Intro4SVG } from "../../../assets/icons/Intro/intro4-
 
 interface Intro4Props {}
 
-const Intro3: React.FC<Intro4Props> = () => {
+const Intro4: React.FC<Intro4Props> = () => {
     return (
         <Intro4Layout>
             <h3>The purpose of the Global Citizenship Program</h3>
@@ -65,5 +65,5 @@ const Intro3: React.FC<Intro4Props> = () => {
         </Intro4Layout>
     );
 };
-export default Intro3;
+export default Intro4;
 
