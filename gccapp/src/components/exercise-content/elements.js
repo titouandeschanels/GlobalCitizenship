@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Blue } from '../../colors';
 
 export const StyledContainer = styled.div`
     padding: 30px;
@@ -18,6 +19,10 @@ export const StyledCardContent = styled.div`
 
 export const TextBold = styled.div`
     font-weight: bold;
+`;
+
+export const TextBlue = styled.text`
+    color: ${Blue}
 `;
 
 export const ButtonNavigate = styled.button`

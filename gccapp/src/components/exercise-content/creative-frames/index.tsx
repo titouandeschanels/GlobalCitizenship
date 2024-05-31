@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCardContent, TextBold } from '../elements';
+import { StyledCardContent, TextBold, TextBlue } from '../elements';
 import { Box1, Box2, Box3 } from './elements'
 import bookshelf from '../../../assets/first-exercise/bookshelf.png'
 
@@ -12,9 +12,9 @@ const CreativeFrames: React.FC = () => {
                         <td>
                             <h2>Creative Frames</h2>
                             <div>For this assignment you will need (color)pen(s) and paper use your notebook:<br />
-                                <br /><TextBold>Step 1:</TextBold>Write, draw, picture anything you associate with “Global”.<br />
-                                <br /><TextBold>Step 2:</TextBold>Write, draw, picture anything you associate with “Citizenship”.<br />
-                                <br /><TextBold>Step 3:</TextBold>Write, draw, picture anything you associate with “Global Citizenship”.<br />
+                                <br /><TextBold>Step 1:</TextBold>Write, draw, picture anything you associate with “<TextBlue>Global</TextBlue>”.<br />
+                                <br /><TextBold>Step 2:</TextBold>Write, draw, picture anything you associate with “<TextBlue>Citizenship</TextBlue>”.<br />
+                                <br /><TextBold>Step 3:</TextBold>Write, draw, picture anything you associate with “<TextBlue>Global Citizenship</TextBlue>”.<br />
                                 <br /><TextBold>Step 4:</TextBold>Compare your frames with at least 2 other classmates, looking for similarities/differences in steps 1-2-3. Take note of them:
                                 <br />Similarities:
                                 <br />Differences:<br />
