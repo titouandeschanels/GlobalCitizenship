@@ -12,7 +12,7 @@ import AboutGCCResit from "./pages/about/aboutGCC-resit";
 import AboutWorkshop from "./pages/about/about-workshop";
 import AboutGlobalCase from "./pages/about/about-global-case";
 import SubmissionPage from "./pages/submission";
-
+import IntroductionPage from "./pages/introduction"
 function App() {
 
   return (
@@ -30,6 +30,7 @@ function App() {
         <Route path="/aboutGCCResit" element={<AboutGCCResit />} />
         <Route path="/aboutWorkshop" element={<AboutWorkshop />} />
         <Route path="/aboutGlobalCase" element={<AboutGlobalCase />} />
+        <Route path = "/introduction" element ={<IntroductionPage/>}/>
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
