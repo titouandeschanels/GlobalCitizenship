@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Blue } from '../../colors';
+import { Orange } from '../../colors';
 
 export const StyledContainer = styled.div`
     padding: 30px;
@@ -21,8 +21,9 @@ export const TextBold = styled.div`
     font-weight: bold;
 `;
 
-export const TextBlue = styled.text`
-    color: ${Blue}
+export const TextOrange = styled.text`
+    color: ${Orange};
+    font-weight: bold;
 `;
 
 export const ButtonNavigate = styled.button`

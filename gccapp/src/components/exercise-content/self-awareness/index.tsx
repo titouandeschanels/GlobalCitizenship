@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCardContent, TextBlue } from '../elements';
+import { StyledCardContent, TextOrange } from '../elements';
 import selfA from '../../../assets/first-exercise/self-awareness.png'
 import { CenteredImage } from './elements';
 
@@ -12,7 +12,7 @@ const SelfAwareness: React.FC = () => {
                         <td>
                             <h2>Self-Awareness</h2>
                             <p>
-                                Global Citizenship is about “<TextBlue>reflective participation</TextBlue>” and Collaborative participation: “<TextBlue>challenge-taking</TextBlue>”.<br />
+                                Global Citizenship is about “<TextOrange>reflective participation</TextOrange>” and Collaborative participation: “<TextOrange>challenge-taking</TextOrange>”.<br />
                                 <br />By reflecting on and framing our own views, beliefs and norms we can start to recognize the triggers and patterns that influence our world perception. Being aware of these triggers and patterns in our world perception gives us the opportunity to actively shape how we see and interact with the world.<br />
                                 <br />Think of a situation you were shocked by someone else's behaviour, way of doing or thinking. Refer to this situation by answering the questions below.
                             </p>

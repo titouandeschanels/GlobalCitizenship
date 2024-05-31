@@ -1,34 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-import { StyledCardContent, TextBold, TextBlue } from '../elements';
+import { StyledCardContent, TextBold, TextOrange } from '../elements';
 import { Green, Orange, Pink, Indigo, Blue } from '../../../colors';
-import { Popup, PopupText, RingContainer } from './elements';
-
-const Ring = styled.div<{ size: number, color: string }>`
-    width: ${(props) => props.size}px;
-    height: ${(props) => props.size}px;
-    background-color: ${(props) => props.color};
-    border-radius: 50%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover .popup {
-        display: block;
-    }
-`;
-
-const PopupTitle = styled.h4<{ color: string }>`
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    font-weight: bold;
-    color: ${(props) => props.color};
-`;
+import { Popup, PopupText, PopupTitle, Ring, RingContainer } from './elements';
 
 const GlobalCompetence: React.FC = () => {
-
     const ringsData: { title: string, text: React.ReactNode }[] = [
         {
             title: "Participatory democracy",
@@ -89,30 +64,25 @@ const GlobalCompetence: React.FC = () => {
                             <h2>Global Competence Model</h2>
                             <div>
                                 Now we are going to link your Sacred Bulls with the Global Competence Model. Below is the Global Competence Model.
-                                <br />Can you remember what each ring stands for? <TextBlue>Place your cursor on each ring to see the explanations!</TextBlue>
+                                <br />Can you remember what each ring stands for? <TextOrange>Place your cursor on each ring to see the explanations!</TextOrange>
                             </div>
                             <br />
                             <RingContainer>
                                 {ringsData.map((data, index) => (
-                                    <Ring
-                                        key={index}
-                                        size={ringSizes[index]}
-                                        color={ringColors[index]}
-                                    >
+                                    <Ring style={{ height: ringSizes[index], width: ringSizes[index]}} key={index} color={ringColors[index]}>
+
                                         <Popup className="popup">
                                             <PopupTitle color={ringColors[index]}>{data.title}</PopupTitle>
                                             <PopupText>{data.text}</PopupText>
                                         </Popup>
-
                                     </Ring>
                                 ))}
                             </RingContainer>
                             <br />
                             <div>
-                                <TextBlue>What are sayings that are "common knowledge" for you (from your background)? Write a couple of them that are true to you:</TextBlue><br />
+                                <TextOrange>What are sayings that are "common knowledge" for you (from your background)? Write a couple of them that are true to you:</TextOrange><br />
                                 Ex. People are not always open-minded, People are in general…, People should..., People learn better when...<br />
-
-                                <br /><TextBlue>Where do those expressions fit in the model?</TextBlue><br />
+                                <br /><TextOrange>Where do those expressions fit in the model?</TextOrange><br />
                                 Ex: “Doe maar gewoon, doe maar normaal” / (zo hoort het!): which of these dimensions does this expression relate to, in your own view and why?
                                 <br />Add your reasoning to it! (Self-awareness = S; Risk-taking = R; Open-mindedness = O; Attentiveness to diversity =D)
                             </div>
@@ -123,4 +93,5 @@ const GlobalCompetence: React.FC = () => {
         </StyledCardContent>
     );
 }
+
 export default GlobalCompetence;

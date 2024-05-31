@@ -9,45 +9,27 @@ import purple from '../../../assets/first-exercise/purple.png';
 import { ButtonClicked, ButtonStyled, ExpandableButton, ExpandedContent } from './elements';
 
 const SacredBullsOne: React.FC = () => {
-        // state variables for managing component state
-        const [isExpandedDutch, setIsExpandedDutch] = useState(false);
-        const [isExpandedNonDutch, setIsExpandedNonDutch] = useState(false);
-    
-        const [pinkClickedState, setPinkClickedState] = useState(false);
-        const [greenClickedState, setGreenClickedState] = useState(false);
-        const [orangeClickedState, setOrangeClickedState] = useState(false);
-        const [blueClickedState, setBlueClickedState] = useState(false);
-        const [purpleClickedState, setPurpleClickedState] = useState(false);
-    
-        // Event handlers for expanding/collapsing content
-        const handleDutchButtonClick = () => {
-            setIsExpandedDutch(!isExpandedDutch);
-        };
-    
-        const handleNonDutchButtonClick = () => {
-            setIsExpandedNonDutch(!isExpandedNonDutch);
-        };
-    
-        // Event handlers for handling card clicks
-        const handlePinkCardClick = () => {
-            setPinkClickedState(true);
-        };
-    
-        const handleGreenCardClick = () => {
-            setGreenClickedState(true);
-        };
-    
-        const handleOrangeCardClick = () => {
-            setOrangeClickedState(true);
-        };
-    
-        const handleBlueCardClick = () => {
-            setBlueClickedState(true);
-        };
-    
-        const handlePurpleCardClick = () => {
-            setPurpleClickedState(true);
-        };
+
+    const cardData = [
+        { color: Pink, image: pink, prompt: 'I come from a family...' },
+        { color: Green, image: green, prompt: 'I come from an environment...' },
+        { color: Orange, image: orange, prompt: 'I come from a culture that...', example: 'specify different cultures by\nrepeating this prompt'},
+        { color: Blue, image: blue, prompt: 'I come from a background that...', example: 'ex. community, religion,\nupbringing, etc' },
+        { color: Purple, image: purple, prompt: 'I feel...', example: 'ex. nationality, ethnicity'}
+    ];
+    const [isExpandedDutch, setIsExpandedDutch] = useState(false);
+    const [isExpandedNonDutch, setIsExpandedNonDutch] = useState(false);
+    const [clickedCards, setClickedCards] = useState(new Array(cardData.length).fill(false));
+
+    const handleButtonClick = (index: number) => {
+        const newClickedCards = [...clickedCards];
+        newClickedCards[index] = true;
+        setClickedCards(newClickedCards);
+    };
+
+    const handleExpandableButtonClick = (setExpanded: React.Dispatch<React.SetStateAction<boolean>>) => {
+        setExpanded((prevExpanded) => !prevExpanded);
+    };
 
     return (
         <StyledCardContent>
@@ -57,7 +39,7 @@ const SacredBullsOne: React.FC = () => {
                         <td>
                             <h2>Sacred Bulls 1</h2>
                             <h4>Activity 1</h4>
-                            <ExpandableButton onClick={handleDutchButtonClick} style={{ height: isExpandedDutch ? '130px' : '40px' }}>
+                            <ExpandableButton onClick={() => handleExpandableButtonClick(setIsExpandedDutch)} style={{ height: isExpandedDutch ? '130px' : '40px' }}>
                                 Dutch-Speakers
                                 {isExpandedDutch && (
                                     <ExpandedContent>
@@ -72,7 +54,7 @@ const SacredBullsOne: React.FC = () => {
                     </tr>
                     <tr>
                         <td>
-                            <ExpandableButton onClick={handleNonDutchButtonClick} style={{ height: isExpandedNonDutch ? '240px' : '40px' }}>
+                            <ExpandableButton onClick={() => handleExpandableButtonClick(setIsExpandedNonDutch)} style={{ height: isExpandedNonDutch ? '240px' : '40px' }}>
                                 Non-Dutch Speakers
                                 {isExpandedNonDutch && (
                                     <ExpandedContent>
@@ -92,44 +74,22 @@ const SacredBullsOne: React.FC = () => {
                     <tr>
                         <td>
                             <div style={{ display: 'flex' }}>
-                                {pinkClickedState ?
-                                    <ButtonClicked style={{ borderColor: Pink }}>
-                                        <h2>I come from a family...</h2>
-                                    </ButtonClicked> :
-                                    <ButtonStyled style={{ backgroundColor: Pink }} onClick={handlePinkCardClick}>
-                                        <img src={pink} alt="pink" />
-                                    </ButtonStyled>}
-                                {greenClickedState ?
-                                    <ButtonClicked style={{ borderColor: Green }}>
-                                        <h2>I come from an<br />environment...</h2>
-                                    </ButtonClicked> :
-                                    <ButtonStyled style={{ backgroundColor: Green }} onClick={handleGreenCardClick}>
-                                        <img src={green} alt="green" />
-                                    </ButtonStyled>}
-                                {orangeClickedState ?
-                                    <ButtonClicked style={{ borderColor: Orange }}>
-                                        <h2>I come from a<br />culture that...</h2>
-                                        <p>specify different culture by<br />repeating this prompt</p>
-                                    </ButtonClicked> :
-                                    <ButtonStyled style={{ backgroundColor: Orange }} onClick={handleOrangeCardClick}>
-                                        <img src={orange} alt="orange" />
-                                    </ButtonStyled>}
-                                {blueClickedState ?
-                                    <ButtonClicked style={{ borderColor: Blue }}>
-                                        <h2>I come from a<br />background that...</h2>
-                                        <p>ex. community, religion,<br />upbringing, etc</p>
-                                    </ButtonClicked> :
-                                    <ButtonStyled style={{ backgroundColor: Blue }} onClick={handleBlueCardClick}>
-                                        <img src={blue} alt="blue" />
-                                    </ButtonStyled>}
-                                {purpleClickedState ?
-                                    <ButtonClicked style={{ borderColor: Purple }}>
-                                        <h2>I feel...</h2>
-                                        <p>ex. nationality, ethnicity</p>
-                                    </ButtonClicked> :
-                                    <ButtonStyled style={{ backgroundColor: Purple }} onClick={handlePurpleCardClick}>
-                                        <img src={purple} alt="purple" />
-                                    </ButtonStyled>}
+                                {cardData.map((card, index) => (
+                                    <React.Fragment key={index}>
+                                        {clickedCards[index] ? (
+                                            <ButtonClicked style={{ borderColor: card.color }}>
+                                                <h2>{card.prompt}</h2>
+                                                {card.example && (
+                                                    <p>{card.example}</p>
+                                                )}
+                                            </ButtonClicked>
+                                        ) : (
+                                            <ButtonStyled style={{ backgroundColor: card.color }} onClick={() => handleButtonClick(index)}>
+                                                <img src={card.image} alt={card.color} />
+                                            </ButtonStyled>
+                                        )}
+                                    </React.Fragment>
+                                ))}
                             </div>
                         </td>
                     </tr>
