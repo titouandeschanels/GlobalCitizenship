@@ -1,4 +1,4 @@
-import {SquareContainer, SquareItemAbout, ImageRow, TextRow, SquareTitleAbout, QuestionImage, PlantImage, PaperImage, ComputerImage} from './elements';
+import {SquareContainer, SquareItem, ImageRow, TextRow, SquareTitle, QuestionImage, PlantImage, PaperImage, ComputerImage} from './elements';
 import computer from '../../assets/aboutpage/computer.png';
 import paper from '../../assets/aboutpage/paper.png';
 import plant from '../../assets/aboutpage/plant.png';
@@ -11,46 +11,46 @@ const SquaresHome = () => {
 
     return (
         <SquareContainer>
-            <SquareItemAbout onClick={() => handleClick('/aboutGCC')}>
+            <SquareItem onClick={() => handleClick('/aboutGCC')}>
                 <ImageRow>
                     <QuestionImage>
                     <img src={questionmark} alt="questionmark"/>
                     </QuestionImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitleAbout>About the GCC Program</SquareTitleAbout>
+                    <SquareTitle>About the Global EU Program</SquareTitle>
                 </TextRow>
-            </SquareItemAbout>
-            <SquareItemAbout onClick={() => handleClick('/aboutWorkshop')}>
+            </SquareItem>
+            <SquareItem onClick={() => handleClick('/aboutWorkshop')}>
                 <ImageRow>
                     <PlantImage>
                         <img src={plant} alt="plant"/>
                     </PlantImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitleAbout>About the Workshop Flow</SquareTitleAbout>
+                    <SquareTitle>About the Workshop Flow</SquareTitle>
                 </TextRow>
-            </SquareItemAbout>
-            <SquareItemAbout onClick={() => handleClick('/aboutGlobalCase')}>
+            </SquareItem>
+            <SquareItem onClick={() => handleClick('/aboutGlobalCase')}>
                 <ImageRow>
                     <PaperImage>
                         <img src={paper} alt="paper"/>
                     </PaperImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitleAbout>About the Global Case Study Challenge</SquareTitleAbout>
+                    <SquareTitle>About the Global EU Challenge</SquareTitle>
                 </TextRow>
-            </SquareItemAbout>
-            <SquareItemAbout onClick={() => handleClick('/AboutGCCResit')}>
+            </SquareItem>
+            <SquareItem onClick={() => handleClick('/AboutGCCResit')}>
                 <ImageRow>
                     <ComputerImage>
                         <img src={computer} alt="computer"/>
                     </ComputerImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitleAbout>About the GCC Resit</SquareTitleAbout>
+                    <SquareTitle>About the GCC Resit</SquareTitle>
                 </TextRow>
-            </SquareItemAbout>
+            </SquareItem>
         </SquareContainer>
     );
 }

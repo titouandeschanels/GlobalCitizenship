@@ -8,7 +8,7 @@ import checkFileIcon from '../../../assets/aboutpage/gccProgram/checkFileIcon.pn
 const GCCProgram = () => {
     return (
         <ContentWrapper>
-            <Header>About the GCC Program</Header>
+            <Header>About the Global EU Program</Header>
             <SubHeader>E-learning explained</SubHeader>
             {/*First boxes*/}
             <BoxContainer>
@@ -20,7 +20,7 @@ const GCCProgram = () => {
                         <Text>
                             <b>Step 1:</b>
                             <br/>
-                            Go through the reading content in the GC Program module to get informed
+                            Go through the practical information in the Global EU Program module to get informed
                             before starting the tasks.
                         </Text>
                     </TextColumn>
@@ -33,7 +33,7 @@ const GCCProgram = () => {
                         <Text>
                             <b>Step 2:</b>
                             <br/>
-                            Go through the e-learning in the Start Modules on home page. Follow the
+                            Go through the Journey in the Start Modules on home page. Follow the
                             instructions when following each module.
                         </Text>
                     </TextColumn>
@@ -54,7 +54,7 @@ const GCCProgram = () => {
             </BoxContainer>
             <SubHeaderWithLine>Assignments</SubHeaderWithLine>
             <TextAll>
-                Deadlines meant for students participating in the Global Case Study Challenge COIL, starting on the
+                Deadlines meant for students participating in the Global EU Challenge, starting on the
                 4th of October and ending in end of November:
             </TextAll>
             {/*Second boxes*/}
@@ -103,7 +103,7 @@ const GCCProgram = () => {
                 </Box>
             </BoxContainer>
             <TextWithLine>
-                Definitive deadline for those students participating in the Global Case Study Challenge world-COIL
+                Definitive deadline for those students participating in the Global EU Challenge world-COIL
                 (all assignments submitted) is the 3rd of October (noon: 12:00/midday).
                 <br/>
                 *Please notice that all assignments need to be submitted before the start of the GCSC sessions

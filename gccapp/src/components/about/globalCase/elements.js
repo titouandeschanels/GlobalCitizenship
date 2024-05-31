@@ -21,12 +21,12 @@ export const CenteredImage = styled.img`
 export const List = styled.ul`
     margin-top: 30px;
     margin-bottom: 50px;
-    line-height: 1.5;
+    line-height: 1.6;
     list-style-type: disc;
 `;
 
 export const ListItem = styled.li`
-    font-size: small;
+    font-size: 15px;
     margin-top: 10px;
 `;
 
@@ -45,31 +45,16 @@ export const StyledButton = styled.button`
     background-color: ${Blue};
     color: ${White};
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     padding: 10px 20px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    width: 55%;
-    height: 3vw;
+    width: 70%;
+    height: 3.2vw;
     box-shadow: 1px 1px 4px ${Gray};
     
     &:hover {
         box-shadow: 2px 2px 4px ${Gray};
     }
-`;
-
-export const ChecklistTitle = styled.button`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: ${Blue};
-    color: ${White};
-    font-weight: bold;
-    font-size: 14px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    width: 17%;
-    height: 3vw;
 `;

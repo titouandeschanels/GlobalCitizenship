@@ -4,21 +4,21 @@ export const Header = styled.h2`
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 80%;
 `;
 
 export const SubHeader = styled.h3`
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 80%;
 `;
 
 export const SmallTitle = styled.h4`
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 80%;
 `;
 
 export const ContentWrapper = styled.div`
@@ -27,8 +27,8 @@ export const ContentWrapper = styled.div`
 `;
 
 export const TextAll = styled.p`
-    font-size: small;
-    width: 70%;
+    font-size: 15px;
+    width: 80%;
     margin: 10px auto 30px;
-    line-height: 1.5;
+    line-height: 1.6;
 `;

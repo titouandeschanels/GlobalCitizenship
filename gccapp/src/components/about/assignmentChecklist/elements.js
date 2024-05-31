@@ -22,26 +22,9 @@ export const Box = styled.div`
     position: relative;
 `;
 
-export const IconWrapper = styled.div`
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 20px; /* Adjust width according to your icon size */
-    height: 20px; /* Adjust height according to your icon size */
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
-`;
-
 export const Header = styled.h3`
     font-size: 16px;
     margin-bottom: 10px;
-`;
-
-export const Text = styled.p`
-    font-size: 14px;
 `;
 
 export const List = styled.ul`
@@ -54,6 +37,8 @@ export const ListItem = styled.li`
     align-items: center;
     margin-bottom: 10px;
     padding-bottom: 3px;
+    font-size: 14px;
+    line-height: 1.4;
 `;
 
 export const BulletIcon = styled.img`

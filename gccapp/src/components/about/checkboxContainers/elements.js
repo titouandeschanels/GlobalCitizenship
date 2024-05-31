@@ -60,5 +60,5 @@ export const IconWrapper = styled.div`
 export const TextWrapper = styled.div`
     font-size: 14px;
     color: #333;
-    flex: 1; /* Takes up remaining space in the flex container */
+    flex: 1;
 `;

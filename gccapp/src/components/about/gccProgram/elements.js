@@ -1,20 +1,20 @@
 import styled from "styled-components";
-import { White, Blue } from '../../../colors'; // Adjust the import according to your colors file
+import { White, Blue } from '../../../colors';
 
 export const SubHeaderWithLine = styled.h3`
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 80%;
     padding-top: 50px;
     border-top: 1px solid lightgrey;
 `;
 
 export const TextWithLine = styled.p`
-    font-size: small;
-    width: 70%;
+    font-size: 15px;
+    width: 80%;
     margin: 10px auto 50px;
-    line-height: 1.5;
+    line-height: 1.6;
     padding-top: 30px;
     padding-bottom: 40px;
     border-bottom: 1px solid lightgrey;
@@ -32,7 +32,7 @@ export const Box = styled.div`
     background-color: ${Blue};
     color: ${White};
     width: 25%;
-    height: 90px;
+    height: 100px;
     padding: 20px;
     border-radius: 18px;
     border: none;
@@ -66,5 +66,5 @@ export const TextColumn = styled.div`
 export const Text = styled.div`
     margin-left: 30px;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.5;
 `;
