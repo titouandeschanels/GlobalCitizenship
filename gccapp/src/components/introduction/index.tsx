@@ -45,17 +45,13 @@ const Introduction: React.FC<IntroductionProps> = () => {
     const MinusStep = () => {
         let progressCount = Number(currentCard);
         if (progressBar.current) {
-            console.log(progressCount);
             progressBar.current.style.width = `${(progressCount - 1) * 25}%`;
         }
     };
     const AddStep = () => {
         let progressCount = Number(currentCard);
         if (progressBar.current) {
-            console.log(progressCount);
             progressBar.current.style.width = `${(progressCount + 1) * 25}%`;
-        }
-        if (circle.current) {
         }
     };
     let cardContentComponent: JSX.Element | null = null;
