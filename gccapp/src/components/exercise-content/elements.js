@@ -48,3 +48,16 @@ export const ButtonContainer = styled.div`
   max-width: 100%;
   margin: 0 auto;
 `;
+
+export const ButtonSubmissionPoint = styled.button`
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+  }
+`;
