@@ -18,8 +18,8 @@ const SquaresHome = () => {
                     </PathImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitle>E-learning Journey</SquareTitle>
-                    <SquareText>To-do Content</SquareText>
+                    <SquareTitle>Journey</SquareTitle>
+                    <SquareText>Your personal learning path</SquareText>
                 </TextRow>
             </SquareItem>
             <SquareItem onClick={() => handleClick('/about')}>
@@ -30,7 +30,7 @@ const SquaresHome = () => {
                 </ImageRow>
                 <TextRow>
                     <SquareTitle>About</SquareTitle>
-                    <SquareText>Reading Content</SquareText>
+                    <SquareText>Practical information</SquareText>
                 </TextRow>
             </SquareItem>
             <SquareItem onClick={() => handleClick('/badges')}>
@@ -41,7 +41,7 @@ const SquaresHome = () => {
                 </ImageRow>
                 <TextRow>
                     <SquareTitle>Badge Collection</SquareTitle>
-                    <SquareText>To-do Content</SquareText>
+                    <SquareText>Your earned journey rewards</SquareText>
                 </TextRow>
             </SquareItem>
         </SquareContainer>
