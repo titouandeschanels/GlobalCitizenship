@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { ButtonNavigate, StyledContainer, ButtonContainer, ButtonSubmissionPoint, Navigation as CurrentNavigation, IntroNavigation, TitleAndProgress, TitleBox, ProgressBox, CircleActive, Circle, ProgressBarActive, ProgressBar } from './elements';
+import { ButtonNavigate, StyledContainer, ButtonContainer, ButtonSubmissionPoint, IntroNavigation, TitleAndProgress, TitleBox, ProgressBox, CircleActive, Circle, ProgressBarActive, ProgressBar } from './elements';
 import CreativeFrames from './creative-frames';
 import SelfAwareness from './self-awareness';
 import SacredBullsOne from './sacred-bulls-1';
@@ -8,12 +8,11 @@ import GlobalCompetence from './global-competence-model';
 import ArrowLeft from '../../assets/first-exercise/arrow-left.png';
 import ArrowRight from '../../assets/first-exercise/arrow-right.png';
 import { Link } from 'react-router-dom';
-import { ReactComponent as NavArrow } from "../../assets/icons/intro-navigate-arrow.svg";
 
 const Carousel: React.FC = () => {
     const cardLength: number = 5;
     const [currentCard, setCurrentCard] = useState<number>(0);
-    const progressArr = [1,2,3,4,5];
+    const progressArr = [1, 2, 3, 4, 5];
     const circle = useRef<HTMLDivElement | null>(null);
     const progressBar = useRef<HTMLDivElement | null>(null);
 
@@ -58,9 +57,9 @@ const Carousel: React.FC = () => {
         <StyledContainer>
             <IntroNavigation>
                 <p>Home</p>
-                <NavArrow />
+                {/* Arrow missing */}
                 <p>Journey</p>
-                <NavArrow />
+                {/* Arrow missing */}
                 <p>This is me</p>
             </IntroNavigation>
             <TitleAndProgress>
@@ -85,13 +84,22 @@ const Carousel: React.FC = () => {
             </TitleAndProgress>
             <ButtonContainer>
                 {currentCard !== 0 && (
-                    <ButtonNavigate onClick={prevCard}>
+                    <ButtonNavigate
+                        onClick={() => {
+                            prevCard();
+                            MinusStep();
+                        }}>
                         <img src={ArrowLeft} alt="ArrowLeft" />
                     </ButtonNavigate>
                 )}
                 {cardContentComponent}
                 {currentCard !== cardLength - 1 ? (
-                    <ButtonNavigate onClick={nextCard}>
+                    <ButtonNavigate
+                        onClick={() => {
+                            nextCard();
+                            AddStep();
+                        }}
+                    >
                         <img src={ArrowRight} alt="ArrowRight" />
                     </ButtonNavigate>
                 ) : (
