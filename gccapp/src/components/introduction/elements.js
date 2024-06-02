@@ -1,33 +1,31 @@
 import styled from 'styled-components';
-import { Green, Gray, Blue} from '../../colors';
+import { Green, Gray, Blue , Orange} from '../../colors';
 
 export const IntroductionLayout = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 50px;
     height: 100vh;
-    overflow-y: scroll;
 `;
 export const IntroNavigation = styled.div`
-display: flex;
-flex-direction: row;
-gap: 10px;
-margin-top: 30px;
-margin-left: 200px;
-align-items: center;
-color: ${Gray};
-:last-child {
-    font-weight: bold;
-}
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: ${Gray};
+    :last-child {
+        font-weight: bold;
+    }
 `
 
 export const TitleAndProgress = styled.div`
     font-weight: bold;
     font-size: 20px;
-    margin-left: 200px;
     display: flex;
     max-width: 100%;
     flex-direction: row;
+    margin-left: 100px;
 `;
 export const TitleBox = styled.div`
     margin-right: 50px;
@@ -60,10 +58,12 @@ export const ButtonNavigation = styled.button`
 `;
 
 export const ContentBox = styled.div`
-    display: flex;
     flex-direction: row;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
     align-items: center;
-    margin-left: 200px;
 `;
 export const ContentCardStyled = styled.div`
     background-color: white;
@@ -159,3 +159,8 @@ export const AllModuleButton = styled.button`
     border-radius: 20px;
     box-shadow: 0px 5px 10px #d9d9d9;
     `;
+
+export const TextOrange = styled.text`
+    color: ${Orange};
+    font-weight: bold;
+`;

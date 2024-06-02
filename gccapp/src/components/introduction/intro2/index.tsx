@@ -1,6 +1,6 @@
 import { Intro2Layout, ImageBox } from "./elements";
+import { TextOrange } from "../elements";
 import { ReactComponent as Intro2SVG } from "../../../assets/icons/Intro/intro2-icon.svg";
-import { Blue } from "../../../colors";
 interface Intro2Props {}
 
 const Intro2: React.FC<Intro2Props> = () => {
@@ -11,7 +11,7 @@ const Intro2: React.FC<Intro2Props> = () => {
                 The acquired knowledge (KNOWING), skills (DOING) and
                 dispositions (BEING) needed to promote sustainable development
                 are the ground zero of{" "}
-                <span style={{ color: Blue }}> active citizens</span>.
+                <TextOrange> active citizens</TextOrange>.
             </p>
             <ImageBox>
                 <Intro2SVG />

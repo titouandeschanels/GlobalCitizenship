@@ -85,7 +85,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
             <IntroNavigation>
                 <p>Home</p>
                 <NavArrow />
-                <p>journey</p>
+                <p>Journey</p>
                 <NavArrow />
                 <p>Introduction</p>
             </IntroNavigation>

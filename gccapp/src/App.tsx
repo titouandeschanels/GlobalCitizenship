@@ -33,7 +33,7 @@ function App() {
         <Route path="/aboutGlobalCase" element={<AboutGlobalCase />} />
         <Route path = "/introduction" element ={<IntroductionPage/>}/>
         <Route path="*" element={<Home />} />
-        <Route path="first-exercise" element={<FirstExercise />} />
+        <Route path="/this-is-me" element={<FirstExercise />} />
       </Routes>
     </Router>
   );

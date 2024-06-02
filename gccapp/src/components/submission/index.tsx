@@ -1,6 +1,5 @@
 import {
     SubmissionBox,
-    Navigation,
     TitleBox,
     Title,
     CompletedCircle,
@@ -16,16 +15,21 @@ import {
 } from "../submission/elements";
 import React from "react";
 import Sync from '../../assets/icons/sync.png';
+import { IntroNavigation } from "../introduction/elements";
+import { ReactComponent as NavArrow } from "../../assets/icons/intro-navigate-arrow.svg";
 
 interface SubmissionProps{}
 const Submissionlayout: React.FC<SubmissionProps> = () => {
     return (
         <>
         <SubmissionBox>
-            <Navigation>
-                Home {'>'} My Page {'>'} Submission Point
-            </Navigation>
-
+        <IntroNavigation>
+                <p>Home</p>
+                <NavArrow />
+                <p>My Page</p>
+                <NavArrow />
+                <p>Submission Point</p>
+            </IntroNavigation>
             <TitleBox>
                 <Title>
                     Submission Point

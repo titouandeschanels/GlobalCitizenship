@@ -6,16 +6,16 @@ import green from '../../../assets/first-exercise/green.png';
 import orange from '../../../assets/first-exercise/orange.png';
 import blue from '../../../assets/first-exercise/blue.png';
 import purple from '../../../assets/first-exercise/purple.png';
-import { ButtonClicked, ButtonStyled, ExpandableButton, ExpandedContent } from './elements';
+import { ButtonClicked, ButtonStyled, CenteredImage, ExpandableButton, ExpandedContent, ImageContainer } from './elements';
 
 const SacredBullsOne: React.FC = () => {
 
     const cardData = [
         { color: Pink, image: pink, prompt: 'I come from a family...' },
         { color: Green, image: green, prompt: 'I come from an environment...' },
-        { color: Orange, image: orange, prompt: 'I come from a culture that...', example: 'specify different cultures by\nrepeating this prompt'},
+        { color: Orange, image: orange, prompt: 'I come from a culture that...', example: 'specify different cultures by\nrepeating this prompt' },
         { color: Blue, image: blue, prompt: 'I come from a background that...', example: 'ex. community, religion,\nupbringing, etc' },
-        { color: Purple, image: purple, prompt: 'I feel...', example: 'ex. nationality, ethnicity'}
+        { color: Purple, image: purple, prompt: 'I feel...', example: 'ex. nationality, ethnicity' }
     ];
     const [isExpandedDutch, setIsExpandedDutch] = useState(false);
     const [isExpandedNonDutch, setIsExpandedNonDutch] = useState(false);
@@ -85,7 +85,9 @@ const SacredBullsOne: React.FC = () => {
                                             </ButtonClicked>
                                         ) : (
                                             <ButtonStyled style={{ backgroundColor: card.color }} onClick={() => handleButtonClick(index)}>
-                                                <img src={card.image} alt={card.color} />
+                                                <ImageContainer>
+                                                    <CenteredImage src={card.image} alt={card.color} />
+                                                </ImageContainer>
                                             </ButtonStyled>
                                         )}
                                     </React.Fragment>

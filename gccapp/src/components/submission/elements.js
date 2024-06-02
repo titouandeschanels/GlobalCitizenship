@@ -30,7 +30,7 @@ export const TitleBox = styled.div`
 
 export const Title = styled.div`
     position: relative;
-    margin-left: 220px;
+    margin-left: 100px;
     padding-top: 0px;
     font-weight: 600;
     font-size: 45px;
@@ -40,8 +40,8 @@ export const Title = styled.div`
 
 export const CompletedCircle = styled.div`
     position: relative;
-    margin-left: 220px;
-    padding-top: 0px;
+    margin-left: 560px;
+    margin-top: 7px;
     width: 35px;            
     height: 35px;           
     background-color: ${Blue};  
@@ -51,7 +51,7 @@ export const CompletedCircle = styled.div`
 export const Completed = styled.div`
     position: relative;
     margin-left: 13px;
-    padding-top: 0px;
+    margin-top: 13px;
     font-weight: 550;
     font-size: 20px;
     height: 20px;
@@ -61,7 +61,7 @@ export const Completed = styled.div`
 export const OngoingCircle = styled.div`
     position: relative;
     margin-left: 40px;
-    padding-top: 0px;
+    margin-top: 7px;
     width: 35px;            
     height: 35px;           
     background-color: ${Orange};  
@@ -71,7 +71,7 @@ export const OngoingCircle = styled.div`
 export const Ongoing = styled.div`
     position: relative;
     margin-left: 13px;
-    padding-top: 0px;
+    margin-top: 13px;
     font-weight: 550;
     font-size: 20px;
     height: 20px;
@@ -81,7 +81,7 @@ export const Ongoing = styled.div`
 export const SyncButton = styled.div`
     position: realtive;
     margin-left: 35px;
-    margin-top: -12px;
+    margin-top: -5px;
     padding-top: 0px;
     width: 60px;            
     height: 60px;
