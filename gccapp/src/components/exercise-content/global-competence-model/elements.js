@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const RingContainer = styled.div`
-    position: relative;
-    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 310px;
 `;
 
 export const Popup = styled.div`

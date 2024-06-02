@@ -4,7 +4,7 @@ import { Gray, Orange, Green, Blue } from '../../colors';
 export const BackgroundTheoriesLayout = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    padding-bottom: 50px;
 `;
 
 export const CenteredImage = styled.img`

@@ -4,7 +4,7 @@ import { Gray, Orange, Green } from '../../colors';
 export const FirstExerciseLayout = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    padding-bottom: 50px;
 `;
 
 export const StyledCardContent = styled.div`
