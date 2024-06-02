@@ -175,7 +175,8 @@ export const NextModuleButton = styled.button`
     display: flex;
     flex-direction: row;
     height: 40px;
-    width: 150px;
+    width: 160px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     color: #ffffff;
@@ -190,8 +191,9 @@ export const NextModuleButton = styled.button`
 export const AllModuleButton = styled.button`
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
     height: 40px;
-    width: 150px;
+    width: 160px;
     align-items: center;
     justify-content: center;
     font-size: 16px;
