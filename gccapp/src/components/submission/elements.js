@@ -102,38 +102,7 @@ export const SubmissionContainer = styled.div`
     height: 80vh;
 `;
 
-export const Submission1 = styled.div`
-    margin: 0px 0px;
-    padding-top: 80px;
-    background-color: ${White};
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 10vh;
-`;
-
-export const Circle1 = styled.div`
-    position: relative;
-    margin-left: 150px;
-    padding: 0px 0px;
-    width: 60px;            
-    height: 60px;           
-    background-color: ${Blue};  
-    border-radius: 50%;      
-    border: 7px solid ${LightGray};
-`;
-
-export const Description1 = styled.div`
-    position: relative;
-    margin-left: 80px;
-    padding-top: 0px;
-    width: 820px;            
-    height: 110px;           
-    background-color: ${Blue};  
-    border-radius: 20px;      
-`;
-
-export const Submission2 = styled.div`
+export const SubmissionOngoing = styled.div`
     margin: 0px 0px;
     padding-top: 80px;
     background-color: ${White};
@@ -164,7 +133,7 @@ export const Description2 = styled.div`
     border-radius: 20px;      
 `;
 
-export const Submission3 = styled.div`
+export const SubmissionNotDone = styled.div`
     margin: 0px 0px;
     padding-top: 80px;
     background-color: ${White};
@@ -203,6 +172,7 @@ export const TextBox = styled.div`
     color: ${White};
     height: 110px;
     width: 820px;
+    font-weight: bold
 `;
 
 export const EmptyBox = styled.div`

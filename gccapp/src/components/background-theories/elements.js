@@ -1,10 +1,24 @@
 import styled from 'styled-components';
-import { Gray, Orange, Green } from '../../colors';
+import { Gray, Orange, Green, Blue } from '../../colors';
 
 export const FirstExerciseLayout = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
+`;
+
+export const CenteredImage = styled.img`
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
 
 export const StyledCardContent = styled.div`
@@ -72,13 +86,6 @@ export const TextOrange = styled.text`
     font-weight: bold;
 `;
 
-export const ModuleButton = styled.div`
-    display: flex;
-    height: 100%; 
-    justify-content: flex-end;
-    align-items: center;
-`;
-
 export const ButtonSubmissionPoint = styled.button`
   background-color: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -97,8 +104,7 @@ export const IntroNavigation = styled.div`
     flex-direction: row;
     gap: 10px;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 40px;
     color: ${Gray};
     :last-child {
         font-weight: bold;
@@ -111,7 +117,7 @@ export const TitleAndProgress = styled.div`
     display: flex;
     max-width: 100%;
     flex-direction: row;
-    margin-left: 100px;
+    margin-left: 40px;
 `;
 
 export const TitleBox = styled.div`
@@ -155,6 +161,44 @@ export const ProgressBox = styled.div`
     align-items: center;
     justify-content: space-between;
     position: relative;
-    margin-left: 30px
 `;
+
+export const ModuleButton = styled.div`
+    display: flex;
+    height: 100%; 
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+`;
+
+export const NextModuleButton = styled.button`
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: ${Blue};
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px #d9d9d9;
+    `;
+
+export const AllModuleButton = styled.button`
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px #d9d9d9;
+    `;
 

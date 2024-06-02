@@ -17,7 +17,6 @@ export const ExpandableButton = styled.button`
 `;
 
 export const ButtonStyled = styled.button`
-  background-color: ${props => props.backgroundColor};
   color: white;
   padding: 10px;
   border: none;
@@ -29,7 +28,6 @@ export const ButtonStyled = styled.button`
 
 export const ButtonClicked = styled.button`
   background-color: white;
-  border-color: ${props => props.borderColor};
   border: 7px solid;
   padding: 10px;
   border-radius: 15px;
