@@ -1,3 +1,4 @@
+import CircularProgressBar from '../ciruclarProgressbar';
 import {HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem} from './elements';
 import {Link} from 'react-router-dom';
 
@@ -30,6 +31,7 @@ const Header: React.FC<HeaderProps> = () => {
                 <Link to="/mypage" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <HeaderItem>My Page</HeaderItem>
                 </Link>
+                <CircularProgressBar progress={35} />
             </HeaderMenu>
         </HeaderContainer>
     );
