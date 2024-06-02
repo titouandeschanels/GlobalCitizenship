@@ -1,4 +1,4 @@
-import {Intro5Layout, ImageBox, ModuleButton, NextModuleButton, AllModuleButton} from "./elements";
+import {Intro5Layout, ImageBox } from "./elements";
 import { ReactComponent as Intro5SVG } from "../../../assets/icons/Intro/intro5-icon.svg";
 interface Intro5Props {}
 

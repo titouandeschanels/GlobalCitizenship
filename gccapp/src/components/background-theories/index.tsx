@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { IntroNavigation, TitleAndProgress, TitleBox, ProgressBox, CircleActive, Circle, ProgressBarActive, ProgressBar, FirstExerciseLayout, ContentBox, ContentCardStyled, ButtonNavigation, ButtonBox, ModuleButton, NextModuleButton, AllModuleButton } from './elements';
+import { IntroNavigation, TitleAndProgress, TitleBox, ProgressBox, CircleActive, Circle, ProgressBarActive, ProgressBar, BackgroundTheoriesLayout, ContentBox, ContentCardStyled, ButtonNavigation, ButtonBox, ModuleButton, NextModuleButton, AllModuleButton } from './elements';
 import BKDModel from './BKD-model';
 import FiveUNESCOPillars from './5-UNESCO-pillars';
 import TheoriesGEUModel from './theories-GEU-model';
@@ -63,7 +63,7 @@ const BackgroundTheoriesCarusel: React.FC = () => {
     
 
     return (
-        <FirstExerciseLayout>
+        <BackgroundTheoriesLayout>
             <IntroNavigation>
                 <p>Home</p>
                 <NavArrow />
@@ -137,7 +137,7 @@ const BackgroundTheoriesCarusel: React.FC = () => {
                     </div>
                 </ModuleButton>
             )}
-        </FirstExerciseLayout>
+        </BackgroundTheoriesLayout>
     );
 }
 

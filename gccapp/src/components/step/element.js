@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
-import {  Black, Grey } from "../../colors";
+import {  Black } from "../../colors";
 
 export const StepContainer = styled.div``
 export const StepBox = styled.div``;

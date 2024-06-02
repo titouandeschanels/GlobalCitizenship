@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Gray, Orange, Green, Blue } from '../../colors';
 
-export const FirstExerciseLayout = styled.div`
+export const BackgroundTheoriesLayout = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;

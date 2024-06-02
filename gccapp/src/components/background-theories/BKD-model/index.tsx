@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { StyledCardContent, TextBold, CenteredImage, ImageContainer } from '../elements';
 import brain from '../../../assets/background-theories/brain.png';
 import hand from '../../../assets/background-theories/hand.png';
