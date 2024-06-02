@@ -1,20 +1,17 @@
 import Page from "./page";
 import { Link } from "react-router-dom";
+import Journeylayout from "../components/journey";
+import Navigation from "../components/navigation";
+interface JourneyProps {}
 
-interface JourneyProps {
-
-}
 
 const Journey: React.FC<JourneyProps> = () => {
-    return (
-        <Page>
-            <h1>Journey map page</h1>
-            {/* Just a mock button, will be removed later */}
-            <Link to="/first-exercise">
-                <button>Go to First Exercise</button>
-            </Link>
-        </Page>
-    );
-}
+  return (
+    <Page>
+        <Journeylayout></Journeylayout>
+        <Navigation/>
+    </Page>
+  );
+};
 
 export default Journey;
