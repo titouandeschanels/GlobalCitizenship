@@ -1,18 +1,24 @@
 import {
     JourneyLayout,
     Title,
+    Description,
     TitleIconWrapper,
     JourneyContainer,
     JourneyBox,
     IDGStepBox,
     SDGStepBox,
+    CaptionTitle,
+    IDGS,
+    SDGS,
 } from "../journey/elements";
 import StepBox from "../step";
 import React from "react";
+import Navigation from "../navigation";
 import { ReactComponent as TrophyIcon } from "../../assets/icons/trophy-icon.svg";
 import { ReactComponent as TisismeIcon } from "../../assets/icons/speechbubble-thisisme-icon.svg";
 import {ReactComponent as TrophyLockIcon} from "../../assets/icons/trophy-lock-icon.svg"
 import {useLevelStore} from "../../position_store"; /*offline*/
+
 
 interface JourneyComponentProps {
 }
@@ -30,10 +36,10 @@ const idgitem: StepItem[] = [
     {
         id: 1,
         mode: "IDG",
-        title: "This is me",
+        title: "1.This is me",
         description:
             `You will be shaping your own definition of what Global Citizenship means to you and what kind of impact you want to make! 
-            
+
             Here starts your journey into becoming an active global citizen!`,
         image: TisismeIcon,
     },
@@ -90,7 +96,7 @@ const sdgitem: StepItem[] = [
     },
 ];
 const Journeylayout: React.FC<JourneyComponentProps> = () => {
-    // const currentLevel = 4; /*A temporary number*/
+    //const currentLevel = 6; /*A temporary number*/
     const { currentLevel } = useLevelStore(); /*offline*/
     return (
         <JourneyLayout>
@@ -98,7 +104,13 @@ const Journeylayout: React.FC<JourneyComponentProps> = () => {
                 Journey
                 <TitleIconWrapper />
             </Title>
+            <Description>
+                Your personal learning journey starts here! 
+                <br/>
+                Every flagged islandon the map offers knowlegde and rewards
+            </Description>
             <JourneyContainer>
+                <Navigation />
                 <JourneyBox>
                     <IDGStepBox>
                         {idgitem.map((item: StepItem) => {
@@ -126,6 +138,14 @@ const Journeylayout: React.FC<JourneyComponentProps> = () => {
                         })}
                     </SDGStepBox>
                 </JourneyBox>
+                <CaptionTitle>
+                    <IDGS>
+                        IDGS
+                    </IDGS>
+                    <SDGS>
+                        SDGS
+                    </SDGS>
+                </CaptionTitle>
             </JourneyContainer>
         </JourneyLayout>
     );

@@ -1,40 +1,43 @@
 import styled from "styled-components";
-import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
-import {  Black, Grey } from "../../colors";
+import {  Black } from "../../colors";
 import { ReactComponent as StepLockIconBase } from "../../assets/icons/journey-step-lock-icon.svg";
 
 export const StepContainer = styled.div``
 export const StepBox = styled.div``;
-export const TitleIconWrapper = styled(TitleIcon)`
-    position: absolute;
-    width: 60%;
-    height: auto;
-    padding-top: 50px;
-    left: 0;
-`; 
+
 export const StepAndFlag = styled.div`
     position: relative;
-    width: 156px;
+    width: 130px;
     height: 80px;
-    :nth-child(1) {
+    :nth-child(2) {
         position: absolute;
-        top: -90px;
-        left: 0;
-        z-index: 1;
     }  
     :last-child {
         z-index: 0;
-        top: 0;
     }
+    & > svg {
+        animation-duration: 2s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+    }
+    @keyframes slidein {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+    ;
+}
 `;
 export const DescriptionBox = styled.div`
     position: relative;
     opacity: 0;
     & > svg {
         position: absolute;
-        right: 0px;
+        right: -320px;
         top: -50px;
-        z-index: 100;
+        z-index: 1000;
     }
     ${StepContainer}:hover & {
         opacity: 1;
@@ -43,7 +46,7 @@ export const DescriptionBox = styled.div`
     z-index: 200;
 `;
 
-
+export const ModuleEmpty = styled.div``
 export const Description = styled.div`
     & > div {
         width: 120px;
@@ -73,25 +76,36 @@ export const Description = styled.div`
     width: 500px;
     height: 200px;
     top: -250px;
-    right: -10px;
+    left: 200px;
     background-color: #ffffff;
     color: white;
     border-radius: 20px;
     box-shadow: 0px 5px 10px #d9d9d9;
     transition: opacity 0.3s;
     pointer-events: none;
-
 `;
 export const DescriptionImage = styled.div`
     position: absolute;
     top: -220px;
-    right: 10px;
+    left: 550px;
     z-index: 150;
 `;
 
-export const Flag = styled.div``
-export const Step = styled.div`
+export const Flag = styled.div`
+    position: absolute;
+    top : -50px;
+    left: 50px;
+    z-index: 2;
     cursor: pointer;
+`
+export const Step = styled.div`
+    & > svg {
+        cursor: pointer;
+    }
+    position: absolute;
+    top : 30px;
+    left: 45px;
+    z-index: 3;
 `
 export const StepLockIcon = styled(StepLockIconBase)`
     pointer-events: none;

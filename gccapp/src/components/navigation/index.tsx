@@ -17,9 +17,9 @@ const Navigation: React.FC<NavigationProps> = () => {
         navigate(path, { replace: false });
         return;
     };
-
+    
     return (
-        <NavigationLayout>
+        <NavigationLayout >
             <Title>
                 <p>GC program</p>
                 <TitleIcon />
@@ -49,7 +49,9 @@ const Navigation: React.FC<NavigationProps> = () => {
                     </button>
                     <p>Submission</p>
                 </List>
-                <NavigateLink href="">Extra materials / links</NavigateLink>
+                <NavigateLink href="https://brightspace.hhs.nl/content/enforced/74916-THUAS-GBBP-20232023_HM/SDGs_Learning%20objectives%20x%20SDG_UNESCO.pdf">
+                    Extra materials / links
+                </NavigateLink>
                 <div />
             </NavigationContainer>
         </NavigationLayout>
