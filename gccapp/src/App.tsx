@@ -7,14 +7,15 @@ import Cloud from "./pages/cloud";
 import Community from "./pages/community";
 import Badges from "./pages/badges";
 import About from "./pages/about";
+import FirstExercise from "./pages/first-exercise";
 import AboutGCC from "./pages/about/aboutGCC";
 import AboutGCCResit from "./pages/about/aboutGCC-resit";
 import AboutWorkshop from "./pages/about/about-workshop";
 import AboutGlobalCase from "./pages/about/about-global-case";
 import SubmissionPage from "./pages/submission";
 import IntroductionPage from "./pages/introduction"
+        
 function App() {
-
   return (
     <Router>
       <Routes>
@@ -32,6 +33,7 @@ function App() {
         <Route path="/aboutGlobalCase" element={<AboutGlobalCase />} />
         <Route path = "/introduction" element ={<IntroductionPage/>}/>
         <Route path="*" element={<Home />} />
+        <Route path="first-exercise" element={<FirstExercise />} />
       </Routes>
     </Router>
   );
