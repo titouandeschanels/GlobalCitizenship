@@ -59,7 +59,6 @@ export const ButtonClicked = styled.button`
       font-size: 0.6rem;
     }
   }
-  }
 `;
 
 export const CenteredImage = styled.img`
@@ -67,6 +66,11 @@ export const CenteredImage = styled.img`
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+    
+    @media (max-width: 1400px) {
+        height: 140px;
+        
+    }
 `;
 
 export const ImageContainer = styled.div`
