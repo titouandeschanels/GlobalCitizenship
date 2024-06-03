@@ -132,13 +132,46 @@ export const Popup = styled.div`
 export const PopupContent = styled.div`
     background-color: white;
     padding: 60px;
-    border-radius: 5px;
+    border-radius: 15px;
     text-align: center;
+    width: 25%;
 
     table {
         width: 100%;
     }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 1600px) {
+
+        img {
+            max-width: 70%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        padding: 40px;
+
+        img {
+            max-width: 60%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding: 30px;
+
+        img {
+            max-width: 40%;
+            height: auto;
+        }
+    }
 `;
+
 
 export const ButtonBadgesBook = styled.button`
     background-color: white;

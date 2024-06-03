@@ -150,7 +150,7 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
                                                             </div>
                                                         ))}
                                                     </div>
-                                                    <UploadButton>
+                                                    <UploadButton style={{ display: ((fileUpload.uploaded || (index === 0 && !fileUpload.uploaded) || (fileUploads[index - 1]?.uploaded && !fileUpload.uploaded)) ? "block" : "none") }}>
                                                         <label htmlFor={`file-upload-${index}`} className="custom-file-upload">
                                                             <img src={Upload} alt="upload" />
                                                         </label>
