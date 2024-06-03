@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = () => {
             </Link>
             <HeaderMenu>
                 <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem active={location.pathname === '/'}>Home</HeaderItem>
+                    <HeaderItem>Home</HeaderItem>
                 </Link>
                 <Link to="/journey" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <HeaderItem>Journey</HeaderItem>
