@@ -52,10 +52,8 @@ export const TrophyBox = styled.div`
 export const JourneyContainer = styled.div`
     display: flex;
     flex : 1;
-    //align-items: center;
     justify-content: center;
     margin: 100px 0px;
-    //height: 1556px;
     padding-right: 0; 
 `;
 
@@ -87,7 +85,7 @@ export const IDGStepBox = styled.div`
                 left: -10px;
             }
             :nth-child(2) {
-                left: 100px;
+                left: 200px;
             }
             :nth-child(3) {
                 left: 350px;
@@ -183,7 +181,7 @@ export const SDGStepBox = styled.div`
                 left: -10px;
             }
             :nth-child(2) {
-                left: 100px;
+                left: 180px;
             }
             :nth-child(3) {
                 left: 350px;
@@ -206,7 +204,7 @@ export const SDGStepBox = styled.div`
                 left: -10px;
             }
             :nth-child(2) {
-                left: 100px;
+                left: 200px;
             }
             :nth-child(3) {
                 left: 350px;
