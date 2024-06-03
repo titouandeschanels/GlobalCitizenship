@@ -38,20 +38,11 @@ const Navigation: React.FC<NavigationProps> = () => {
                     <p>Background</p>
                 </List>
                 <List>
-                    <button onClick={() => onClickHandler("/framework")}>
-                        <Arrow />
-                    </button>
-                    <p>Framework</p>
-                </List>
-                <List>
                     <button onClick={() => onClickHandler("/submission")}>
                         <Arrow />
                     </button>
                     <p>Submission</p>
                 </List>
-                <NavigateLink href="https://brightspace.hhs.nl/content/enforced/74916-THUAS-GBBP-20232023_HM/SDGs_Learning%20objectives%20x%20SDG_UNESCO.pdf">
-                    Extra materials / links
-                </NavigateLink>
                 <div />
             </NavigationContainer>
         </NavigationLayout>

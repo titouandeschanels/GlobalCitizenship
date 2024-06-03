@@ -10,7 +10,7 @@ export const NavigationLayout = styled.div`
     margin-bottom:auto;
     background-color: #f8f8f8;
     min-width: 375px;
-    height: 746px;
+    height: 500px;
     border-radius: 20px;
     border: 3px solid #e1e1e1;
     @media (max-width : 1180px) {
