@@ -15,7 +15,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'name']
 
 class LessonSerializer(serializers.ModelSerializer):
-    in_chapter = serializers.SerializerMethodField(read_only=True)
+    in_chapter = serializers.IntegerField(write_only=True)
     get_chapter = serializers.IntegerField(read_only=True)
     get_lesson = serializers.IntegerField(read_only=True)
     
