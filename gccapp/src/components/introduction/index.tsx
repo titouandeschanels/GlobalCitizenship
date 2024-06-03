@@ -17,7 +17,7 @@ import {
     ModuleButton,
     JourneyMapButton,
 } from "./elements";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Intro1 from "./intro1";
 import Intro2 from "./intro2";
 import Intro3 from "./intro3";
@@ -31,19 +31,12 @@ interface IntroductionProps {
 }
 
 const Introduction: React.FC<IntroductionProps> = () => {
-    const navigate = useNavigate();
     const cardLength: number = 5;
     const [currentCard, setCurrentCard] = useState<number>(0);
     const progressArr = [1,2,3,4,5];
     const circle = useRef<HTMLDivElement | null>(null);
     const progressBar = useRef<HTMLDivElement | null>(null);
 
-    const onClickNextModule = () =>{
-        navigate('/background')
-    }   
-    const onClickAllModule = () => {
-        navigate("/journey");
-    };   
     const nextCard = () => {
         setCurrentCard((prevCard) => (prevCard + 1) % cardLength);
     };
@@ -138,7 +131,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
                             <ModuleButton>
                                 <Link to="/journey">
                                     <JourneyMapButton>
-                                        <img src={Check} />
+                                        <img src={Check} alt = 'check' />
                                     </JourneyMapButton>
                                 </Link>
                             </ModuleButton>

@@ -113,7 +113,7 @@ const BackgroundTheoriesCarusel: React.FC = () => {
                             <ModuleButton>
                                 <Link to="/journey">
                                     <JourneyMapButton>
-                                        <img src={Check} />
+                                        <img src={Check} alt='check' />
                                     </JourneyMapButton>
                                 </Link>
                             </ModuleButton>
