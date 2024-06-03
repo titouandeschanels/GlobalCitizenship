@@ -4,7 +4,7 @@ import { Green, Gray, Blue, Purple} from '../../colors';
 export const IntroductionLayout = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    padding-bottom: 50px;
 `;
 export const IntroNavigation = styled.div`
     display: flex;
