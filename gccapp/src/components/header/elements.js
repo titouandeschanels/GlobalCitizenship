@@ -55,6 +55,7 @@ export const HeaderItem = styled.div`
     &:hover {
         color: ${Green};
     }
+    color: ${({ active }) => (active ? Green : 'inherit')};
     font-size: 20px;
     transition: 0.3s;
 `;

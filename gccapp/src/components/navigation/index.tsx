@@ -3,7 +3,6 @@ import {
     Title,
     NavigationContainer,
     List,
-    NavigateLink,
 } from "./elements";
 import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
 import { ReactComponent as Arrow } from "../../assets/icons/arrow.svg";

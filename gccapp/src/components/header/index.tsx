@@ -1,12 +1,14 @@
 import CircularProgressBar from '../ciruclarProgressbar';
 import {HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem} from './elements';
-import {Link} from 'react-router-dom';
+import {Link , useLocation} from 'react-router-dom';
 
 interface HeaderProps {
     
 }
 
 const Header: React.FC<HeaderProps> = () => {
+    const location = useLocation();
+
     return (
         <HeaderContainer>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -16,7 +18,7 @@ const Header: React.FC<HeaderProps> = () => {
             </Link>
             <HeaderMenu>
                 <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Home</HeaderItem>
+                    <HeaderItem active={location.pathname === '/'}>Home</HeaderItem>
                 </Link>
                 <Link to="/journey" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <HeaderItem>Journey</HeaderItem>
