@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCardContent, TextBold, TextOrange } from '../elements';
+import { StyledCardContent, TextBold, TextPurple } from '../elements';
 import { Green, Orange, Pink, Indigo, Blue } from '../../../colors';
 import { Popup, PopupText, PopupTitle, Ring, RingContainer } from './elements';
 
@@ -63,7 +63,7 @@ const GlobalCompetence: React.FC = () => {
                         <h2>Global Competence Model</h2>
                         <div>
                             Now we are going to link your Sacred Bulls with the Global Competence Model. Below is the Global Competence Model.
-                            <br />Can you remember what each ring stands for? <TextOrange>Place your cursor on each ring to see the explanations!</TextOrange>
+                            <br />Can you remember what each ring stands for? <TextPurple>Place your cursor on each ring to see the explanations!</TextPurple>
                         </div>
                         <RingContainer>
                             {ringsData.map((data, index) => (
@@ -77,9 +77,9 @@ const GlobalCompetence: React.FC = () => {
                             ))}
                         </RingContainer>
                         <div>
-                            <TextOrange>What are sayings that are "common knowledge" for you (from your background)? Write a couple of them that are true to you:</TextOrange><br />
+                            <TextPurple>What are sayings that are "common knowledge" for you (from your background)? Write a couple of them that are true to you:</TextPurple><br />
                             Ex. People are not always open-minded, People are in general…, People should..., People learn better when...<br />
-                            <br /><TextOrange>Where do those expressions fit in the model?</TextOrange><br />
+                            <br /><TextPurple>Where do those expressions fit in the model?</TextPurple><br />
                             Ex: “Doe maar gewoon, doe maar normaal” / (zo hoort het!): which of these dimensions does this expression relate to, in your own view and why?
                             <br />Add your reasoning to it! (Self-awareness = S; Risk-taking = R; Open-mindedness = O; Attentiveness to diversity =D)
                         </div>

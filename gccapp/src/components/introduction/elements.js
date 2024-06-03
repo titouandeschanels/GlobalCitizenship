@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Green, Gray, Blue , Orange} from '../../colors';
+import { Green, Gray, Blue, Purple} from '../../colors';
 
 export const IntroductionLayout = styled.div`
     display: flex;
@@ -126,41 +126,24 @@ export const ModuleButton = styled.div`
     }
 `;
 
-export const NextModuleButton = styled.button`
-display: flex;
-    flex-direction: row;
-    height: 40px;
-    width: 183px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: ${Blue};
+export const JourneyMapButton = styled.button`
+  background-color: ${Blue};
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     border: none;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px #d9d9d9;
-    `;
-export const AllModuleButton = styled.button`
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    width: 183px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 10px 15px;
     font-size: 16px;
-    font-weight: bold;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px #d9d9d9;
-    `;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    }
+`;
 
-export const TextOrange = styled.text`
-    color: ${Orange};
+
+export const TextPurple = styled.text`
+    color: ${Purple};
     font-weight: bold;
 `;

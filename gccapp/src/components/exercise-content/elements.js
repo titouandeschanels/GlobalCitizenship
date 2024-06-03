@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Gray, Orange, Green } from '../../colors';
+import { Gray, Purple, Green } from '../../colors';
 
 export const FirstExerciseLayout = styled.div`
     display: flex;
@@ -67,8 +67,8 @@ export const TextBold = styled.text`
     font-weight: bold;
 `;
 
-export const TextOrange = styled.text`
-    color: ${Orange};
+export const TextPurple = styled.text`
+    color: ${Purple};
     font-weight: bold;
 `;
 

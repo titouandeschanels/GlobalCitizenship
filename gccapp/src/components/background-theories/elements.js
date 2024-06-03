@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Gray, Orange, Green, Blue } from '../../colors';
+import { Gray, Purple, Green, Blue } from '../../colors';
 
 export const BackgroundTheoriesLayout = styled.div`
     display: flex;
@@ -81,8 +81,8 @@ export const TextBold = styled.text`
     font-weight: bold;
 `;
 
-export const TextOrange = styled.text`
-    color: ${Orange};
+export const TextPurple = styled.text`
+    color: ${Purple};
     font-weight: bold;
 `;
 
@@ -168,39 +168,20 @@ export const ModuleButton = styled.div`
     height: 100%; 
     justify-content: flex-end;
     align-items: center;
-    margin-right: 30px;
 `;
 
-export const NextModuleButton = styled.button`
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    width: 160px;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: ${Blue};
+export const JourneyMapButton = styled.button`
+  background-color: ${Blue};
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     border: none;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px #d9d9d9;
-    `;
-
-export const AllModuleButton = styled.button`
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    height: 40px;
-    width: 160px;
-    align-items: center;
-    justify-content: center;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 10px 15px;
     font-size: 16px;
-    font-weight: bold;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px #d9d9d9;
-    `;
-
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    }
+`;

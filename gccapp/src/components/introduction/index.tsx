@@ -15,17 +15,15 @@ import {
     CircleActive,
     ProgressBox,
     ModuleButton,
-    NextModuleButton,
-    AllModuleButton,
+    JourneyMapButton,
 } from "./elements";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Intro1 from "./intro1";
 import Intro2 from "./intro2";
 import Intro3 from "./intro3";
 import Intro4 from "./intro4";
 import Intro5 from "./intro5";
-import {ReactComponent as AllModuleArrow} from "../../assets/icons/Intro/all-module-arrow.svg"
-import {ReactComponent as NextModuleArrow} from "../../assets/icons/Intro/next-module-arrow.svg"
+import Check from "../../assets/icons/check.png"
 import {ReactComponent as ArrowRight } from "../../assets/icons/Intro/ArrowRight.svg"
 import {ReactComponent as ArrowLeft} from "../../assets/icons/Intro/ArrowLeft.svg";
 import { ReactComponent as NavArrow } from "../../assets/icons/intro-navigate-arrow.svg";
@@ -127,7 +125,7 @@ const Introduction: React.FC<IntroductionProps> = () => {
                                 <ArrowLeft />
                             </ButtonNavigation>
                         )}
-                        {currentCard !== cardLength - 1 && (
+                        {currentCard !== cardLength - 1 ? (
                             <ButtonNavigation
                                 onClick={() => {
                                     nextCard();
@@ -136,26 +134,19 @@ const Introduction: React.FC<IntroductionProps> = () => {
                             >
                                 <ArrowRight />
                             </ButtonNavigation>
+                        ) : (
+                            <ModuleButton>
+                                <Link to="/journey">
+                                    <JourneyMapButton>
+                                        <img src={Check} />
+                                    </JourneyMapButton>
+                                </Link>
+                            </ModuleButton>
                         )}
                     </ButtonBox>
                     {cardContentComponent}
                 </ContentCardStyled>
             </ContentBox>
-            {currentCard === cardLength - 1 && (
-                <ModuleButton>
-                    <div>
-                        <NextModuleButton onClick={onClickNextModule}>
-                            Next module
-                            <NextModuleArrow />
-                        </NextModuleButton>
-                        <AllModuleButton onClick={onClickAllModule}>
-                            <AllModuleArrow />
-                            <AllModuleArrow />
-                            All modules
-                        </AllModuleButton>
-                    </div>
-                </ModuleButton>
-            )}
         </IntroductionLayout>
     );
 }

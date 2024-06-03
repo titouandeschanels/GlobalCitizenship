@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCardContent, CenteredImage, ImageContainer, TextOrange } from '../elements';
+import { StyledCardContent, CenteredImage, ImageContainer, TextPurple } from '../elements';
 import TheoriesGEU from '../../../assets/background-theories/theoriesGEU.png'
 
 const TheoriesGEUModel: React.FC = () => {
@@ -11,7 +11,7 @@ const TheoriesGEUModel: React.FC = () => {
                         <td>
                             <h2>Intersecting theories in the global EU program</h2>
                             <div>
-                            Therefore, this is not just another Global EU program, but a <TextOrange>hands-on journey</TextOrange> where you will be exploring 
+                            Therefore, this is not just another Global EU program, but a <TextPurple>hands-on journey</TextPurple> where you will be exploring 
                             the different sides of Global Citizenship. You will explore Global Citizenship in different dimensions and layers, 
                             and from different perspectives, linking your Being + Knowing + Doing as a Global Citizen, in order to work on the “how to 
                             develop Global Competence” (hands-on).

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { IntroNavigation, TitleAndProgress, TitleBox, ProgressBox, CircleActive, Circle, ProgressBarActive, ProgressBar, BackgroundTheoriesLayout, ContentBox, ContentCardStyled, ButtonNavigation, ButtonBox, ModuleButton, NextModuleButton, AllModuleButton } from './elements';
+import { IntroNavigation, TitleAndProgress, TitleBox, ProgressBox, CircleActive, Circle, ProgressBarActive, ProgressBar, BackgroundTheoriesLayout, ContentBox, ContentCardStyled, ButtonNavigation, ButtonBox, ModuleButton, JourneyMapButton } from './elements';
 import BKDModel from './BKD-model';
 import FiveUNESCOPillars from './5-UNESCO-pillars';
 import TheoriesGEUModel from './theories-GEU-model';
@@ -7,9 +7,8 @@ import GlobalCompetence from './global-competence-model';
 import { ReactComponent as ArrowRight } from "../../assets/icons/Intro/ArrowRight.svg"
 import { ReactComponent as ArrowLeft } from "../../assets/icons/Intro/ArrowLeft.svg";
 import { ReactComponent as NavArrow } from "../../assets/icons/intro-navigate-arrow.svg";
-import { ReactComponent as AllModuleArrow } from "../../assets/icons/Intro/all-module-arrow.svg"
-import { ReactComponent as NextModuleArrow } from "../../assets/icons/Intro/next-module-arrow.svg"
-import { useNavigate } from "react-router-dom";
+import Check from "../../assets/icons/check.png"
+import { Link } from "react-router-dom";
 
 const BackgroundTheoriesCarusel: React.FC = () => {
     const cardLength: number = 4;
@@ -17,14 +16,6 @@ const BackgroundTheoriesCarusel: React.FC = () => {
     const progressArr = [1, 2, 3, 4];
     const circle = useRef<HTMLDivElement | null>(null);
     const progressBar = useRef<HTMLDivElement | null>(null);
-    const navigate = useNavigate();
-
-    const onClickNextModule = () => {
-        navigate('/background')
-    }
-    const onClickAllModule = () => {
-        navigate("/journey");
-    };
 
     const nextCard = () => {
         setCurrentCard((prevCard) => (prevCard + 1) % cardLength);
@@ -53,14 +44,14 @@ const BackgroundTheoriesCarusel: React.FC = () => {
             progressBar.current.style.width = `${(progressCount - 1) * (100 / 3)}%`;
         }
     };
-    
+
     const AddStep = () => {
         let progressCount = Number(currentCard);
         if (progressBar.current) {
             progressBar.current.style.width = `${(progressCount + 1) * (100 / 3)}%`;
         }
     };
-    
+
 
     return (
         <BackgroundTheoriesLayout>
@@ -109,7 +100,7 @@ const BackgroundTheoriesCarusel: React.FC = () => {
                                 <ArrowLeft />
                             </ButtonNavigation>
                         )}
-                        {currentCard !== cardLength - 1 && (
+                        {currentCard !== cardLength - 1 ? (
                             <ButtonNavigation
                                 onClick={() => {
                                     nextCard();
@@ -118,25 +109,19 @@ const BackgroundTheoriesCarusel: React.FC = () => {
                             >
                                 <ArrowRight />
                             </ButtonNavigation>
+                        ) : (
+                            <ModuleButton>
+                                <Link to="/journey">
+                                    <JourneyMapButton>
+                                        <img src={Check} />
+                                    </JourneyMapButton>
+                                </Link>
+                            </ModuleButton>
                         )}
                     </ButtonBox>
                     {cardContentComponent}
                 </ContentCardStyled>
             </ContentBox>
-            {currentCard === cardLength - 1 && (
-                <ModuleButton>
-                    <div>
-                        <NextModuleButton onClick={onClickNextModule}>
-                            Next module
-                            <NextModuleArrow />
-                        </NextModuleButton>
-                        <AllModuleButton onClick={onClickAllModule}>
-                            <AllModuleArrow />
-                            All modules
-                        </AllModuleButton>
-                    </div>
-                </ModuleButton>
-            )}
         </BackgroundTheoriesLayout>
     );
 }
