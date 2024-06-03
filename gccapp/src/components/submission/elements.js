@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { White, LightGray, Green, Gray } from "../../colors";
+import { White, LightGray, Green, Gray, Blue } from "../../colors";
 
 export const SubmissionBox = styled.div`
     display: flex;
@@ -66,7 +66,6 @@ export const SubmissionItem = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px;
 `;
 
 export const Circle = styled.div`
@@ -74,6 +73,7 @@ export const Circle = styled.div`
     height: 60px;           
     border-radius: 50%;      
     border: 7px solid ${LightGray};
+    margin-right: 40px;
 `;
 
 export const Box = styled.div`
@@ -115,4 +115,47 @@ export const UploadButton = styled.button`
         max-height: 100%;
         object-fit: contain;
     }
+`;
+
+export const Popup = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const PopupContent = styled.div`
+    background-color: white;
+    padding: 60px;
+    border-radius: 5px;
+    text-align: center;
+
+    table {
+        width: 100%;
+    }
+`;
+
+export const ButtonBadgesBook = styled.button`
+    background-color: white;
+    padding: 10px;
+    border: 1px solid;
+    border-color: ${Gray};
+    border-radius: 15px;
+    width: 100%;
+    font-weight: bold;
+`;
+
+export const ButtonLater = styled.button`
+    background-color: ${Blue};
+    color: ${White};
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    font-weight: bold;
 `;

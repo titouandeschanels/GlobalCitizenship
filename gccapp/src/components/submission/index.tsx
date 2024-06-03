@@ -13,11 +13,22 @@ import {
     UploadButton,
     FileName,
     UploadContainer,
+    Popup,
+    PopupContent,
+    ButtonBadgesBook,
+    ButtonLater,
 } from "../submission/elements";
 import Sync from '../../assets/icons/sync.png';
 import { ReactComponent as NavArrow } from "../../assets/icons/intro-navigate-arrow.svg";
 import { Green, LightGray, Orange } from "../../colors";
-import Upload from '../../assets/icons/upload.png'
+import Upload from '../../assets/icons/upload.png';
+import BadgeModule1 from '../../assets/badges/badge-module1.png';
+import BadgeModule2 from '../../assets/badges/badge-module2.png';
+import BadgeModule3 from '../../assets/badges/badge-module3.png';
+import BadgeModule4 from '../../assets/badges/badge-module4.png';
+import BadgeModule5 from '../../assets/badges/badge-module5.png';
+import BadgeModule6 from '../../assets/badges/badge-module6.png';
+import { Link } from "react-router-dom";
 
 interface FileUploadStatus {
     files: File[];
@@ -28,6 +39,8 @@ interface SubmissionProps { }
 
 const Submissionlayout: React.FC<SubmissionProps> = () => {
     const [fileUploads, setFileUploads] = useState<FileUploadStatus[]>(Array(6).fill({ files: [], uploaded: false }));
+    const [uploadedModuleIndex, setUploadedModuleIndex] = useState<number | null>(null);
+    const [popupStates, setPopupStates] = useState<boolean[]>(Array(6).fill(false));
 
     const handleUpload = (index: number, files: FileList | null) => {
         if (!files) return;
@@ -35,6 +48,20 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
         const updatedFileUploads = [...fileUploads];
         updatedFileUploads[index] = { files: Array.from(files), uploaded: true };
         setFileUploads(updatedFileUploads);
+        setUploadedModuleIndex(index);
+        handleOpenPopup(index)
+    };
+
+    const handleOpenPopup = (index: number) => {
+        const updatedPopupStates = [...popupStates];
+        updatedPopupStates[index] = true;
+        setPopupStates(updatedPopupStates);
+    };
+
+    const handleClosePopup = (index: number) => {
+        const updatedPopupStates = [...popupStates];
+        updatedPopupStates[index] = false;
+        setPopupStates(updatedPopupStates);
     };
 
     const modules = [
@@ -42,8 +69,17 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
         "Me and my circles",
         "The influence of perceptions",
         "Dilemmas",
-        "Challende and goal setting",
+        "Challenges and goal setting",
         "Value-based challenge creation"
+    ];
+
+    const badges = [
+        BadgeModule1,
+        BadgeModule2,
+        BadgeModule3,
+        BadgeModule4,
+        BadgeModule5,
+        BadgeModule6
     ];
 
     return (
@@ -132,10 +168,35 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
                                     </tbody>
                                 </table>
                             </Box>
+                            {fileUpload.uploaded && popupStates[index] && (
+                                <div>
+                                    <Popup>
+                                        <PopupContent>
+                                            <h1>Module complete!</h1>
+                                            <p>You've earned the "{modules[index]}" badge!</p>
+                                            <img src={badges[index]} alt="Badge" />
+                                            <p>Find out more about it in your badge collection.</p>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <Link to="/badges">
+                                                                <ButtonBadgesBook>Go to collection book</ButtonBadgesBook>
+                                                            </Link>
+                                                        </td>
+                                                        <td>
+                                                            <ButtonLater onClick={() => handleClosePopup(index)}>View later!</ButtonLater>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </PopupContent>
+                                    </Popup>
+                                </div>
+                            )}
                         </SubmissionItem>
                     ))}
                 </SubmissionContainer>
-
             </SubmissionBox>
         </>
     );
