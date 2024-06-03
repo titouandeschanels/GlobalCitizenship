@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { White, Blue, Orange, LightGray } from "../../colors";
+import { White, Blue, Orange, LightGray, Green } from "../../colors";
 
 export const SubmissionBox = styled.div`
     margin: 0px 0px;
@@ -79,7 +79,7 @@ export const Ongoing = styled.div`
 `;
 
 export const SyncButton = styled.div`
-    position: realtive;
+    position: relative;
     margin-left: 35px;
     margin-top: -12px;
     padding-top: 0px;
