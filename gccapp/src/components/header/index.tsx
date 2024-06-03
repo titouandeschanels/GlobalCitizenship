@@ -15,21 +15,17 @@ const Header: React.FC<HeaderProps> = () => {
                 </HeaderLogo>
             </Link>
             <HeaderMenu>
-                {/* <HeaderItem>Journey</HeaderItem>
-                <HeaderItem>Community</HeaderItem>
-                <HeaderItem>Cloud</HeaderItem>
-                <HeaderItem>My Page</HeaderItem> */}
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <HeaderItem>Home</HeaderItem>
+                </Link>
                 <Link to="/journey" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <HeaderItem>Journey</HeaderItem>
                 </Link>
-                <Link to="/community" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Community</HeaderItem>
+                <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <HeaderItem>About</HeaderItem>
                 </Link>
-                <Link to="/cloud" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Cloud</HeaderItem>
-                </Link>
-                <Link to="/mypage" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>My Page</HeaderItem>
+                <Link to="/badges" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <HeaderItem>Badges</HeaderItem>
                 </Link>
                 <CircularProgressBar progress={35} />
             </HeaderMenu>
