@@ -14,6 +14,7 @@ export const ExpandableButton = styled.button`
   width: 500px;
   overflow: hidden;
   transition: height 0.3s ease;
+  margin-right: 20px;
 `;
 
 export const ButtonStyled = styled.button`
@@ -59,7 +60,6 @@ export const ButtonClicked = styled.button`
       font-size: 0.6rem;
     }
   }
-  }
 `;
 
 export const CenteredImage = styled.img`
@@ -74,4 +74,10 @@ export const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 `;

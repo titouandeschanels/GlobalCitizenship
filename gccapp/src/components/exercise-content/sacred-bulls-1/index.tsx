@@ -6,7 +6,7 @@ import green from '../../../assets/first-exercise/green.png';
 import orange from '../../../assets/first-exercise/orange.png';
 import blue from '../../../assets/first-exercise/blue.png';
 import purple from '../../../assets/first-exercise/purple.png';
-import { ButtonClicked, ButtonStyled, CenteredImage, ExpandableButton, ExpandedContent, ImageContainer } from './elements';
+import { ButtonClicked, ButtonContainer, ButtonStyled, CenteredImage, ExpandableButton, ExpandedContent, ImageContainer } from './elements';
 
 const SacredBullsOne: React.FC = () => {
 
@@ -39,34 +39,32 @@ const SacredBullsOne: React.FC = () => {
                         <td>
                             <h2>Sacred Bulls 1</h2>
                             <h4>Activity 1</h4>
-                            <ExpandableButton onClick={() => handleExpandableButtonClick(setIsExpandedDutch)} style={{ height: isExpandedDutch ? '130px' : '40px' }}>
-                                Dutch-Speakers
-                                {isExpandedDutch && (
-                                    <ExpandedContent>
-                                        <TextBold>"Doe maar gewoon, doe maar normaal."</TextBold>
-                                        <br />1. What does this expression mean to you?
-                                        <br />2. How would you explain it to a non-Dutch speaker?
-                                        <br />3. Which words come up when trying to explain it?
-                                    </ExpandedContent>
-                                )}
-                            </ExpandableButton>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ExpandableButton onClick={() => handleExpandableButtonClick(setIsExpandedNonDutch)} style={{ height: isExpandedNonDutch ? '240px' : '40px' }}>
-                                Non-Dutch Speakers
-                                {isExpandedNonDutch && (
-                                    <ExpandedContent>
-                                        <TextBold>Find a well-known, common expression in your own language and culture that everybody uses which is accepted by everyone as "how are you expected to behave"</TextBold>
-                                        <br />- Example: "hay que ser como a gente" which means "behave like people do".
-                                        <br />- Other option: an expression that you have always heard at home, like "people are/should..."<br />
-                                        <br />1. What does this expression mean to you?
-                                        <br />2. How would you explain it to a foreigner?
-                                        <br />3. Which words come up when trying to explain it?
-                                    </ExpandedContent>
-                                )}
-                            </ExpandableButton>
+                            <ButtonContainer>
+                                <ExpandableButton onClick={() => handleExpandableButtonClick(setIsExpandedDutch)} style={{ height: isExpandedDutch ? '130px' : '40px' }}>
+                                    Dutch-Speakers
+                                    {isExpandedDutch && (
+                                        <ExpandedContent>
+                                            <TextBold>"Doe maar gewoon, doe maar normaal."</TextBold>
+                                            <br />1. What does this expression mean to you?
+                                            <br />2. How would you explain it to a non-Dutch speaker?
+                                            <br />3. Which words come up when trying to explain it?
+                                        </ExpandedContent>
+                                    )}
+                                </ExpandableButton>
+                                <ExpandableButton onClick={() => handleExpandableButtonClick(setIsExpandedNonDutch)} style={{ height: isExpandedNonDutch ? '240px' : '40px' }}>
+                                    Non-Dutch Speakers
+                                    {isExpandedNonDutch && (
+                                        <ExpandedContent>
+                                            <TextBold>Find a well-known, common expression in your own language and culture that everybody uses which is accepted by everyone as "how are you expected to behave"</TextBold>
+                                            <br />- Example: "hay que ser como a gente" which means "behave like people do".
+                                            <br />- Other option: an expression that you have always heard at home, like "people are/should..."<br />
+                                            <br />1. What does this expression mean to you?
+                                            <br />2. How would you explain it to a foreigner?
+                                            <br />3. Which words come up when trying to explain it?
+                                        </ExpandedContent>
+                                    )}
+                                </ExpandableButton>
+                            </ButtonContainer>
                             <h4>Activity 2</h4>
                             <p>Flip the cards and complete the prompts behind the cards as related to your “I” positions.</p>
                         </td>

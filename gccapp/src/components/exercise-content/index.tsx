@@ -121,7 +121,6 @@ const Carousel: React.FC = () => {
                                 </Link>
                             </ModuleButton>
                         )}
-
                     </ButtonBox>
                     {cardContentComponent}
                 </ContentCardStyled>
