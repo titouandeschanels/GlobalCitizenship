@@ -46,10 +46,11 @@ export const DescriptionBox = styled.div`
     z-index: 200;
 `;
 
-export const ModuleEmpty = styled.div``
+export const ModuleEmpty = styled.div`
+`
 export const Description = styled.div`
     & > div {
-        width: 120px;
+        width: 340px;
         z-index: 150;
         padding-top: 20px;
         padding-left: 40px;
@@ -94,7 +95,7 @@ export const DescriptionImage = styled.div`
 export const Flag = styled.div`
     position: absolute;
     top : -50px;
-    left: 50px;
+    left: 45px;
     z-index: 2;
     cursor: pointer;
 `
@@ -104,7 +105,7 @@ export const Step = styled.div`
     }
     position: absolute;
     top : 30px;
-    left: 45px;
+    left: 40px;
     z-index: 3;
 `
 export const StepLockIcon = styled(StepLockIconBase)`

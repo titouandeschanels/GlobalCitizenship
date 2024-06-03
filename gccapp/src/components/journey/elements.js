@@ -4,7 +4,7 @@ import { White, Pink, Blue, Gray } from "../../colors";
 
 export const JourneyLayout = styled.div`
     margin: 0px 0px;
-    margin-bottom: 200px;
+    margin-bottom: 400px;
     background-color: ${White};
     display: flex;
     flex-direction: column;
@@ -40,18 +40,23 @@ export const JourneyBox = styled.div`
     display: flex;
     flex-direction: column;
     gap : 90px;
-    & > svg {
-    margin-left: 150px;
+    width: 350px;
+    &>  svg {
+        margin-left: 160px;
     }
-    
 `
+export const TrophyBox = styled.div`
+    margin-left: 250px;
+`;
 
 export const JourneyContainer = styled.div`
     display: flex;
+    flex : 1;
     //align-items: center;
     justify-content: center;
     margin: 100px 0px;
-    height: 1556px;
+    //height: 1556px;
+    padding-right: 0; 
 `;
 
 export const IDGStepBox = styled.div`
@@ -76,7 +81,44 @@ export const IDGStepBox = styled.div`
             display: flex;
     }
     :nth-child(3) {
-        margin-left: 0px;
+        justify-content: flex-end;
+        :first-child {
+            :first-child {
+                left: -10px;
+            }
+            :nth-child(2) {
+                left: 100px;
+            }
+            :nth-child(3) {
+                left: 350px;
+            }
+        }
+        :nth-child(3) {
+            & > svg > path {
+                fill: #3b6cb9;
+            }
+            & > svg > ellipse {
+                fill: ${Blue};
+        }
+    }
+    }
+    :nth-child(4) {
+        justify-content: center;
+    }
+    :nth-child(5) {
+        & > div {
+            :nth-child(3) {
+                & > svg > path {
+                fill: #e0a2a2;
+            }
+            & > svg > ellipse {
+                fill: ${Pink};
+        }
+        }
+    }
+    }
+    :nth-child(6) {
+        justify-content: center;
         :nth-child(3) {
             & > svg > path {
                 fill: #3b6cb9;
@@ -94,13 +136,14 @@ export const CaptionTitle = styled.div`
     font-weight: bold;
     font-size: 128px;
     color: #D9D9D9;
-    gap: 800px;
+    gap: 1100px;
     height: 100%;
-    width: auto;
+    //width: auto;
 `
 export const IDGS = styled.div`
     display: flex;
-    margin-top: 150px;
+    margin-top: 300px;
+    margin-left:  120px;
 `;
 export const SDGS = styled.div`
 `;
@@ -135,6 +178,17 @@ export const SDGStepBox = styled.div`
     }
     :nth-child(1) {
         justify-content: right;
+        :first-child {
+            :first-child {
+                left: -10px;
+            }
+            :nth-child(2) {
+                left: 100px;
+            }
+            :nth-child(3) {
+                left: 350px;
+            }
+        }
     }
     :nth-child(2) {
         justify-content: center;
@@ -147,6 +201,17 @@ export const SDGStepBox = styled.div`
     }
     :nth-child(5) {
         justify-content: right;
+        :first-child {
+            :first-child {
+                left: -10px;
+            }
+            :nth-child(2) {
+                left: 100px;
+            }
+            :nth-child(3) {
+                left: 350px;
+            }
+        }
     }
     height: 80px;
 `; 
