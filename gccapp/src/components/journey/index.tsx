@@ -107,7 +107,7 @@ const Journeylayout: React.FC<JourneyComponentProps> = () => {
             <Description>
                 Your personal learning journey starts here! 
                 <br/>
-                Every flagged islandon the map offers knowlegde and rewards
+                Every flagged island on the map offers knowledge and rewards.
             </Description>
             <JourneyContainer>
                 <Navigation />
