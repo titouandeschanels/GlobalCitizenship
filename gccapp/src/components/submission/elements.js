@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { White, Blue, Orange, LightGray } from "../../colors";
+import { White, Orange, LightGray, Green } from "../../colors";
 
 export const SubmissionBox = styled.div`
     margin: 0px 0px;
@@ -25,7 +25,8 @@ export const TitleBox = styled.div`
     background-color: ${White};
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    height: 45px;
+    width: 1800px;
 `;
 
 export const Title = styled.div`
@@ -34,8 +35,8 @@ export const Title = styled.div`
     padding-top: 0px;
     font-weight: 600;
     font-size: 45px;
-    height: 45px;
-    width: 450px;
+    height: 100%;
+    width: 25%;
 `;
 
 export const CompletedCircle = styled.div`
@@ -44,7 +45,7 @@ export const CompletedCircle = styled.div`
     padding-top: 0px;
     width: 35px;            
     height: 35px;           
-    background-color: ${Blue};  
+    background-color: ${Green};  
     border-radius: 50%;      
 `;
 
@@ -109,16 +110,17 @@ export const Submission1 = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 10vh;
+    height: 240px;
+    width: 2400px;
 `;
 
 export const Circle1 = styled.div`
-    position: relative;
+    position: absloute;
     margin-left: 150px;
     padding: 0px 0px;
-    width: 60px;            
-    height: 60px;           
-    background-color: ${Blue};  
+    width: 2.5%;            
+    height: 52%;           
+    background-color: ${Green};  
     border-radius: 50%;      
     border: 7px solid ${LightGray};
 `;
@@ -129,7 +131,7 @@ export const Description1 = styled.div`
     padding-top: 0px;
     width: 820px;            
     height: 110px;           
-    background-color: ${Blue};  
+    background-color: ${Green};  
     border-radius: 20px;      
 `;
 
@@ -140,15 +142,16 @@ export const Submission2 = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 10vh;
+    height: 240px;
+    width: 2400px;
 `;
 
 export const Circle2 = styled.div`
     position: relative;
     margin-left: 150px;
     padding: 0px 0px;
-    width: 60px;            
-    height: 60px;           
+    width: 2.5%;            
+    height: 52%;          
     background-color: ${Orange};  
     border-radius: 50%;      
     border: 7px solid ${LightGray};
@@ -171,17 +174,19 @@ export const Submission3 = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 10vh;
+    height: 240px;
+    width: 2400px;
 `;
 
 export const Circle3 = styled.div`
     position: relative;
     margin-left: 150px;
     padding: 0px 0px;
-    width: 67px;            
-    height: 67px;           
+    width: 2.5%;            
+    height: 52%;          
     background-color: ${LightGray};  
-    border-radius: 50%;      
+    border-radius: 50%;
+    border: 7px solid ${LightGray};      
 `;
 
 export const Description3 = styled.div`

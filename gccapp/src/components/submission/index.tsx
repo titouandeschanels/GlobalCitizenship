@@ -23,7 +23,7 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
         <>
         <SubmissionBox>
             <Navigation>
-                Home {'>'} My Page {'>'} Submission Point
+                Home {'>'} Journey {'>'} Submission Point
             </Navigation>
 
             <TitleBox>
