@@ -48,7 +48,7 @@ export const JourneyBox = styled.div`
 
 export const JourneyContainer = styled.div`
     display: flex;
-    align-items: center;
+    //align-items: center;
     justify-content: center;
     margin: 100px 0px;
     height: 1556px;
@@ -100,7 +100,7 @@ export const CaptionTitle = styled.div`
 `
 export const IDGS = styled.div`
     display: flex;
-    margin-top: 480px;
+    margin-top: 150px;
 `;
 export const SDGS = styled.div`
 `;
