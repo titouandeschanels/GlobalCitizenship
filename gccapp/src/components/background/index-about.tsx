@@ -15,9 +15,9 @@ const BackgroundAboutpage: React.FC<BackgroundAboutpageProps> = () => {
             </div>
             <div>
                 <Subtitle>
-                    Practical information about the Global Citizenship Certificate
+                    Practical information about the Global EU program,
                     <br/>
-                    program, upcoming classes, and related matters.
+                    upcoming classes, and related matters.
                 </Subtitle>
             </div>
         </BackgroundPictureAbout>

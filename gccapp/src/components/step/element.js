@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
-import {  Black } from "../../colors";
+import {  Black, Grey } from "../../colors";
+import { ReactComponent as StepLockIconBase } from "../../assets/icons/journey-step-lock-icon.svg";
 
 export const StepContainer = styled.div``
 export const StepBox = styled.div``;
@@ -89,4 +90,8 @@ export const DescriptionImage = styled.div`
 
 export const Flag = styled.div``
 export const Step = styled.div`
+    cursor: pointer;
 `
+export const StepLockIcon = styled(StepLockIconBase)`
+    pointer-events: none;
+`;

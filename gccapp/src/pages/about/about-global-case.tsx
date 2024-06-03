@@ -1,4 +1,6 @@
 import Page from ".././page";
+import GlobalCase from "../../components/about/globalCase/index";
+import CheckboxContainer from "../../components/about/checkboxContainers";
 
 interface AboutGlobalCaseProps {
 
@@ -7,7 +9,8 @@ interface AboutGlobalCaseProps {
 const AboutGlobalCase: React.FC<AboutGlobalCaseProps> = () => {
     return (
         <Page>
-            <h1>About the Global Case Study Challenge</h1>
+            <GlobalCase></GlobalCase>
+            <CheckboxContainer></CheckboxContainer>
         </Page>
     );
 }

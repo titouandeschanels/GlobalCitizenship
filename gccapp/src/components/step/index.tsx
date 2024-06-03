@@ -7,13 +7,14 @@ import {
     StepAndFlag,
     StepContainer,
     Step,
+    StepLockIcon,
     Flag,
 } from "./element";
 import { useLevelStore } from "../../position_store"; /*offline*/
 import { ReactComponent as SpeechBubbleIcon } from "../../assets/icons/speechbubble-icon.svg";
 import { ReactComponent as FlagIcon } from "../../assets/icons/journey-flag-icon.svg";
 import { ReactComponent as StepIcon } from "../../assets/icons/journey-step-icon.svg";
-import  {ReactComponent as StepLockIcon} from "../../assets/icons/journey-step-lock-icon.svg"
+import { useNavigate } from "react-router-dom";
 interface StepBoxProps extends React.HTMLAttributes<HTMLDivElement> {
     idx: number;
     description: string;
@@ -26,8 +27,19 @@ const StepBox: React.FC<StepBoxProps> = ({
     description,
     image: Image,
 }) => {
-    //const currentLevel = 4;
-    const { currentLevel } = useLevelStore(); /*offline*/
+    const currentLevel = 1; 
+    //const { currentLevel } = useLevelStore();
+        const navigate = useNavigate();
+        const onClickHandler = (idx: number) => {
+            if(idx === 1){
+                navigate("/first-exercise", { replace: false });
+            }
+            if(idx > currentLevel) {
+
+            }
+            return;
+        };
+
     return (
         <>
             <StepContainer>
@@ -50,7 +62,7 @@ const StepBox: React.FC<StepBoxProps> = ({
                     >
                         <FlagIcon />
                     </Flag>
-                    <Step>
+                    <Step onClick={() => onClickHandler(idx)}>
                         {idx > currentLevel ? <StepLockIcon /> : <StepIcon />}
                     </Step>
                 </StepAndFlag>

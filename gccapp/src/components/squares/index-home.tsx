@@ -41,7 +41,7 @@ const SquaresHome = () => {
                 </ImageRow>
                 <TextRow>
                     <SquareTitle>Badge Collection</SquareTitle>
-                    <SquareText>Your earned rewards</SquareText>
+                    <SquareText>Your earned journey rewards</SquareText>
                 </TextRow>
             </SquareItem>
         </SquareContainer>

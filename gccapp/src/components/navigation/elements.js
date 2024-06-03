@@ -61,7 +61,7 @@ export const List = styled.div`
         margin-left: 20px;
         cursor: pointer;
         &:hover{
-            background-color: ${Blue};
+            background-color: #97C242;
         }
         transition: 0.3s;
         display: flex;
