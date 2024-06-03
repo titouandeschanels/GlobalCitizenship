@@ -4,7 +4,7 @@ import { White, Pink, Blue, Gray } from "../../colors";
 
 export const JourneyLayout = styled.div`
     margin: 0px 0px;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     background-color: ${White};
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@ export const JourneyLayout = styled.div`
 export const Title = styled.div`
     position: relative;
     margin-left: 200px;
-    padding-top: 200px;
+    padding-top: 50px;
     font-weight: 600;
     font-size: 45px;
     height: 75px;
