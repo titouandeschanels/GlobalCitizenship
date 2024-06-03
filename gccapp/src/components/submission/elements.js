@@ -40,8 +40,8 @@ export const CompletedCircle = styled.div`
     position: relative;
     margin-left: 220px;
     padding-top: 0px;
-    width: 35px;            
-    height: 35px;           
+    min-width: 35px;            
+    max-height: 35px;           
     background-color: ${Green};  
     border-radius: 50%;      
 `;
@@ -52,16 +52,16 @@ export const Completed = styled.div`
     padding-top: 0px;
     font-weight: 550;
     font-size: 20px;
-    height: 20px;
-    width: 100px;
+    min-height: 20px;
+    min-width: 100px;
 `;
 
 export const OngoingCircle = styled.div`
     position: relative;
     margin-left: 40px;
     padding-top: 0px;
-    width: 35px;            
-    height: 35px;           
+    min-width: 35px;            
+    max-height: 35px;           
     background-color: ${Orange};  
     border-radius: 50%;
 `;
@@ -72,8 +72,8 @@ export const Ongoing = styled.div`
     padding-top: 0px;
     font-weight: 550;
     font-size: 20px;
-    height: 20px;
-    width: 100px;
+    min-height: 20px;
+    min-width: 100px;
 `;
 
 export const SyncButton = styled.div`
@@ -201,7 +201,6 @@ export const TextBox = styled.div`
     font-size: 17px;
     color: ${White};
     height: 110px;
-    width: 820px;
 `;
 
 export const EmptyBox = styled.div`
