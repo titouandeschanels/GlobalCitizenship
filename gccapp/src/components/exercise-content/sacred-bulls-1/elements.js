@@ -5,16 +5,15 @@ export const ExpandedContent = styled.div`
 `;
 
 export const ExpandableButton = styled.button`
-  border: 1px solid;
-  border-color: black;
-  border-radius: 15px;
-  background-color: white;
-  padding: 10px;
-  text-align: left;
-  width: 500px;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+    width: 45%;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    margin-right: 20px;
 `;
 
 export const ButtonStyled = styled.button`
@@ -85,4 +84,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
 `;
