@@ -25,8 +25,6 @@ export const TitleBox = styled.div`
     background-color: ${White};
     display: flex;
     flex-direction: row;
-    height: 45px;
-    width: 1800px;
 `;
 
 export const Title = styled.div`
@@ -35,9 +33,8 @@ export const Title = styled.div`
     padding-top: 0px;
     font-weight: 600;
     font-size: 45px;
-    height: 100%;
-    width: 25%;
-`;
+    min-height: 45px;
+    min-width: 450px`;
 
 export const CompletedCircle = styled.div`
     position: relative;
@@ -110,16 +107,15 @@ export const Submission1 = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 240px;
-    width: 2400px;
+    height: 10vh;
 `;
 
 export const Circle1 = styled.div`
-    position: absloute;
+    position: relative;
     margin-left: 150px;
     padding: 0px 0px;
-    width: 2.5%;            
-    height: 52%;           
+    min-width: 60px;            
+    min-height: 60px;           
     background-color: ${Green};  
     border-radius: 50%;      
     border: 7px solid ${LightGray};
@@ -142,16 +138,15 @@ export const Submission2 = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 240px;
-    width: 2400px;
+    height: 10vh;
 `;
 
 export const Circle2 = styled.div`
     position: relative;
     margin-left: 150px;
     padding: 0px 0px;
-    width: 2.5%;            
-    height: 52%;          
+    min-width: 60px;            
+    min-height: 60px;          
     background-color: ${Orange};  
     border-radius: 50%;      
     border: 7px solid ${LightGray};
@@ -174,16 +169,15 @@ export const Submission3 = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 240px;
-    width: 2400px;
+    height: 10vh;
 `;
 
 export const Circle3 = styled.div`
     position: relative;
     margin-left: 150px;
     padding: 0px 0px;
-    width: 2.5%;            
-    height: 52%;          
+    min-width: 60px;            
+    min-height: 60px;         
     background-color: ${LightGray};  
     border-radius: 50%;
     border: 7px solid ${LightGray};      
@@ -211,8 +205,8 @@ export const TextBox = styled.div`
 `;
 
 export const EmptyBox = styled.div`
-margin: 0px 0px;
-background-color: ${White};
-display: flex;
-height: 10vh;
+    margin: 0px 0px;
+    background-color: ${White};
+    display: flex;
+    height: 10vh;
 `;
