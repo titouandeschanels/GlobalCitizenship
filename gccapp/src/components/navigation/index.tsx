@@ -38,18 +38,11 @@ const Navigation: React.FC<NavigationProps> = () => {
                     <p>Background</p>
                 </List>
                 <List>
-                    <button onClick={() => onClickHandler("/framework")}>
-                        <Arrow />
-                    </button>
-                    <p>Framework</p>
-                </List>
-                <List>
                     <button onClick={() => onClickHandler("/submission")}>
                         <Arrow />
                     </button>
                     <p>Submission</p>
                 </List>
-                <NavigateLink href="">Extra materials / links</NavigateLink>
                 <div />
             </NavigationContainer>
         </NavigationLayout>
