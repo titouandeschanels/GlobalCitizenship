@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { White, Orange, LightGray, Green } from "../../colors";
+import { White, Blue, Orange, LightGray } from "../../colors";
 
 export const SubmissionBox = styled.div`
     margin: 0px 0px;
@@ -25,6 +25,7 @@ export const TitleBox = styled.div`
     background-color: ${White};
     display: flex;
     flex-direction: row;
+    height: 10vh;
 `;
 
 export const Title = styled.div`
@@ -33,8 +34,9 @@ export const Title = styled.div`
     padding-top: 0px;
     font-weight: 600;
     font-size: 45px;
-    min-height: 45px;
-    min-width: 450px`;
+    height: 45px;
+    width: 450px;
+`;
 
 export const CompletedCircle = styled.div`
     position: relative;
@@ -52,8 +54,8 @@ export const Completed = styled.div`
     padding-top: 0px;
     font-weight: 550;
     font-size: 20px;
-    min-height: 20px;
-    min-width: 100px;
+    height: 20px;
+    width: 100px;
 `;
 
 export const OngoingCircle = styled.div`
@@ -72,8 +74,8 @@ export const Ongoing = styled.div`
     padding-top: 0px;
     font-weight: 550;
     font-size: 20px;
-    min-height: 20px;
-    min-width: 100px;
+    height: 20px;
+    width: 100px;
 `;
 
 export const SyncButton = styled.div`
@@ -145,8 +147,8 @@ export const Circle2 = styled.div`
     position: relative;
     margin-left: 150px;
     padding: 0px 0px;
-    min-width: 60px;            
-    min-height: 60px;          
+    width: 60px;            
+    height: 60px;           
     background-color: ${Orange};  
     border-radius: 50%;      
     border: 7px solid ${LightGray};
@@ -176,11 +178,10 @@ export const Circle3 = styled.div`
     position: relative;
     margin-left: 150px;
     padding: 0px 0px;
-    min-width: 60px;            
-    min-height: 60px;         
+    width: 67px;            
+    height: 67px;           
     background-color: ${LightGray};  
-    border-radius: 50%;
-    border: 7px solid ${LightGray};      
+    border-radius: 50%;      
 `;
 
 export const Description3 = styled.div`
@@ -197,15 +198,16 @@ export const TextBox = styled.div`
     position: relative;
     padding-left: 40px;
     padding-top: 40px;
-    font-weight: 500;
     font-size: 17px;
     color: ${White};
     height: 110px;
+    width: 820px;
+    font-weight: bold
 `;
 
 export const EmptyBox = styled.div`
-    margin: 0px 0px;
-    background-color: ${White};
-    display: flex;
-    height: 10vh;
+margin: 0px 0px;
+background-color: ${White};
+display: flex;
+height: 10vh;
 `;

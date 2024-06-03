@@ -18,7 +18,7 @@ const SquaresHome = () => {
                     </PathImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitle>Journey</SquareTitle>
+                    <SquareTitle>E-learning Journey</SquareTitle>
                     <SquareText>Your personal learning path</SquareText>
                 </TextRow>
             </SquareItem>
