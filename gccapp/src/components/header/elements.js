@@ -52,12 +52,12 @@ export const HeaderItem = styled.div`
     margin: 0 10px;
     cursor: pointer;
     user-select: none;
+    color: ${props => props.color};
+    font-size: 20px;
+    transition: 0.3s;
     &:hover {
         color: ${Green};
     }
-    color: ${({ active }) => (active ? Green : 'inherit')};
-    font-size: 20px;
-    transition: 0.3s;
 `;
 
 export const HeaderButton = styled.button`

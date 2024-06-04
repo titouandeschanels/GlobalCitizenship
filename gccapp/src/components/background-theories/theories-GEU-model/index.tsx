@@ -9,9 +9,9 @@ const TheoriesGEUModel: React.FC = () => {
                 <tbody>
                     <tr>
                         <td>
-                            <h2>Intersecting theories in the global EU program</h2>
+                            <h2>Intersecting theories in the Global-U program</h2>
                             <div>
-                            Therefore, this is not just another Global EU program, but a <TextPurple>hands-on journey</TextPurple> where you will be exploring 
+                            Therefore, this is not just another Global-U program, but a <TextPurple>hands-on journey</TextPurple> where you will be exploring 
                             the different sides of Global Citizenship. You will explore Global Citizenship in different dimensions and layers, 
                             and from different perspectives, linking your Being + Knowing + Doing as a Global Citizen, in order to work on the “how to 
                             develop Global Competence” (hands-on).

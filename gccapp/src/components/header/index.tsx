@@ -1,13 +1,23 @@
+import React from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { Black, Green } from '../../colors';
 import CircularProgressBar from '../ciruclarProgressbar';
-import {HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem} from './elements';
-import {Link } from 'react-router-dom';
+import { HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem } from './elements';
 
-interface HeaderProps {
+
+const Header: React.FC = () => {
+    const location = useLocation();
+
+    const isActive = (path: string) => location.pathname === path;
+
+    const defineColor = (path: string) => {
+        if (isActive(path)) {
+            return Green
+        } else {
+            return Black
+        }
+    }
     
-}
-
-const Header: React.FC<HeaderProps> = () => {
-
     return (
         <HeaderContainer>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -17,16 +27,16 @@ const Header: React.FC<HeaderProps> = () => {
             </Link>
             <HeaderMenu>
                 <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Home</HeaderItem>
+                    <HeaderItem color={defineColor('/')}>Home</HeaderItem>
                 </Link>
                 <Link to="/journey" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Journey</HeaderItem>
+                    <HeaderItem color={defineColor('/journey')}>Journey</HeaderItem>
                 </Link>
                 <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>About</HeaderItem>
+                    <HeaderItem color={defineColor('/about')}>About</HeaderItem>
                 </Link>
                 <Link to="/badges" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Badges</HeaderItem>
+                    <HeaderItem color={defineColor('/badges')}>Badges</HeaderItem>
                 </Link>
                 <CircularProgressBar progress={35} />
             </HeaderMenu>
