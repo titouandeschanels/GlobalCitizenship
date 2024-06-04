@@ -29,7 +29,7 @@ const BadgesBook = () => {
         {
             badge: BadgeModule4,
             title: "Dilemnas",
-            description: "You have completed the Dilemnas Badge, congratulations! You have learned about dilemnas and how to solve them.",
+            description: "You have completed the Dilemmas Badge, congratulations! You have learned about dilemnas and how to solve them.",
         },
         {
             badge: BadgeModule5,
