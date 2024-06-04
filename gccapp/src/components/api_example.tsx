@@ -1,6 +1,5 @@
 
 import axios from "axios";
-// import useLocalStorage from 'use-local-storage';
 
 function Example() {
     
@@ -32,15 +31,6 @@ function Example() {
             })
             .catch((err) => console.log(err));
     }
-
-        // const info = {
-        //     OnderzoekId: onderzoek.UitvoorderId,
-        //     VraagMetAntwoordenJSON: JSON.stringify(antwoorden)
-        // };
-        // axios
-        //     .post(apiPath + "OpdrachtRespons/CreateOpdrachtRespons", info)
-        //     .then(() => nav("/Feedback"))
-        //     .catch((err) => console.log(err.toJSON()));
     
     const getPosition = () => {
         axios.get(apiPath + "position/" + studentId).then(response => {
