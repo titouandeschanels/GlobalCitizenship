@@ -3,6 +3,7 @@ import BackgroundHomepage from "../components/background/index-home";
 import SquaresHome from '../components/squares/index-home';
 import Page from "./page";
 import { getUser } from "../requests/user";
+import { setupDb } from "../setupdb";
 
 interface HomeProps {
 
@@ -19,6 +20,7 @@ const Home: React.FC<HomeProps> = () => {
     };
 
     useEffect(() => {
+        setupDb();
         getUsername();
     }, []);
 

@@ -13,8 +13,8 @@ export const getSubmission = async () => {
             },
         });
 
-        const user = await response.json();
-        return user;
+        const data = await response.json();
+        return data;
     } catch (error) {
         console.log('ERROR GET SUBMISSION = ' + error);
     }
