@@ -29,8 +29,6 @@ class LessonView(viewsets.ModelViewSet):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
     
-    # http_method_names = ['get', 'post', 'put', 'delete']
-
     @action(detail=False, methods=['get'])
     def get_lesson_by_chapter(self, request):
         get_lesson = request.query_params.get('get_lesson')
@@ -42,21 +40,13 @@ class LessonView(viewsets.ModelViewSet):
         return Response(serializer.data)
     
     def create(self, request):
-        print('REQUEST: ', request)
-        print('DATA', request.data)
         serializer = LessonSerializer(data=request.data)
-        print('VALID: ', serializer.is_valid())
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response({"error": "Couldn't create the new lesson"}, status=422)
-        
-    # # @action(detail=False, methods=['put'])
-    # def update(self, request):
-    #     print('IN UPDATE')
-    #     pass
-
+    
 
 class GetStudentPosition(viewsets.ModelViewSet):
     queryset = Student.objects.all()
