@@ -187,9 +187,10 @@ export const ButtonBadgesBook = styled.button`
     width: 100%;
     font-weight: bold;
 
-    :hover {
+    &:hover {
         cursor: pointer;
     }
+
 `;
 
 export const ButtonLater = styled.button`
@@ -201,7 +202,7 @@ export const ButtonLater = styled.button`
     width: 100%;
     font-weight: bold;
 
-    :hover {
+    &:hover {
         cursor: pointer;
     }
 `;
