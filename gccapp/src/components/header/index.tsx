@@ -1,6 +1,7 @@
 import CircularProgressBar from '../ciruclarProgressbar';
 import {HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem} from './elements';
 import {Link} from 'react-router-dom';
+import Logo from '../../assets/logo/mainLogo.png';
 
 interface HeaderProps {
     
@@ -11,7 +12,7 @@ const Header: React.FC<HeaderProps> = () => {
         <HeaderContainer>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <HeaderLogo>
-                    <img src="https://via.placeholder.com/100" alt="logo" />
+                    <img src={Logo} alt="logo"/>
                 </HeaderLogo>
             </Link>
             <HeaderMenu>
