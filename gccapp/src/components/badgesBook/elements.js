@@ -26,41 +26,6 @@ export const BookClosedImage = styled.div`
     width: 30%;
     background-size: 100% 100%;
     text-align: center;
-
-    @media (max-width: 1600px) {
-        height: 60%;
-        width: 28%;
-    }
-
-    @media (max-width: 1400px) {
-        height: 55%;
-        width: 26%;
-    }
-
-    @media (max-width: 1200px) {
-        height: 50%;
-        width: 24%;
-    }
-
-    @media (max-width: 1000px) {
-        height: 45%;
-        width: 22%;
-    }
-
-    @media (max-width: 800px) {
-        height: 40%;
-        width: 20%;
-    }
-
-    @media (max-width: 600px) {
-        height: 35%;
-        width: 18%;
-    }
-
-    @media (max-width: 400px) {
-        height: 30%;
-        width: 16%;
-    }
 `;
 
 export const BookClosedButton = styled.div`
@@ -94,41 +59,6 @@ export const BookOpenImage = styled.div`
     width: 52%;
     background-size: 100% 100%;
     text-align: center;
-
-    @media (max-width: 1600px) {
-        height: 60%;
-        width: 50%;
-    }
-
-    @media (max-width: 1400px) {
-        height: 55%;
-        width: 48%;
-    }
-
-    @media (max-width: 1200px) {
-        height: 50%;
-        width: 45%;
-    }
-
-    @media (max-width: 1000px) {
-        height: 45%;
-        width: 42%;
-    }
-
-    @media (max-width: 800px) {
-        height: 40%;
-        width: 40%;
-    }
-
-    @media (max-width: 600px) {
-        height: 35%;
-        width: 38%;
-    }
-
-    @media (max-width: 400px) {
-        height: 30%;
-        width: 35%;
-    }
 `;
 
 export const BookOpenTitle = styled.h1`
