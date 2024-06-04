@@ -17,6 +17,8 @@ import {
     PopupContent,
     ButtonBadgesBook,
     ButtonLater,
+    TitleIconWrapper,
+    Title,
 } from "../submission/elements";
 import Sync from '../../assets/icons/sync.png';
 import { ReactComponent as NavArrow } from "../../assets/icons/intro-navigate-arrow.svg";
@@ -91,7 +93,10 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
                     <p>Submission Point</p>
                 </IntroNavigation>
                 <TitleBox>
-                    <h2>Submission Point</h2>
+                    <Title>
+                        Submission Point
+                        <TitleIconWrapper />
+                    </Title>
                     <table>
                         <tbody>
                             <tr>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { White, LightGray, Green, Gray, Blue } from "../../colors";
+import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
 
 export const SubmissionBox = styled.div`
     display: flex;
@@ -18,6 +19,21 @@ export const IntroNavigation = styled.div`
     :last-child {
         font-weight: bold;
     }
+`;
+
+export const Title = styled.div`
+    position: relative;
+    font-weight: 600;
+    font-size: 30px;
+    padding-top: 20px;
+`;
+
+export const TitleIconWrapper = styled(TitleIcon)`
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding-top: 35px;
+    left: 0;
 `;
 
 export const TitleBox = styled.div`

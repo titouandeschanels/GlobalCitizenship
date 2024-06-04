@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import backgroundHomepage from '../../assets/homepage/background-wave.png';
 import backgroundAboutpage from '../../assets/aboutpage/background-wave-about.png';
-import { Gray, Indigo, Orange, White, Black } from '../../colors';
+import { Gray, Indigo, Orange, White } from '../../colors';
+import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
+import { ReactComponent as TitleIconOrange } from "../../assets/icons/title-icon-orange.svg";
+
 
 export const BackgroundPictureHome = styled.div`
     position: relative;
@@ -40,7 +43,7 @@ export const TextStyleSmall = styled.div`
     color: ${Gray};
     position: absolute;
     top: 7vh;
-    left: 10vw;
+    margin-left: 100px;
     user-select: none;
 `;
 
@@ -57,15 +60,43 @@ export const TextStyleBig = styled.div`
 
 export const ColoredText = styled.span`
     color: ${Orange};
-    text-decoration: underline;
     user-select: none;
 `;
 
-export const UnderlinedText = styled.span`
-    color: ${Black};
-    text-decoration: underline;
-    user-select: none;
+export const TitleAbout = styled.div`
+    position: relative;
+    font-weight: 600;
+    font-size: 40px;
+    padding-top: 20px;
+    margin-left: 100px;
+    width: 140px;
 `;
+
+export const TitleIconWrapperAbout = styled(TitleIcon)`
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    left: 0;
+`;
+
+export const TitleHome = styled.div`
+    position: relative;
+    font-weight: 600;
+    font-size: 4vh;
+    padding-top: 12vh;
+    margin-left: 100px;
+    width: 50vh;
+`;
+
+export const TitleIconWrapperHome = styled(TitleIconOrange)`
+    position: absolute;
+    width: 55%;
+    height: auto;
+    padding-top: 5vh;
+    left: 0;
+`;
+
 
 export const Subtitle = styled.div`
     font-family: Arial, sans-serif;
@@ -73,7 +104,7 @@ export const Subtitle = styled.div`
     font-weight: lighter;
     color: ${Gray};
     position: absolute;
-    top: 21vh;
-    left: 10vw;
+    padding-top: 40px;
+    margin-left: 100px;
     user-select: none;
 `;
