@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Gray, Indigo, White, Blue } from '../../colors';
+import { Indigo, White, Blue } from '../../colors';
 
 
 // Responsive breakpoints
@@ -16,8 +16,7 @@ export const SquareContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    height: auto;
-    width: 100%;
+    width: 98%;
     padding: 0 10px;
     font-size: 20px;
     font-weight: 600;

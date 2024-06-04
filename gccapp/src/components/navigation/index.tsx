@@ -3,7 +3,6 @@ import {
     Title,
     NavigationContainer,
     List,
-    NavigateLink,
 } from "./elements";
 import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
 import { ReactComponent as Arrow } from "../../assets/icons/arrow.svg";
@@ -17,9 +16,9 @@ const Navigation: React.FC<NavigationProps> = () => {
         navigate(path, { replace: false });
         return;
     };
-
+    
     return (
-        <NavigationLayout>
+        <NavigationLayout >
             <Title>
                 <p>GC program</p>
                 <TitleIcon />
@@ -38,18 +37,11 @@ const Navigation: React.FC<NavigationProps> = () => {
                     <p>Background</p>
                 </List>
                 <List>
-                    <button onClick={() => onClickHandler("/framework")}>
-                        <Arrow />
-                    </button>
-                    <p>Framework</p>
-                </List>
-                <List>
                     <button onClick={() => onClickHandler("/submission")}>
                         <Arrow />
                     </button>
                     <p>Submission</p>
                 </List>
-                <NavigateLink href="">Extra materials / links</NavigateLink>
                 <div />
             </NavigationContainer>
         </NavigationLayout>

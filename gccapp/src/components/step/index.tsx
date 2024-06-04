@@ -3,15 +3,16 @@ import {
     Description,
     DescriptionBox,
     DescriptionImage,
-    TitleIconWrapper,
     StepAndFlag,
     StepContainer,
     Step,
+    ModuleEmpty,
     StepLockIcon,
     Flag,
 } from "./element";
-import { useLevelStore } from "../../position_store"; /*offline*/
-import { ReactComponent as SpeechBubbleIcon } from "../../assets/icons/speechbubble-icon.svg";
+import { useLevelStore } from "../../position_store"; 
+import { ReactComponent as ModuleBtn } from "../../assets/icons/journey-module-btn.svg";
+import { ReactComponent as SpeechBubbleIcon } from "../../assets/icons/speechbubble-right-icon.svg";
 import { ReactComponent as FlagIcon } from "../../assets/icons/journey-flag-icon.svg";
 import { ReactComponent as StepIcon } from "../../assets/icons/journey-step-icon.svg";
 import { useNavigate } from "react-router-dom";
@@ -27,15 +28,17 @@ const StepBox: React.FC<StepBoxProps> = ({
     description,
     image: Image,
 }) => {
-    const currentLevel = 1; 
-    //const { currentLevel } = useLevelStore();
+    const { currentLevel } = useLevelStore();
         const navigate = useNavigate();
         const onClickHandler = (idx: number) => {
             if(idx === 1){
-                navigate("/first-exercise", { replace: false });
+                navigate("/this-is-me", { replace: false });
             }
-            if(idx > currentLevel) {
-
+            if (idx <=currentLevel){
+                if (idx === 2) {
+                        navigate("/me-and-my-circle", { replace: false });
+                    }
+                //...(add the exercise pages here)
             }
             return;
         };
@@ -43,18 +46,20 @@ const StepBox: React.FC<StepBoxProps> = ({
     return (
         <>
             <StepContainer>
-                <DescriptionBox>
+                {idx <= currentLevel && <DescriptionBox>
                     <Description>
                         <div>
                             {title}
-                            <TitleIconWrapper />
                         </div>
                         <p>{description} </p>
                     </Description>
                     <SpeechBubbleIcon />
-                    <DescriptionImage> {Image && <Image />}</DescriptionImage>
-                </DescriptionBox>
+                    <DescriptionImage>
+                        <div>{Image && <Image />}</div>
+                    </DescriptionImage>
+                </DescriptionBox>}
                 <StepAndFlag>
+                    {idx === currentLevel ? <ModuleBtn /> : <ModuleEmpty />}
                     <Flag
                         style={{
                             display: idx === currentLevel ? "block" : "none",

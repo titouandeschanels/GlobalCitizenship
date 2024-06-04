@@ -11,8 +11,8 @@ interface GlobalCaseProps {
 const GlobalCaseStudy: React.FC<GlobalCaseProps> = () => {
     return (
         <ContentWrapper>
-            <Header>About the Global EU Challenge</Header>
-            <SubHeader>Global Citizenship Certificate & Global EU Challenge</SubHeader>
+            <Header>About the Global-U Challenge</Header>
+            <SubHeader>Global Citizenship Certificate & Global-UChallenge</SubHeader>
             <TextAll>
                 We are looking for students who want impact as Global Citizen and earn extra credits
                 (could be part of your electives - vrije ruimte, honours program or as extra-curricular activity).
@@ -30,7 +30,7 @@ const GlobalCaseStudy: React.FC<GlobalCaseProps> = () => {
             <ImageWrapper>
                 <CenteredImage src={deadlineImg}/>
             </ImageWrapper>
-            <SubHeader>Explanation of the Global EU Challenge</SubHeader>
+            <SubHeader>Explanation of the Global-U Challenge</SubHeader>
             <TextAll>
                 More under this link:
                 <a href="https://www.globalcasestudychallenge.com/global-virtual-teams-challenge/">Click here</a>
@@ -62,7 +62,7 @@ const GlobalCaseStudy: React.FC<GlobalCaseProps> = () => {
                 </StyledButton>
             </ButtonWrapper>
             <TextAll>
-                The Global EU Challenge is a real intercultural and virtual experience, which provides
+                The Global-U Challenge is a real intercultural and virtual experience, which provides
                 the participants with invaluable experience for their private and professional lives to make an impact
                 as Global Citizens. Educators from 30 universities across the globe with more than 1450 students
                 participated in this experiential COIL and virtual exchange project in the past editions!

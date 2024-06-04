@@ -15,7 +15,7 @@ const BackgroundAboutpage: React.FC<BackgroundAboutpageProps> = () => {
             </div>
             <div>
                 <Subtitle>
-                    Practical information about the Global EU program,
+                    Practical information about the Global-U program,
                     <br/>
                     upcoming classes, and related matters.
                 </Subtitle>

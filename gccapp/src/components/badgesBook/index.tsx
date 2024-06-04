@@ -1,42 +1,43 @@
 import { useState } from 'react';
-import { BookContainer, BookClosedImage, BookClosedButton, BookClosedTitle, BookOpenImage, BookOpenTitle, BookOpenContainerLeft, BookOpenLine, BookOpenButton, BookOpenContainerRight, BookOpenBadgeTitle, BookOpenBadgeDescription } from './elements';
-import Blue from '../../assets/badges/blue.png';
-import Red from '../../assets/badges/red.png';
-import Yellow from '../../assets/badges/yellow.png';
-import Green from '../../assets/badges/green.png';
-import DarkGreen from '../../assets/badges/darkgreen.png';
+import { BookContainer, BookClosedImage, BookClosedButton, BookClosedTitle, BookOpenImage, BookOpenTitle, BookOpenContainerLeft, BookOpenLine, BookOpenButton, BookOpenContainerRight, BookOpenBadgeTitle, BookOpenBadgeDescription, BookOpenBadgeImage } from './elements';
+import BadgeModule1 from '../../assets/badges/badge-module1.png';
+import BadgeModule2 from '../../assets/badges/badge-module2.png';
+import BadgeModule3 from '../../assets/badges/badge-module3.png';
+import BadgeModule4 from '../../assets/badges/badge-module4.png';
+import BadgeModule5 from '../../assets/badges/badge-module5.png';
+import BadgeModule6 from '../../assets/badges/badge-module6.png';
 
 const BadgesBook = () => {
     const [bookOpen, setBookOpen] = useState(false);
 
     const [badges] = useState([
         {
-            badge: {Blue},
+            badge: BadgeModule1,
             title: "This is me",
             description: "You have completed the This is me Badge, congratulations! You have learned about yourself.",
         },
         {
-            badge: {Red},
+            badge: BadgeModule2,
             title: "Me and my circles",
             description: "You have completed the Me and my circles Badge, congratulations! You have learned about your family and friends.",
         },
         {
-            badge: {Yellow},
+            badge: BadgeModule3,
             title: "The influence of perceptions",
             description: "You have completed the The influence of perceptions Badge, congratulations! You have learned about the importance of perceptions.",
         },
         {
-            badge: {Green},
+            badge: BadgeModule4,
             title: "Dilemnas",
-            description: "You have completed the Dilemnas Badge, congratulations! You have learned about dilemnas and how to solve them.",
+            description: "You have completed the Dilemmas Badge, congratulations! You have learned about dilemnas and how to solve them.",
         },
         {
-            badge: {DarkGreen},
+            badge: BadgeModule5,
             title: "Challenge and Goal Setting",
             description: "You have completed the Challenge and Goal Setting Badge, congratulations! You have learned about setting goals and how to achieve them.",
         },
         {
-            badge: {Blue},
+            badge: BadgeModule6,
             title: "Value-based challenge creation",
             description: "You have completed the Value-based challenge creation Badge, congratulations! You have learned about creating challenges based on your values.",
         }
@@ -57,21 +58,26 @@ const BadgesBook = () => {
                     <BookOpenContainerLeft>
                         <BookOpenLine>
                             <BookOpenButton onClick={() => setCurrentBadge(0)}>
-                                <img src={Blue} alt="Blue Badge" />
+                                <img src={BadgeModule1} alt="Badge Module 1" />
                             </BookOpenButton>
                             <BookOpenButton onClick={() => setCurrentBadge(1)}>
-                                <img src={Red} alt="Red Badge" />
-                            </BookOpenButton>
-                            <BookOpenButton onClick={() => setCurrentBadge(2)}>
-                                <img src={Yellow} alt="Yellow Badge" />
+                                <img src={BadgeModule2} alt="Badge Module 2" />
                             </BookOpenButton>
                         </BookOpenLine>
                         <BookOpenLine>
-                            <BookOpenButton onClick={() => setCurrentBadge(3)}>
-                                <img src={Green} alt="Green Badge" />
+                            <BookOpenButton onClick={() => setCurrentBadge(2)}>
+                                <img src={BadgeModule3} alt="Badge Module 3" />
                             </BookOpenButton>
+                            <BookOpenButton onClick={() => setCurrentBadge(3)}>
+                                <img src={BadgeModule4} alt="Badge Module 4" />
+                            </BookOpenButton>
+                        </BookOpenLine>
+                        <BookOpenLine>
                             <BookOpenButton onClick={() => setCurrentBadge(4)}>
-                                <img src={DarkGreen} alt="Dark Green Badge" />
+                                <img src={BadgeModule5} alt="Badge Module 5" />
+                            </BookOpenButton>
+                            <BookOpenButton onClick={() => setCurrentBadge(5)}>
+                                <img src={BadgeModule6} alt="Badge Module 6" />
                             </BookOpenButton>
                         </BookOpenLine>
                     </BookOpenContainerLeft>
@@ -80,6 +86,7 @@ const BadgesBook = () => {
                         <BookOpenBadgeTitle>
                             {badges[cuurentBadge].title}
                         </BookOpenBadgeTitle>
+                        <BookOpenBadgeImage src={badges[cuurentBadge].badge} alt="Badge" />
                         <BookOpenBadgeDescription>
                             {badges[cuurentBadge].description}
                         </BookOpenBadgeDescription>
@@ -89,7 +96,7 @@ const BadgesBook = () => {
             ) : (
                 <BookClosedImage>
                     <BookClosedTitle>
-                    <span dangerouslySetInnerHTML={{__html: "Emma's<br/>Global Citizenship<br/>Journey"}} />
+                        <span dangerouslySetInnerHTML={{ __html: "Emma's<br/>Global Citizenship<br/>Journey" }} />
                     </BookClosedTitle>
                     <BookClosedButton onClick={() => setBookOpen(true)} />
                 </BookClosedImage>

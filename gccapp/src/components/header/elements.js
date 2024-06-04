@@ -22,8 +22,8 @@ export const HeaderContainer = styled.div`
 export const HeaderLogo = styled.div`
     display: flex;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     margin-right: 10px;
     cursor: pointer;
     img {
@@ -35,8 +35,8 @@ export const HeaderLogo = styled.div`
     user-select: none;
     transition: 0.3s;
     &:hover {
-        width: 55px;
-        height: 55px;
+        width: 75px;
+        height: 75px;
     }
 `;
 
@@ -52,11 +52,12 @@ export const HeaderItem = styled.div`
     margin: 0 10px;
     cursor: pointer;
     user-select: none;
+    color: ${props => props.color};
+    font-size: 20px;
+    transition: 0.3s;
     &:hover {
         color: ${Green};
     }
-    font-size: 20px;
-    transition: 0.3s;
 `;
 
 export const HeaderButton = styled.button`

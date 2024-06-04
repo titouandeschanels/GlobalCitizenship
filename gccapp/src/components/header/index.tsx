@@ -1,35 +1,42 @@
+import React from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { Black, Green } from '../../colors';
 import CircularProgressBar from '../ciruclarProgressbar';
 import {HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem} from './elements';
-import {Link} from 'react-router-dom';
+import Logo from '../../assets/logo/mainLogo.png';
 
-interface HeaderProps {
-    
-}
+const Header: React.FC = () => {
+    const location = useLocation();
 
-const Header: React.FC<HeaderProps> = () => {
+    const isActive = (path: string) => location.pathname === path;
+
+    const defineColor = (path: string) => {
+        if (isActive(path)) {
+            return Green
+        } else {
+            return Black
+        }
+    }
+
     return (
         <HeaderContainer>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <HeaderLogo>
-                    <img src="https://via.placeholder.com/100" alt="logo" />
+                    <img src={Logo} alt="logo"/>
                 </HeaderLogo>
             </Link>
             <HeaderMenu>
-                {/* <HeaderItem>Journey</HeaderItem>
-                <HeaderItem>Community</HeaderItem>
-                <HeaderItem>Cloud</HeaderItem>
-                <HeaderItem>My Page</HeaderItem> */}
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <HeaderItem color={defineColor('/')}>Home</HeaderItem>
+                </Link>
                 <Link to="/journey" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Journey</HeaderItem>
+                    <HeaderItem color={defineColor('/journey')}>Journey</HeaderItem>
                 </Link>
-                <Link to="/community" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Community</HeaderItem>
+                <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <HeaderItem color={defineColor('/about')}>About</HeaderItem>
                 </Link>
-                <Link to="/cloud" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>Cloud</HeaderItem>
-                </Link>
-                <Link to="/mypage" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>My Page</HeaderItem>
+                <Link to="/badges" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <HeaderItem color={defineColor('/badges')}>Badges</HeaderItem>
                 </Link>
                 <CircularProgressBar progress={35} />
             </HeaderMenu>

@@ -10,17 +10,20 @@ export const BookContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top : 21px;
-    margin-bottom : 22px;
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 120px;
 `;
 
 export const BookClosedImage = styled.div`
     display: flex;
     position: relative;
     background-image: url("${BookClosed}");
-    height: 75vh;
-    width: 35vw;
+    height: 65%;
+    width: 30%;
     background-size: 100% 100%;
     text-align: center;
 `;
@@ -52,8 +55,8 @@ export const BookOpenImage = styled.div`
     display: flex;
     position: relative;
     background-image: url("${BookOpen}");
-    height: 75vh;
-    width: 60vw;
+    height: 65%;
+    width: 52%;
     background-size: 100% 100%;
     text-align: center;
 `;
@@ -104,8 +107,8 @@ export const BookOpenButton = styled.div`
     margin-right: 5%;
 
     img {
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 130%;
+        max-height: 130%;
         object-fit: contain;
     }
 
@@ -121,6 +124,8 @@ export const BookOpenContainerRight = styled.div`
     top: 15%;
     right: 6%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const BookOpenBadgeTitle = styled.h1`
@@ -129,7 +134,7 @@ export const BookOpenBadgeTitle = styled.h1`
     font-family: ${Inika};
     color: ${Black};
     margin-bottom: 2%;
-    top: 5%;
+    top: 0.5%;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
@@ -140,8 +145,15 @@ export const BookOpenBadgeDescription = styled.h1`
     font-size: calc(0.5vw + 0.5vh + 0.5vmin);
     font-family: ${Inika};
     color: ${Black};
-    top: 25%;
+    top: 65%;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
+`;
+
+
+export const BookOpenBadgeImage = styled.img`
+    height: 50%;  
+    top: 20%;
+    position: absolute;
 `;

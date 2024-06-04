@@ -1,6 +1,5 @@
 import Page from "./page";
-import WaveBackground from "../components/waveBackground";
-import { Indigo } from "../colors";
+import WaveBackground from "../components/waveBackgroundBadgesbook";
 import BadgesBook from "../components/badgesBook";
 
 interface BadgesProps {
@@ -11,9 +10,7 @@ const Badges: React.FC<BadgesProps> = () => {
     return (
         <Page>
             <WaveBackground />
-            <div style={{ marginTop: '-21px', backgroundColor: Indigo, marginBottom: '-22px' }}>
-                <BadgesBook />
-            </div>
+            <BadgesBook />
         </Page>
     );
 }
