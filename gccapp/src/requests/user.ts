@@ -16,6 +16,6 @@ export const getUser = async () => {
         const user = await responseUser.json();
         return user;
     } catch (error) {
-        console.log('ERROR GET USER = ' + error);
+        console.error('ERROR GET USER = ' + error);
     }
 };

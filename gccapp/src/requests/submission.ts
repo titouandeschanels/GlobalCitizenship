@@ -16,6 +16,6 @@ export const getSubmission = async () => {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.log('ERROR GET SUBMISSION = ' + error);
+        console.error('ERROR GET SUBMISSION = ' + error);
     }
 };

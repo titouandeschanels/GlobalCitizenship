@@ -1,10 +1,10 @@
-export const getChapter = async () => {
+export const getLesson = async () => {
     const username = process.env.REACT_APP_REQUEST_USER;
     const password = process.env.REACT_APP_REQUEST_PASSWORD;
 
     try {
         const urlRequest =
-            process.env.REACT_APP_BACKEND_URL + `chapter`;
+            process.env.REACT_APP_BACKEND_URL + `lesson`;
         const response = await fetch(urlRequest, {
             method: 'GET',
             headers: {
@@ -16,23 +16,26 @@ export const getChapter = async () => {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('ERROR GET Chapter = ' + error);
+        console.error('ERROR GET Lesson = ' + error);
     }
 };
 
-export const postChapter = async (chapter: any) => {
+export const postLesson = async (lesson: any) => {
     const username = process.env.REACT_APP_REQUEST_USER;
     const password = process.env.REACT_APP_REQUEST_PASSWORD;
+    console.log("DATA in post")
+    console.log(lesson);
+
     try {
         const urlRequest =
-            process.env.REACT_APP_BACKEND_URL + `chapter/`;
+            process.env.REACT_APP_BACKEND_URL + `lesson/`;
         const response = await fetch(urlRequest, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Basic ${btoa(`${username}:${password}`)}`,
             },
-            body: JSON.stringify(chapter)
+            body: JSON.stringify(lesson)
         });
 
         if (!response.ok) {
@@ -42,6 +45,6 @@ export const postChapter = async (chapter: any) => {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('ERROR SET Chapter = ' + error);
+        console.error('ERROR SET Lesson = ' + error);
     }
 }
