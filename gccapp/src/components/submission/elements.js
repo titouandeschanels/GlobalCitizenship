@@ -115,6 +115,10 @@ export const UploadButton = styled.button`
         max-height: 100%;
         object-fit: contain;
     }
+
+    :hover {
+        cursor: pointer;
+    }
 `;
 
 export const Popup = styled.div`
@@ -127,6 +131,7 @@ export const Popup = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 `;
 
 export const PopupContent = styled.div`
