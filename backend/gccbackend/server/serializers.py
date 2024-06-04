@@ -193,14 +193,104 @@ class PositionSerializer(serializers.HyperlinkedModelSerializer):
 
 #TODO create method + serializer fields
 class SubmissionSerializer(serializers.HyperlinkedModelSerializer):
+    student = serializers.SerializerMethodField(read_only=True)
+    lesson = serializers.SerializerMethodField(read_only=True)
+    chapter = serializers.SerializerMethodField(read_only=True)
+    set_student = serializers.IntegerField(write_only=True, required=False)
+    set_lesson = serializers.IntegerField(write_only=True, required=False)
+    set_chapter = serializers.IntegerField(write_only=True, required=False)
+    # set_submission = serializers.IntegerField(write_only=True, required=False)
+
     class Meta:
         model = Submission
-        fields = ['lesson', 'student', 'content']
+        fields = ['lesson', 'student', 'content', 'set_student', 'chapter', 'set_lesson', 'set_chapter']
 
     def create(self, validated_data):
-        lesson = validated_data.pop('lesson')
-        student = validated_data.pop('student')
+        # try:
+        #     submission_id = validated_data.pop('set_submission')
+            
+        #     submission = Submission.objects.get(pk=submission_id)
+
+        #     if submission:
+        #         submission.content = validated_data.pop('content')
+        #         submission.save()
+        #         return submission
+        #     raise serializers.ValidationError("submission not found")
+        # except:
+            
+        lesson_number = validated_data.pop('set_lesson')
+        student_id = validated_data.pop('set_student')
         chapter_number = validated_data.pop('set_chapter')
+        content = validated_data.pop('content')
+        print(f'Student {student_id}: {chapter_number}.{lesson_number}: {content}')
+
+        # if Submission.objects.exists(student = )
+        try:
+            lesson = Lesson.objects.filter(number=lesson_number, in_chapter__number=chapter_number).first()
+            if lesson==None:
+                raise serializers.ValidationError("Lesson not found")
+            student = Student.objects.get(id=student_id)
+            print(f'Create submission\nlesson: {lesson}\nStudent: {student}\nContent: {content}')
+            submission = Submission.objects.filter(lesson=lesson, student=student).first()
+            if submission:
+                submission.content = content
+                submission.save()
+                return submission
+            return Submission.objects.create(content=content, lesson=lesson, student=student)
+        except:
+            raise serializers.ValidationError("Could not create the submission")
+
+        # lesson = Lesson.objects.filter(number=lesson_number, in_chapter__number=chapter_number).first()
+        # print(f'1 lesson: {lesson}; ln: {lesson_number} {type(lesson_number)}; cn: {chapter_number}')
+        # if lesson==None:
+        #     print("NONE")
+        #     lesson_number = 1
+        #     chapter_number = 1
+        #     print(f'1.1 lesson: {lesson}; ln: {lesson_number} {type(lesson_number)}; cn: {chapter_number}')
+        
+            
+        # lesson_default = Lesson.objects.all().filter(number=lesson_number, in_chapter__number=chapter_number).first()
+        # print(f'1.2 lesson: {lesson}; lesson_default: {lesson_default}; ln: {lesson_number}; cn: {chapter_number}')
+        
+        # print(f'1.3 lesson: {lesson}; ln: {lesson_number}; cn: {chapter_number}')
+        
+        # print(f'2 lesson: {lesson}')
+        # user = User.objects.create(username=username)
+        # if lesson==None:
+        #     print("DEFAULT USER POSITION")
+        #     return Student.objects.create(user=user, **validated_data)
+        # student = Student.objects.create(user=user, current_lesson=lesson , **validated_data)
+        # return student
+
+    #doesn't get here...
+    def update(self, validated_data):
+        submission_id = validated_data.pop('set_submission')
+        submission = Submission.objects.get(pk=submission_id)
+
+        if submission:
+            submission.content = validated_data.pop('content')
+            submission.save()
+            return submission
+        else:
+            raise serializers.ValidationError("submission not found")
+#TODO
+    # def update(self, instance, validated_data):
+    #     lesson = Lesson.objects.filter(number=validated_data.pop('set_lesson'), in_chapter__number=validated_data.pop('set_chapter')).first()
+        
+    #     if lesson:
+    #         instance.current_lesson = lesson
+    #         instance.save()
+    #         return instance
+    #     else:
+    #         raise serializers.ValidationError("Lesson not found")
+    def get_chapter(self, submission):
+        return submission.lesson.in_chapter.number
+    
+    def get_lesson(self, submission):
+        return submission.lesson.number
+    
+    def get_student(self, submission):
+        return submission.student.id
 
 class GetSubmissionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

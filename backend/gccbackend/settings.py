@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'gccbackend.server',
-    'gccbackend.server',
     'drf_spectacular',
     'drf_spectacular_sidecar'
 ]
