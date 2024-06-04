@@ -1,11 +1,11 @@
-export const getUser = async () => {
+export const getSubmission = async () => {
     const username = process.env.REACT_APP_REQUEST_USER;
     const password = process.env.REACT_APP_REQUEST_PASSWORD;
 
     try {
         const urlRequest =
-            process.env.REACT_APP_BACKEND_URL + `users/1`;
-        const responseUser = await fetch(urlRequest, {
+            process.env.REACT_APP_BACKEND_URL + `submission`;
+        const response = await fetch(urlRequest, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -13,9 +13,9 @@ export const getUser = async () => {
             },
         });
 
-        const user = await responseUser.json();
+        const user = await response.json();
         return user;
     } catch (error) {
-        console.log('ERROR GET USER = ' + error);
+        console.log('ERROR GET SUBMISSION = ' + error);
     }
 };

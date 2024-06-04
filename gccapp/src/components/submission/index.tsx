@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     SubmissionBox,
     TitleBox,
@@ -29,6 +29,7 @@ import BadgeModule4 from '../../assets/badges/badge-module4.png';
 import BadgeModule5 from '../../assets/badges/badge-module5.png';
 import BadgeModule6 from '../../assets/badges/badge-module6.png';
 import { Link } from "react-router-dom";
+import { getSubmission } from "../../requests/submission";
 
 interface FileUploadStatus {
     files: File[];
@@ -41,6 +42,34 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
     const [fileUploads, setFileUploads] = useState<FileUploadStatus[]>(Array(6).fill({ files: [], uploaded: false }));
     const [uploadedModuleIndex, setUploadedModuleIndex] = useState<number | null>(null);
     const [popupStates, setPopupStates] = useState<boolean[]>(Array(6).fill(false));
+
+
+    // useEffect(() => {
+    //     const getSubmissionData = async () => {
+    //         const data = await getSubmission();
+    //         if (data) {
+    //             console.log(data)
+    //             if (data.count === 0) return;
+    //             const index = data.count - 1;
+    //             const updatedFileUploads = [...fileUploads];
+    //             updatedFileUploads.map((fileUpload, i) => {
+    //                 if (i <= index) {
+    //                     fileUpload.uploaded = true;
+    //                 }
+    //                 return fileUpload;
+    //             });
+    //             setFileUploads(updatedFileUploads);
+    //             setUploadedModuleIndex(index);
+
+    //             const updatedPopupStates = [...popupStates];
+    //             updatedPopupStates[index] = true;
+    //             setPopupStates(updatedPopupStates);
+
+    //         }
+    //     };
+    //     getSubmissionData();
+    // }, []);
+
 
     const handleUpload = (index: number, files: FileList | null) => {
         if (!files) return;

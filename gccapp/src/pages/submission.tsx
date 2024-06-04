@@ -8,7 +8,7 @@ interface SubmissionProps {
 const SubmissionPage: React.FC<SubmissionProps> = () => {
     return (
         <Page>
-           <Submission></Submission>
+            <Submission/>
         </Page>
     );
 }
