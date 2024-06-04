@@ -1,13 +1,12 @@
 import CircularProgressBar from '../ciruclarProgressbar';
 import {HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem} from './elements';
-import {Link , useLocation} from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 interface HeaderProps {
     
 }
 
 const Header: React.FC<HeaderProps> = () => {
-    const location = useLocation();
 
     return (
         <HeaderContainer>

@@ -121,6 +121,8 @@ export const BookOpenContainerRight = styled.div`
     top: 15%;
     right: 6%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const BookOpenBadgeTitle = styled.h1`
@@ -140,8 +142,15 @@ export const BookOpenBadgeDescription = styled.h1`
     font-size: calc(0.5vw + 0.5vh + 0.5vmin);
     font-family: ${Inika};
     color: ${Black};
-    top: 25%;
+    top: 65%;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
+`;
+
+
+export const BookOpenBadgeImage = styled.img`
+    height: 50%;  
+    top: 20%;
+    position: absolute;
 `;
