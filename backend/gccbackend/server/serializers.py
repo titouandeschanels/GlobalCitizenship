@@ -21,26 +21,26 @@ class LessonSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Lesson
-        fields = ['number', 'title', 'content', 'in_chapter', 'get_chapter', 'get_lesson', 'set_chapter']
+        fields = ['number', 'title', 'content', 'in_chapter', 'get_chapter', 'get_lesson']
 
-    # def get(self, validated_data):
-    #     print('IN GET')
-    #     return Lesson.objects.filter(number=validated_data.pop('get_lesson'), chapter__number=validated_data.pop('get_chapter')).first()
-    #     lesson = Lesson.objects.filter(number=validated_data.pop('set_lesson'), chapter__number=validated_data.pop('set_chapter')).first()
+    def get(self, validated_data):
+        print('IN GET')
+        return Lesson.objects.filter(number=validated_data.pop('get_lesson'), chapter__number=validated_data.pop('get_chapter')).first()
+        lesson = Lesson.objects.filter(number=validated_data.pop('set_lesson'), chapter__number=validated_data.pop('set_chapter')).first()
         
-    #     if lesson:
-    #         instance.current_lesson = lesson
-    #         instance.save()
-    #         return instance
-    #     else:
-    #         raise serializers.ValidationError("Lesson not found")
+        if lesson:
+            instance.current_lesson = lesson
+            instance.save()
+            return instance
+        else:
+            raise serializers.ValidationError("Lesson not found")
 
     def get_in_chapter(self, lesson):
         return lesson.in_chapter.number
     
-    def set_in_chapter(self, lesson):
-        print('SET_CHAPTER')
-        return Chapter.objects.filter(number=self.in_chapter)
+    # def set_in_chapter(self, lesson):
+    #     print('SET_CHAPTER')
+    #     return Chapter.objects.filter(number=self.in_chapter)
 
     def create(self, validated_data):
         print("CREATE LESSON")
@@ -203,7 +203,7 @@ class SubmissionSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Submission
-        fields = ['lesson', 'student', 'content', 'set_student', 'chapter', 'set_lesson', 'set_chapter']
+        fields = ['id', 'lesson', 'student', 'content', 'set_student', 'chapter', 'set_lesson', 'set_chapter']
 
     def create(self, validated_data):
         # try:

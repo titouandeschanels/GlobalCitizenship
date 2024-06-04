@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'gccbackend.server',
     'drf_spectacular',
-    'drf_spectacular_sidecar'
+    'drf_spectacular_sidecar',
+    'django_seeding',
 ]
 
 MIDDLEWARE = [
