@@ -38,6 +38,10 @@ export const FooterText = styled.p`
     font-weight: 400;
     margin-bottom: 5px;
     user-select: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 `;
 
 export const FooterButton = styled.button`
