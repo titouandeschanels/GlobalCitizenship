@@ -63,14 +63,16 @@ const BadgesBook = () => {
                             <BookOpenButton onClick={() => setCurrentBadge(1)}>
                                 <img src={BadgeModule2} alt="Badge Module 2" />
                             </BookOpenButton>
+                        </BookOpenLine>
+                        <BookOpenLine>
                             <BookOpenButton onClick={() => setCurrentBadge(2)}>
                                 <img src={BadgeModule3} alt="Badge Module 3" />
                             </BookOpenButton>
-                        </BookOpenLine>
-                        <BookOpenLine>
                             <BookOpenButton onClick={() => setCurrentBadge(3)}>
                                 <img src={BadgeModule4} alt="Badge Module 4" />
                             </BookOpenButton>
+                        </BookOpenLine>
+                        <BookOpenLine>
                             <BookOpenButton onClick={() => setCurrentBadge(4)}>
                                 <img src={BadgeModule5} alt="Badge Module 5" />
                             </BookOpenButton>

@@ -39,7 +39,6 @@ interface SubmissionProps { }
 
 const Submissionlayout: React.FC<SubmissionProps> = () => {
     const [fileUploads, setFileUploads] = useState<FileUploadStatus[]>(Array(6).fill({ files: [], uploaded: false }));
-    const [uploadedModuleIndex, setUploadedModuleIndex] = useState<number | null>(null);
     const [popupStates, setPopupStates] = useState<boolean[]>(Array(6).fill(false));
 
     const handleUpload = (index: number, files: FileList | null) => {
@@ -48,7 +47,6 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
         const updatedFileUploads = [...fileUploads];
         updatedFileUploads[index] = { files: Array.from(files), uploaded: true };
         setFileUploads(updatedFileUploads);
-        setUploadedModuleIndex(index);
         handleOpenPopup(index)
     };
 

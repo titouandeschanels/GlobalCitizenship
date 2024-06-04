@@ -10,9 +10,12 @@ export const BookContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top : 21px;
-    margin-bottom : 22px;
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 150px;
 `;
 
 export const BookClosedImage = styled.div`
@@ -104,8 +107,8 @@ export const BookOpenButton = styled.div`
     margin-right: 5%;
 
     img {
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 130%;
+        max-height: 130%;
         object-fit: contain;
     }
 
