@@ -1,4 +1,6 @@
+import React from 'react';
 import Page from ".././page";
+import GccResit from "../../components/about/gccResit/index";
 
 interface AboutGCCResitProps {
 
@@ -7,7 +9,7 @@ interface AboutGCCResitProps {
 const AboutGCCResit: React.FC<AboutGCCResitProps> = () => {
     return (
         <Page>
-            <h1>About the GCC Resit</h1>
+            <GccResit></GccResit>
         </Page>
     );
 }

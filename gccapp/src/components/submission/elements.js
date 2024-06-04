@@ -1,90 +1,51 @@
 import styled from "styled-components";
-import { White, Blue, Orange, LightGray } from "../../colors";
+import { White, LightGray, Green, Gray, Blue } from "../../colors";
 
 export const SubmissionBox = styled.div`
-    margin: 0px 0px;
-    background-color: ${White};
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    overflow-y : scroll;
+    padding-bottom: 50px;
+
 `;
 
-export const Navigation = styled.div`
-    position: relative;
-    margin-left: 222px;
-    padding-top: 80px;
-    font-weight: 150;
-    font-size: 13px;
-    height: 20px;
-    width: 300px;
+export const IntroNavigation = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-left: 40px;
+    color: ${Gray};
+    :last-child {
+        font-weight: bold;
+    }
 `;
 
 export const TitleBox = styled.div`
-    margin: 0px 0px;
-    background-color: ${White};
+    font-weight: bold;
+    font-size: 20px;
     display: flex;
+    max-width: 100%;
     flex-direction: row;
-    height: 10vh;
-`;
-
-export const Title = styled.div`
-    position: relative;
-    margin-left: 220px;
-    padding-top: 0px;
-    font-weight: 600;
-    font-size: 45px;
-    height: 45px;
-    width: 450px;
-`;
-
-export const CompletedCircle = styled.div`
-    position: relative;
-    margin-left: 220px;
-    padding-top: 0px;
-    width: 35px;            
-    height: 35px;           
-    background-color: ${Blue};  
-    border-radius: 50%;      
-`;
-
-export const Completed = styled.div`
-    position: relative;
-    margin-left: 13px;
-    padding-top: 0px;
-    font-weight: 550;
-    font-size: 20px;
-    height: 20px;
-    width: 100px;
-`;
-
-export const OngoingCircle = styled.div`
-    position: relative;
     margin-left: 40px;
-    padding-top: 0px;
+    margin-right: 40px;
+    justify-content: space-between;
+`;
+
+export const ExplanationCircle = styled.div`
     width: 35px;            
-    height: 35px;           
-    background-color: ${Orange};  
-    border-radius: 50%;
+    height: 35px;         
+    border-radius: 50%;     
 `;
 
-export const Ongoing = styled.div`
-    position: relative;
-    margin-left: 13px;
-    padding-top: 0px;
-    font-weight: 550;
-    font-size: 20px;
-    height: 20px;
-    width: 100px;
+export const TdWithPadding = styled.td`
+    padding: 0 10px;
 `;
 
-export const SyncButton = styled.div`
-    position: realtive;
-    margin-left: 35px;
-    margin-top: -12px;
-    padding-top: 0px;
+export const SyncButton = styled.button`
     width: 60px;            
     height: 60px;
+    border: none;
+    background-color: ${White};
 
     img {
         max-width: 100%;
@@ -94,120 +55,154 @@ export const SyncButton = styled.div`
 `;
 
 export const SubmissionContainer = styled.div`
-    margin-left: 150px;
-    padding-top: 40px;
-    background-color: ${White};
-    display: flex;
     flex-direction: column;
-    height: 80vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 `;
 
-export const Submission1 = styled.div`
-    margin: 0px 0px;
-    padding-top: 80px;
-    background-color: ${White};
+export const SubmissionItem = styled.div`
+    padding: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 10vh;
 `;
 
-export const Circle1 = styled.div`
-    position: relative;
-    margin-left: 150px;
-    padding: 0px 0px;
+export const Circle = styled.div`
     width: 60px;            
     height: 60px;           
-    background-color: ${Blue};  
     border-radius: 50%;      
     border: 7px solid ${LightGray};
+    margin-right: 40px;
 `;
 
-export const Description1 = styled.div`
-    position: relative;
-    margin-left: 80px;
-    padding-top: 0px;
-    width: 820px;            
-    height: 110px;           
-    background-color: ${Blue};  
-    border-radius: 20px;      
-`;
-
-export const Submission2 = styled.div`
-    margin: 0px 0px;
-    padding-top: 80px;
-    background-color: ${White};
+export const Box = styled.div`
     display: flex;
-    flex-direction: row;
     align-items: center;
-    height: 10vh;
+    padding: 5px;
+    width: 50vw;            
+    height: 10vh;           
+    background-color: ${Green};  
+    border-radius: 20px;  
+    
+    table {
+        padding: 10px;
+        width: 100%;
+    }
 `;
 
-export const Circle2 = styled.div`
-    position: relative;
-    margin-left: 150px;
-    padding: 0px 0px;
-    width: 60px;            
-    height: 60px;           
-    background-color: ${Orange};  
-    border-radius: 50%;      
-    border: 7px solid ${LightGray};
+export const FileName = styled.p`
+    font-size: 10px;
+    margin-right: 10px;
 `;
 
-export const Description2 = styled.div`
-    position: relative;
-    margin-left: 80px;
-    padding-top: 0px;
-    width: 820px;            
-    height: 110px;           
-    background-color: ${Orange};  
-    border-radius: 20px;      
-`;
-
-export const Submission3 = styled.div`
-    margin: 0px 0px;
-    padding-top: 80px;
-    background-color: ${White};
+export const UploadContainer = styled.div`
     display: flex;
-    flex-direction: row;
     align-items: center;
-    height: 10vh;
+    justify-content: flex-end; 
 `;
 
-export const Circle3 = styled.div`
-    position: relative;
-    margin-left: 150px;
-    padding: 0px 0px;
-    width: 67px;            
-    height: 67px;           
-    background-color: ${LightGray};  
-    border-radius: 50%;      
+export const UploadButton = styled.button`
+    background-color: ${White};
+    height: 50px;
+    width: 50px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    :hover {
+        cursor: pointer;
+    }
 `;
 
-export const Description3 = styled.div`
-    position: relative;
-    margin-left: 80px;
-    padding-top: 0px;
-    width: 820px;            
-    height: 110px;           
-    background-color: ${LightGray};  
-    border-radius: 20px;      
+export const Popup = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 `;
 
-export const TextBox = styled.div`
-    position: relative;
-    padding-left: 40px;
-    padding-top: 40px;
-    font-weight: 500;
-    font-size: 17px;
+export const PopupContent = styled.div`
+    background-color: white;
+    padding: 60px;
+    border-radius: 15px;
+    text-align: center;
+    width: 25%;
+
+    table {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 1600px) {
+
+        img {
+            max-width: 70%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        padding: 40px;
+
+        img {
+            max-width: 60%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding: 30px;
+
+        img {
+            max-width: 40%;
+            height: auto;
+        }
+    }
+`;
+
+
+export const ButtonBadgesBook = styled.button`
+    background-color: white;
+    padding: 10px;
+    border: 1px solid;
+    border-color: ${Gray};
+    border-radius: 15px;
+    width: 100%;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+`;
+
+export const ButtonLater = styled.button`
+    background-color: ${Blue};
     color: ${White};
-    height: 110px;
-    width: 820px;
-`;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    font-weight: bold;
 
-export const EmptyBox = styled.div`
-margin: 0px 0px;
-background-color: ${White};
-display: flex;
-height: 10vh;
+    &:hover {
+        cursor: pointer;
+    }
 `;

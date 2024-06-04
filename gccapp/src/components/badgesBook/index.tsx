@@ -9,7 +9,7 @@ import DarkGreen from '../../assets/badges/darkgreen.png';
 const BadgesBook = () => {
     const [bookOpen, setBookOpen] = useState(false);
 
-    const [badges, setBadges] = useState([
+    const [badges] = useState([
         {
             badge: {Blue},
             title: "This is me",
