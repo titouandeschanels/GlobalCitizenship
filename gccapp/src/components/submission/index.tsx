@@ -1,6 +1,5 @@
 import {
     SubmissionBox,
-    Navigation,
     TitleBox,
     Title,
     CompletedCircle,
@@ -9,101 +8,93 @@ import {
     Ongoing,
     SyncButton,
     SubmissionContainer,
-    Submission1, Submission2, Submission3,
-    Circle1, Circle2, Circle3,
-    Description1, Description2, Description3,
+    SubmissionOngoing, SubmissionNotDone,
+    Circle2, Circle3,
+    Description2, Description3,
     TextBox, EmptyBox,
 } from "../submission/elements";
 import React from "react";
 import Sync from '../../assets/icons/sync.png';
+import { IntroNavigation } from "../introduction/elements";
+import { ReactComponent as NavArrow } from "../../assets/icons/intro-navigate-arrow.svg";
 
-interface SubmissionProps{}
+interface SubmissionProps { }
 const Submissionlayout: React.FC<SubmissionProps> = () => {
     return (
         <>
-        <SubmissionBox>
-            <Navigation>
-                Home {'>'} My Page {'>'} Submission Point
-            </Navigation>
-
-            <TitleBox>
-                <Title>
-                    Submission Point
-                </Title>
-                <CompletedCircle>
+            <SubmissionBox>
+                <IntroNavigation>
+                    <p>Home</p>
+                    <NavArrow />
+                    <p>My Page</p>
+                    <NavArrow />
+                    <p>Submission Point</p>
+                </IntroNavigation>
+                <TitleBox>
+                    <Title>
+                        Submission Point
+                    </Title>
+                    <CompletedCircle>
                     </CompletedCircle>
-                <Completed>
-                    Completed
-                </Completed>
-                <OngoingCircle>
+                    <Completed>
+                        Completed
+                    </Completed>
+                    <OngoingCircle>
                     </OngoingCircle>
-                <Ongoing>
-                    On going
-                </Ongoing>
-                <SyncButton>
-                    <img src={Sync} alt="Sync Button" />
-                </SyncButton>
-            </TitleBox>
+                    <Ongoing>
+                        On going
+                    </Ongoing>
+                    <SyncButton>
+                        <img src={Sync} alt="Sync Button" />
+                    </SyncButton>
+                </TitleBox>
 
-            <SubmissionContainer>
-                <Submission1>
-                    <Circle1>
-                    </Circle1>
-                    <Description1>
-                        <TextBox>
-                            Any description
-                        </TextBox>
-                    </Description1>
-                </Submission1>
-                <Submission1>
-                    <Circle1>
-                    </Circle1>
-                    <Description1>
-                    </Description1>
-                </Submission1>
-                <Submission1>
-                    <Circle1>
-                    </Circle1>
-                    <Description1>
-                    </Description1>
-                </Submission1>
+                <SubmissionContainer>
+                    <SubmissionOngoing>
+                        <Circle2>
+                        </Circle2>
+                        <Description2>
+                            <TextBox>
+                                This is me
+                            </TextBox>
+                        </Description2>
+                    </SubmissionOngoing>
 
-                <Submission2>
-                    <Circle2>
-                    </Circle2>
-                    <Description2>
-                    </Description2>
-                </Submission2>
+                    <SubmissionNotDone>
+                        <Circle3>
+                        </Circle3>
+                        <Description3>
+                            <TextBox>
+                                Me and my circles
+                            </TextBox>
+                        </Description3>
+                    </SubmissionNotDone>
+                    <SubmissionNotDone>
+                        <Circle3>
+                        </Circle3>
+                        <Description3>
+                            <TextBox>
+                                The influence of perceptions
+                            </TextBox>
+                        </Description3>
+                    </SubmissionNotDone>
+                    <SubmissionNotDone>
+                        <Circle3>
+                        </Circle3>
+                        <Description3>
+                        </Description3>
+                    </SubmissionNotDone>
+                    <SubmissionNotDone>
+                        <Circle3>
+                        </Circle3>
+                        <Description3>
+                        </Description3>
+                    </SubmissionNotDone>
+                </SubmissionContainer>
+            </SubmissionBox>
 
-                <Submission3>
-                    <Circle3>
-                    </Circle3>
-                    <Description3>
-                    </Description3>
-                </Submission3>
-                <Submission3>
-                    <Circle3>
-                    </Circle3>
-                    <Description3>
-                    </Description3>
-                </Submission3>
-                <Submission3>
-                    <Circle3>
-                    </Circle3>
-                    <Description3>
-                    </Description3>
-                </Submission3>
-                <Submission3>
-                    <Circle3>
-                    </Circle3>
-                    <Description3>
-                    </Description3>
-                </Submission3>
-            </SubmissionContainer>
-        </SubmissionBox>
-
-        <EmptyBox>
-        </EmptyBox>
+            <EmptyBox>
+            </EmptyBox>
         </>
     )
 }

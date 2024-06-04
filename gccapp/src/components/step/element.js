@@ -59,7 +59,6 @@ export const Description = styled.div`
     }
     }
     & > p {
-        white-space: pre-line;
         width: 309px;
         padding: 5px 40px;
         color: #898888;
