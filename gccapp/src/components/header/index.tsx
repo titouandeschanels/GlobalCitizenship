@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { Black, Green } from '../../colors';
 import CircularProgressBar from '../ciruclarProgressbar';
 import { HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem, IconContainer, Icon } from './elements';
 import Logo from '../../assets/logo/mainLogo.png';

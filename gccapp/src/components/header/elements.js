@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Green, Black, White, Gray } from '../../colors';
+import { Green, Black, White } from '../../colors';
 import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
 
 export const HeaderContainer = styled.div`
