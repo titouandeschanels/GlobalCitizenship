@@ -5,18 +5,19 @@ export const NavigationLayout = styled.div`
     display: flex;
     z-index: 100;
     flex-direction: column;
-    position: fixed;
-    margin: 0 auto;
-    top:0;
-    bottom:0;
-    left: 220px;
-    margin-top:auto;
+    margin-right: 40px;
+    margin-top: 0;
     margin-bottom:auto;
     background-color: #f8f8f8;
     min-width: 375px;
-    height: 746px;
+    height: 500px;
     border-radius: 20px;
     border: 3px solid #e1e1e1;
+    @media (max-width : 1180px) {
+        position: fixed;
+        top: 100px;
+        right: 100px;
+    }
 `;
 
 export const Title = styled.div`
