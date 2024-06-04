@@ -87,9 +87,6 @@ export const IDGStepBox = styled.div`
             :nth-child(2) {
                 left: 200px;
             }
-            :nth-child(3) {
-                left: 350px;
-            }
         }
         :nth-child(3) {
             & > svg > path {
@@ -183,9 +180,6 @@ export const SDGStepBox = styled.div`
             :nth-child(2) {
                 left: 180px;
             }
-            :nth-child(3) {
-                left: 350px;
-            }
         }
     }
     :nth-child(2) {
@@ -205,9 +199,6 @@ export const SDGStepBox = styled.div`
             }
             :nth-child(2) {
                 left: 200px;
-            }
-            :nth-child(3) {
-                left: 350px;
             }
         }
     }
