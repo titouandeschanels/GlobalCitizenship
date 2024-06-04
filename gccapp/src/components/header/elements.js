@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Green, Black, White } from '../../colors';
+import { Green, Black, White, Gray } from '../../colors';
+import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
 
 export const HeaderContainer = styled.div`
     display: flex;
@@ -16,7 +17,7 @@ export const HeaderContainer = styled.div`
     left: 0;
     right: 0;
     z-index: 100;
-    gap : 30vw;
+    gap: 30vw;
 `;
 
 export const HeaderLogo = styled.div`
@@ -43,21 +44,30 @@ export const HeaderLogo = styled.div`
 export const HeaderMenu = styled.div`
     display: flex;
     align-items: center;
-    gap : 50px;
+    gap: 50px;
 `;
 
 export const HeaderItem = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 20px;
     margin: 0 10px;
     cursor: pointer;
     user-select: none;
-    color: ${props => props.color};
     font-size: 20px;
     transition: 0.3s;
-    &:hover {
-        color: ${Green};
-    }
+`;
+
+export const IconContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    height: 100%;
+`;
+
+export const Icon = styled(TitleIcon)`
+    width: 56px;
 `;
 
 export const HeaderButton = styled.button`
