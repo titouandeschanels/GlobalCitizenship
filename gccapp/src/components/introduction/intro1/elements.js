@@ -26,6 +26,8 @@ export const Notification = styled.a`
     width: 65%;
     cursor: pointer;
     border : none;
+    padding-left: 10px;
+    padding-right: 10px;
     box-shadow: 0px 5px 10px #d9d9d9;
     color: #ffffff;
     font-weight: bold;
