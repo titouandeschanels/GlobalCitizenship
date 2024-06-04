@@ -36,19 +36,7 @@ const Footer: React.FC<FooterProps> = () => {
                         <FooterText>About</FooterText>
                     </Link>
                     <Link to="/badges" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <FooterText>Badges Collection</FooterText>
-                    </Link>
-                </FooterColumn>
-                <FooterColumn>
-                    <FooterTitle>Resources</FooterTitle>
-                    <Link to="/community" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <FooterText>Community</FooterText>
-                    </Link>
-                    <Link to="/cloud" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <FooterText>Cloud</FooterText>
-                    </Link>
-                    <Link to="/mypage" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <FooterText>My Page</FooterText>
+                        <FooterText>Badge Collection</FooterText>
                     </Link>
                 </FooterColumn>
                 <FooterColumn>

@@ -18,7 +18,7 @@ const SquaresHome = () => {
                     </QuestionImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitle>About the Global EU Program</SquareTitle>
+                    <SquareTitle>About the Global-U Program</SquareTitle>
                 </TextRow>
             </SquareItem>
             <SquareItem onClick={() => handleClick('/aboutWorkshop')}>
@@ -38,7 +38,7 @@ const SquaresHome = () => {
                     </PaperImage>
                 </ImageRow>
                 <TextRow>
-                    <SquareTitle>About the Global EU Challenge</SquareTitle>
+                    <SquareTitle>About the Global-U Challenge</SquareTitle>
                 </TextRow>
             </SquareItem>
             <SquareItem onClick={() => handleClick('/AboutGCCResit')}>
