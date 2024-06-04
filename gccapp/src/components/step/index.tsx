@@ -10,7 +10,7 @@ import {
     StepLockIcon,
     Flag,
 } from "./element";
-import { useLevelStore } from "../../position_store"; /*offline*/
+import { useLevelStore } from "../../position_store"; 
 import { ReactComponent as ModuleBtn } from "../../assets/icons/journey-module-btn.svg";
 import { ReactComponent as SpeechBubbleIcon } from "../../assets/icons/speechbubble-right-icon.svg";
 import { ReactComponent as FlagIcon } from "../../assets/icons/journey-flag-icon.svg";
@@ -28,7 +28,6 @@ const StepBox: React.FC<StepBoxProps> = ({
     description,
     image: Image,
 }) => {
-    //const currentLevel = 6; 
     const { currentLevel } = useLevelStore();
         const navigate = useNavigate();
         const onClickHandler = (idx: number) => {
