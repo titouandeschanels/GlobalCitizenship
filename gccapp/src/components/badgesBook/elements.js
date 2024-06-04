@@ -15,15 +15,15 @@ export const BookContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    margin-top: 150px;
+    margin-top: 120px;
 `;
 
 export const BookClosedImage = styled.div`
     display: flex;
     position: relative;
     background-image: url("${BookClosed}");
-    height: 75vh;
-    width: 35vw;
+    height: 65%;
+    width: 30%;
     background-size: 100% 100%;
     text-align: center;
 `;
@@ -55,8 +55,8 @@ export const BookOpenImage = styled.div`
     display: flex;
     position: relative;
     background-image: url("${BookOpen}");
-    height: 75vh;
-    width: 60vw;
+    height: 65%;
+    width: 52%;
     background-size: 100% 100%;
     text-align: center;
 `;
@@ -134,7 +134,7 @@ export const BookOpenBadgeTitle = styled.h1`
     font-family: ${Inika};
     color: ${Black};
     margin-bottom: 2%;
-    top: 5%;
+    top: 0.5%;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
