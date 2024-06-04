@@ -1,6 +1,7 @@
 import { FooterContainer, FooterColumn, FooterTitle, FooterText, FooterLogo, FooterDecoration, FooterDecorationBox } from './elements';
 import { Blue, Green, Orange, Pink } from '../../colors';
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/logo/logoAlternative.png';
 
 interface FooterProps {
     
@@ -19,7 +20,7 @@ const Footer: React.FC<FooterProps> = () => {
                 <FooterColumn>
                     <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <FooterLogo>
-                            <img src="https://via.placeholder.com/100" alt="logo" />
+                            <img src={Logo} alt="logo" style={{ width: '80px', height: '80px' }}/>
                         </FooterLogo>
                     </Link>
                     <FooterText>

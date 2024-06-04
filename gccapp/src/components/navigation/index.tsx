@@ -16,9 +16,9 @@ const Navigation: React.FC<NavigationProps> = () => {
         navigate(path, { replace: false });
         return;
     };
-
+    
     return (
-        <NavigationLayout>
+        <NavigationLayout >
             <Title>
                 <p>GC program</p>
                 <TitleIcon />

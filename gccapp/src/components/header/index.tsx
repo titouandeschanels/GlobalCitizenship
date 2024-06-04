@@ -2,8 +2,8 @@ import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { Black, Green } from '../../colors';
 import CircularProgressBar from '../ciruclarProgressbar';
-import { HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem } from './elements';
-
+import {HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem} from './elements';
+import Logo from '../../assets/logo/mainLogo.png';
 
 const Header: React.FC = () => {
     const location = useLocation();
@@ -17,12 +17,12 @@ const Header: React.FC = () => {
             return Black
         }
     }
-    
+
     return (
         <HeaderContainer>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <HeaderLogo>
-                    <img src="https://via.placeholder.com/100" alt="logo" />
+                    <img src={Logo} alt="logo"/>
                 </HeaderLogo>
             </Link>
             <HeaderMenu>
