@@ -14,32 +14,32 @@ const BadgesBook = () => {
         {
             badge: BadgeModule1,
             title: "This is me",
-            description: "You have completed the This is me Badge, congratulations! You have learned about yourself.",
+            description: "You have completed the first milestone on your journey for the IDGs and earned the “This is me” badge.",
         },
         {
             badge: BadgeModule2,
             title: "Me and my circles",
-            description: "You have completed the Me and my circles Badge, congratulations! You have learned about your family and friends.",
+            description: "You have completed the second milestone on your journey for the IDGs and earned the “Me and my circles” badge.",
         },
         {
             badge: BadgeModule3,
             title: "The influence of perceptions",
-            description: "You have completed the The influence of perceptions Badge, congratulations! You have learned about the importance of perceptions.",
+            description: "You have completed the third milestone on your journey for the IDGs and earned the “The influence of perceptions” badge.",
         },
         {
             badge: BadgeModule4,
             title: "Dilemnas",
-            description: "You have completed the Dilemmas Badge, congratulations! You have learned about dilemnas and how to solve them.",
+            description: "You have completed the fourth milestone on your journey for the IDGs and earned the “Dilemnas” badge.",
         },
         {
             badge: BadgeModule5,
             title: "Challenge and Goal Setting",
-            description: "You have completed the Challenge and Goal Setting Badge, congratulations! You have learned about setting goals and how to achieve them.",
+            description: "You have completed the fifth milestone on your journey for the IDGs and earned the “Challenge and Goal Setting” badge.",
         },
         {
             badge: BadgeModule6,
             title: "Value-based challenge creation",
-            description: "You have completed the Value-based challenge creation Badge, congratulations! You have learned about creating challenges based on your values.",
+            description: "You have completed the sixth milestone on your journey for the IDGs and earned the “Value-based challenge creation” badge.",
         }
     ]);
 
