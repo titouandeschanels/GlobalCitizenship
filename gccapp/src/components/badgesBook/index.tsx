@@ -52,7 +52,7 @@ const BadgesBook = () => {
             {bookOpen ? (
                 <BookOpenImage>
                     <BookOpenTitle>
-                        Emma's Journey
+                        Marina's Journey
                     </BookOpenTitle>
 
                     <BookOpenContainerLeft>
