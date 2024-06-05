@@ -17,8 +17,8 @@ import React from "react";
 import Navigation from "../navigation";
 import { ReactComponent as TrophyIcon } from "../../assets/icons/trophy-icon.svg";
 import { ReactComponent as TisismeIcon } from "../../assets/icons/speechbubble-thisisme-icon.svg";
-import {ReactComponent as TrophyLockIcon} from "../../assets/icons/trophy-lock-icon.svg"
-import {useLevelStore} from "../../position_store"; 
+import { ReactComponent as TrophyLockIcon } from "../../assets/icons/trophy-lock-icon.svg"
+import { useLevelStore } from "../../position_store";
 
 
 interface JourneyComponentProps {
@@ -47,36 +47,31 @@ const idgitem: StepItem[] = [
         id: 2,
         mode: "IDG",
         title: "2. Me and my circles",
-        description: " ",
-        image: TisismeIcon, //example image
+        description: "This module is not yet available.",
     },
     {
         id: 3,
         mode: "IDG",
         title: "3. The influence of perceptions",
-        description: " ",
-        image: TisismeIcon,
+        description: "This module is not yet available.",
     },
     {
         id: 4,
         mode: "IDG",
         title: "4. Dilemmas",
-        description: " ",
-        image: TisismeIcon,
+        description: "This module is not yet available.",
     },
     {
         id: 5,
         mode: "IDG",
         title: "5. Challenge and Goal Setting",
-        description: " ",
-        image: TisismeIcon,
+        description: "This module is not yet available.",
     },
     {
         id: 6,
         mode: "IDG",
         title: "6. Value-based Challenge Creation",
-        description: " ",
-        image: TisismeIcon,
+        description: "This module is not yet available.",
     },
 ];
 const sdgitem: StepItem[] = [
@@ -85,39 +80,34 @@ const sdgitem: StepItem[] = [
         mode: "SDG",
         title: "",
         description: " ",
-        image: TisismeIcon,
     },
     {
         id: 8,
         mode: "SDG",
         title: "",
         description: "",
-        image: TisismeIcon,
     },
     {
         id: 9,
         mode: "SDG",
         title: "",
         description: " ",
-        image: TisismeIcon,
     },
     {
         id: 10,
         mode: "SDG",
         title: "",
         description: "",
-        image: TisismeIcon,
     },
     {
         id: 11,
         mode: "SDG",
         title: "",
         description: "",
-        image: TisismeIcon,
     },
 ];
 const Journeylayout: React.FC<JourneyComponentProps> = () => {
-    const { currentLevel } = useLevelStore(); 
+    const { currentLevel } = useLevelStore();
     return (
         <JourneyLayout>
             <Title>
@@ -136,6 +126,7 @@ const Journeylayout: React.FC<JourneyComponentProps> = () => {
                         {idgitem.map((item: StepItem) => {
                             return (
                                 <StepBox
+                                    key={item.id}
                                     idx={item.id}
                                     title={item.title}
                                     description={item.description}
@@ -151,6 +142,7 @@ const Journeylayout: React.FC<JourneyComponentProps> = () => {
                         {sdgitem.map((item: StepItem) => {
                             return (
                                 <StepBox
+                                    key={item.id}
                                     idx={item.id}
                                     title={item.title}
                                     description={item.description}
