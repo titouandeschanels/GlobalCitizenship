@@ -145,7 +145,7 @@ const Journeylayout: React.FC<JourneyComponentProps> = () => {
                         })}
                     </IDGStepBox>
                     <TrophyBox>
-                        {currentLevel < 4 ? <TrophyLockIcon /> : <TrophyIcon />}
+                        {currentLevel < 7 ? <TrophyLockIcon /> : <TrophyIcon />}
                     </TrophyBox>
                     <SDGStepBox>
                         {sdgitem.map((item: StepItem) => {
