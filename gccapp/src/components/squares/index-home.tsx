@@ -5,7 +5,7 @@ import path from '../../assets/homepage/path.png';
 import pics from '../../assets/homepage/pics.png';
 
 const SquaresHome = () => {
-    const handleClick = (path : string) => {
+    const handleClick = (path: string) => {
         window.location.href = path;
     };
 

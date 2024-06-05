@@ -44,7 +44,7 @@ export const SquareItem = styled.div`
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
     transition: 0.3s;
-    
+
     @media screen and (max-width: ${breakpoints.large}) {
         width: 15%;
     }
@@ -61,7 +61,10 @@ export const SquareItem = styled.div`
 export const ImageRow = styled.div`
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     height: 60%;
+    position: relative;
+    overflow: hidden;
 `;
 
 export const TextRow = styled.div`
@@ -97,13 +100,15 @@ export const BooksImage = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-top: 69px;
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
+    position: relative;
     img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: contain;
+        position: absolute;
+        bottom: 0;
     }
 `;
 
@@ -153,13 +158,15 @@ export const PlantImage = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-top: 61px;
     width: 95%;
     height: 95%;
+    position: relative;
     img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: contain;
+        position: absolute;
+        bottom: 0;
     }
 `;
 
