@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     SubmissionBox,
     TitleBox,
@@ -31,6 +31,7 @@ import BadgeModule4 from '../../assets/badges/badge-module4.png';
 import BadgeModule5 from '../../assets/badges/badge-module5.png';
 import BadgeModule6 from '../../assets/badges/badge-module6.png';
 import { Link } from "react-router-dom";
+import { useLevelStore } from "../../position_store";
 
 interface FileUploadStatus {
     files: File[];
@@ -40,8 +41,28 @@ interface FileUploadStatus {
 interface SubmissionProps { }
 
 const Submissionlayout: React.FC<SubmissionProps> = () => {
-    const [fileUploads, setFileUploads] = useState<FileUploadStatus[]>(Array(6).fill({ files: [], uploaded: false }));
+    const [fileUploads, setFileUploads] = useState<FileUploadStatus[]>(() => {
+        const savedUploads = localStorage.getItem("fileUploads");
+        if (savedUploads) {
+            try {
+                const parsedUploads = JSON.parse(savedUploads);
+                if (Array.isArray(parsedUploads)) {
+                    return parsedUploads;
+                }
+            } catch (error) {
+                console.error("Error parsing file uploads from localStorage:", error);
+            }
+        }
+        return Array(6).fill({ files: [], uploaded: false });
+    });
+    
     const [popupStates, setPopupStates] = useState<boolean[]>(Array(6).fill(false));
+
+    const completeModule = useLevelStore(state => state.completeModule);
+
+    useEffect(() => {
+        localStorage.setItem("fileUploads", JSON.stringify(fileUploads));
+    }, [fileUploads]);
 
     const handleUpload = (index: number, files: FileList | null) => {
         if (!files) return;
@@ -49,13 +70,24 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
         const updatedFileUploads = [...fileUploads];
         updatedFileUploads[index] = { files: Array.from(files), uploaded: true };
         setFileUploads(updatedFileUploads);
-        handleOpenPopup(index)
+        handleOpenPopup(index);
+
+        completeModule(modules[index]);
+
+        const toString = (num: number) => num.toString();
+        let stringPercent = toString(100 / modules.length * (index + 1));
+        stringPercent = stringPercent.split(".")[0];
+        localStorage.setItem("percentProgress", stringPercent);
+        const event = new Event('storage');
+        window.dispatchEvent(event);
     };
 
     const handleOpenPopup = (index: number) => {
-        const updatedPopupStates = [...popupStates];
-        updatedPopupStates[index] = true;
-        setPopupStates(updatedPopupStates);
+        if (!fileUploads[index].uploaded) {
+            const updatedPopupStates = [...popupStates];
+            updatedPopupStates[index] = true;
+            setPopupStates(updatedPopupStates);
+        }
     };
 
     const handleClosePopup = (index: number) => {

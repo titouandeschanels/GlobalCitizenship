@@ -1,13 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import CircularProgressBar from '../ciruclarProgressbar';
 import { HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem, IconContainer, Icon } from './elements';
 import Logo from '../../assets/logo/mainLogo.png';
 
 const Header: React.FC = () => {
+    const [percentProgress, setPercentProgress] = useState(localStorage.getItem('percentProgress') || '0');
     const location = useLocation();
 
     const isActive = (path: string) => location.pathname === path;
+
+    const defineColor = (path: string) => {
+        return isActive(path) ? Green : Black;
+    }
+
+    useEffect(() => {
+        if (!localStorage.getItem('percentProgress')) {
+            localStorage.setItem('percentProgress', '0');
+        }
+
+        const handleStorageChange = () => {
+            setPercentProgress(localStorage.getItem('percentProgress') || '0');
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
 
     return (
         <HeaderContainer>
