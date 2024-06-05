@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BookContainer, BookClosedImage, BookClosedButton, BookClosedTitle, BookOpenImage, BookOpenTitle, BookOpenContainerLeft, BookOpenLine, BookOpenButton, BookOpenContainerRight, BookOpenBadgeTitle, BookOpenBadgeDescription, BookOpenBadgeImage } from './elements';
 import BadgeModule1 from '../../assets/badges/badge-module1.png';
 import BadgeModule2 from '../../assets/badges/badge-module2.png';
@@ -6,6 +6,7 @@ import BadgeModule3 from '../../assets/badges/badge-module3.png';
 import BadgeModule4 from '../../assets/badges/badge-module4.png';
 import BadgeModule5 from '../../assets/badges/badge-module5.png';
 import BadgeModule6 from '../../assets/badges/badge-module6.png';
+import EmptyBadge from '../../assets/badges/empty-badge.png';
 
 const BadgesBook = () => {
     const [bookOpen, setBookOpen] = useState(false);
@@ -43,9 +44,26 @@ const BadgesBook = () => {
         }
     ]);
 
-    const [cuurentBadge, setCurrentBadge] = useState(0);
+    const [currentBadge, setCurrentBadge] = useState(0);
+    const [fileUploads, setFileUploads] = useState(localStorage.getItem('fileUploads') || '0');
 
+    useEffect(() => {
+        if (!localStorage.getItem('fileUploads')) {
+            localStorage.setItem('fileUploads', '0');
+        }
 
+        const handleStorageChange = () => {
+            setFileUploads(localStorage.getItem('fileUploads') || '0');
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
+
+    const parsedFileUploads = fileUploads ? JSON.parse(fileUploads) : [];
 
     return (
         <BookContainer>
@@ -58,37 +76,37 @@ const BadgesBook = () => {
                     <BookOpenContainerLeft>
                         <BookOpenLine>
                             <BookOpenButton onClick={() => setCurrentBadge(0)}>
-                                <img src={BadgeModule1} alt="Badge Module 1" />
+                                <img src={parsedFileUploads[0]?.uploaded ? BadgeModule1 : EmptyBadge} alt="Badge Module 1" />
                             </BookOpenButton>
                             <BookOpenButton onClick={() => setCurrentBadge(1)}>
-                                <img src={BadgeModule2} alt="Badge Module 2" />
+                                <img src={parsedFileUploads[1]?.uploaded ? BadgeModule2 : EmptyBadge} alt="Badge Module 2" />
                             </BookOpenButton>
                         </BookOpenLine>
                         <BookOpenLine>
                             <BookOpenButton onClick={() => setCurrentBadge(2)}>
-                                <img src={BadgeModule3} alt="Badge Module 3" />
+                                <img src={parsedFileUploads[2]?.uploaded ? BadgeModule3 : EmptyBadge} alt="Badge Module 3" />
                             </BookOpenButton>
                             <BookOpenButton onClick={() => setCurrentBadge(3)}>
-                                <img src={BadgeModule4} alt="Badge Module 4" />
+                                <img src={parsedFileUploads[3]?.uploaded ? BadgeModule4 : EmptyBadge} alt="Badge Module 4" />
                             </BookOpenButton>
                         </BookOpenLine>
                         <BookOpenLine>
                             <BookOpenButton onClick={() => setCurrentBadge(4)}>
-                                <img src={BadgeModule5} alt="Badge Module 5" />
+                                <img src={parsedFileUploads[4]?.uploaded ? BadgeModule5 : EmptyBadge} alt="Badge Module 5" />
                             </BookOpenButton>
                             <BookOpenButton onClick={() => setCurrentBadge(5)}>
-                                <img src={BadgeModule6} alt="Badge Module 6" />
+                                <img src={parsedFileUploads[5]?.uploaded ? BadgeModule6 : EmptyBadge} alt="Badge Module 6" />
                             </BookOpenButton>
                         </BookOpenLine>
                     </BookOpenContainerLeft>
 
                     <BookOpenContainerRight>
                         <BookOpenBadgeTitle>
-                            {badges[cuurentBadge].title}
+                            {parsedFileUploads[currentBadge]?.uploaded ? badges[currentBadge].title : ""}
                         </BookOpenBadgeTitle>
-                        <BookOpenBadgeImage src={badges[cuurentBadge].badge} alt="Badge" />
+                        <BookOpenBadgeImage src={parsedFileUploads[currentBadge]?.uploaded ? badges[currentBadge].badge : EmptyBadge} alt="Badge" />
                         <BookOpenBadgeDescription>
-                            {badges[cuurentBadge].description}
+                            {parsedFileUploads[currentBadge]?.uploaded ? badges[currentBadge].description : "You haven't unlocked this badge yet."}
                         </BookOpenBadgeDescription>
                     </BookOpenContainerRight>
 
@@ -96,7 +114,7 @@ const BadgesBook = () => {
             ) : (
                 <BookClosedImage>
                     <BookClosedTitle>
-                        <span dangerouslySetInnerHTML={{ __html: "Emma's<br/>Global Citizenship<br/>Journey" }} />
+                        <span dangerouslySetInnerHTML={{ __html: "Marina's<br/>Global Citizenship<br/>Journey" }} />
                     </BookClosedTitle>
                     <BookClosedButton onClick={() => setBookOpen(true)} />
                 </BookClosedImage>

@@ -16,6 +16,7 @@ import { ReactComponent as SpeechBubbleIcon } from "../../assets/icons/speechbub
 import { ReactComponent as FlagIcon } from "../../assets/icons/journey-flag-icon.svg";
 import { ReactComponent as StepIcon } from "../../assets/icons/journey-step-icon.svg";
 import { useNavigate } from "react-router-dom";
+
 interface StepBoxProps extends React.HTMLAttributes<HTMLDivElement> {
     idx: number;
     description: string;
@@ -33,12 +34,6 @@ const StepBox: React.FC<StepBoxProps> = ({
         const onClickHandler = (idx: number) => {
             if(idx === 1){
                 navigate("/this-is-me", { replace: false });
-            }
-            if (idx <=currentLevel){
-                if (idx === 2) {
-                        navigate("/me-and-my-circle", { replace: false });
-                    }
-                //...(add the exercise pages here)
             }
             return;
         };
