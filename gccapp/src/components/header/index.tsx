@@ -6,6 +6,7 @@ import {HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem} from './elements';
 import Logo from '../../assets/logo/mainLogo.png';
 
 const Header: React.FC = () => {
+    const percentprogress = localStorage.getItem('percentProgress');
     const location = useLocation();
 
     const isActive = (path: string) => location.pathname === path;
@@ -38,7 +39,7 @@ const Header: React.FC = () => {
                 <Link to="/badges" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <HeaderItem color={defineColor('/badges')}>Badges</HeaderItem>
                 </Link>
-                <CircularProgressBar progress={35} />
+                <CircularProgressBar progress={Number(percentprogress)} />
             </HeaderMenu>
         </HeaderContainer>
     );

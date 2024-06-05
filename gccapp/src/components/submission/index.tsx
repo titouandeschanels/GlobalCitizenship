@@ -48,6 +48,11 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
         updatedFileUploads[index] = { files: Array.from(files), uploaded: true };
         setFileUploads(updatedFileUploads);
         handleOpenPopup(index)
+
+        const toString = (num: number) => num.toString();
+        let stringPercent = toString(100/6 * (index +1));
+        stringPercent = stringPercent.split(".")[0];
+        localStorage.setItem("percentProgress", stringPercent);
     };
 
     const handleOpenPopup = (index: number) => {
