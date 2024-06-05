@@ -53,6 +53,8 @@ const Submissionlayout: React.FC<SubmissionProps> = () => {
         let stringPercent = toString(100/6 * (index +1));
         stringPercent = stringPercent.split(".")[0];
         localStorage.setItem("percentProgress", stringPercent);
+        const event = new Event('storage');
+        window.dispatchEvent(event);
     };
 
     const handleOpenPopup = (index: number) => {
