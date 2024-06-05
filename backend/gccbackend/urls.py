@@ -20,6 +20,7 @@ from rest_framework import routers
 from gccbackend.server import views
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
+
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
@@ -29,7 +30,6 @@ router.register(r'student', views.StudentView, 'student')
 router.register(r'position', views.GetStudentPosition, 'position')
 router.register(r'submission', views.SubmissionView, 'submission')
 router.register(r'submission/(?P<student>\d+)/(?P<lesson_id>\d+)', views.SubmissionView, 'unique_submission')
-
 
 urlpatterns = [
     path('', include(router.urls)),

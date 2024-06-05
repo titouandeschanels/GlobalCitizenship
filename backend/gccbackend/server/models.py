@@ -6,19 +6,30 @@ class Chapter(models.Model):
     title = models.CharField(max_length=200, default='Title')
     content = models.CharField(max_length=5000, default='Lorem ipsum')
 
+    # def __str__(self):
+    #     return self.number
+
 class Lesson(models.Model):
-    chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE)
+    in_chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE)
     number = models.IntegerField()
-    title = models.CharField(max_length=200, default='Lesson title')
-    content = models.CharField(max_length=5000, default='dolor sit amet')
+    title = models.CharField(max_length=200, default='Lesson title', blank=True)
+    content = models.CharField(max_length=5000, default='dolor sit amet', blank=True)
     
     class Meta:
-        unique_together = ('chapter', 'number')
+        unique_together = ('in_chapter', 'number')
 
 class Student(models.Model):
     def default_lesson():
         try:
-            return Lesson.objects.get(number=1, chapter__number=1)
+            print("Create student: ")
+            # print(f'number 1 lesson: {Lesson.objects.get(number=1)}')
+            # return Lesson.objects.get(number=1, in_chapter__number=1)
+            chapter = Chapter.objects.filter(number=1).first()
+            print(f'CHAPTER: {chapter}')
+            lesson = Lesson.objects.get(in_chapter__number=1, number=1)
+            # lesson = Lesson.objects.filter(number=1).filter(in_chapter=chapter)
+            print(f'STUDENT LESSON DEFAULT: {lesson}')
+            return lesson
         except Lesson.DoesNotExist:
             return None
 
@@ -28,7 +39,7 @@ class Student(models.Model):
 class Submission(models.Model):
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    content = models.CharField(max_length=5000)
+    content = models.CharField(max_length=5000, blank=True)
 
     class Meta:
         unique_together = ('lesson', 'student')
