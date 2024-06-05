@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import CircularProgressBar from '../ciruclarProgressbar';
+import CircularProgressBar from '../circularProgressbar/index';
 import { HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem, IconContainer, Icon } from './elements';
 import Logo from '../../assets/logo/mainLogo.png';
 
@@ -9,10 +9,6 @@ const Header: React.FC = () => {
     const location = useLocation();
 
     const isActive = (path: string) => location.pathname === path;
-
-    const defineColor = (path: string) => {
-        return isActive(path) ? Green : Black;
-    }
 
     useEffect(() => {
         if (!localStorage.getItem('percentProgress')) {
@@ -42,7 +38,7 @@ const Header: React.FC = () => {
                 <MenuItem path="/journey" label="Journey" isActive={isActive('/journey')}/>
                 <MenuItem path="/about" label="About" isActive={isActive('/about')}/>
                 <MenuItem path="/badges" label="Badges" isActive={isActive('/badges')}/>
-                <CircularProgressBar progress={35} />
+                <CircularProgressBar progress={Number(percentProgress)} />
             </HeaderMenu>
         </HeaderContainer>
     );
