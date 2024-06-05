@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import CircularProgressBar from '../ciruclarProgressbar';
 import { HeaderContainer, HeaderLogo, HeaderMenu, HeaderItem, IconContainer, Icon } from './elements';
@@ -17,42 +17,38 @@ const Header: React.FC = () => {
                 </HeaderLogo>
             </Link>
             <HeaderMenu>
-                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>
-                        Home
-                        <IconContainer>
-                            {isActive('/') && <Icon />}
-                        </IconContainer>
-                    </HeaderItem>
-                </Link>
-                <Link to="/journey" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>
-                        Journey
-                        <IconContainer>
-                            {isActive('/journey') && <Icon />}
-                        </IconContainer>
-                    </HeaderItem>
-                </Link>
-                <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>
-                        About
-                        <IconContainer>
-                            {isActive('/about') && <Icon />}
-                        </IconContainer>
-                    </HeaderItem>
-                </Link>
-                <Link to="/badges" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <HeaderItem>
-                        Badges
-                        <IconContainer>
-                            {isActive('/badges') && <Icon />}
-                        </IconContainer>
-                    </HeaderItem>
-                </Link>
+                <MenuItem path="/" label="Home" isActive={isActive('/')}/>
+                <MenuItem path="/journey" label="Journey" isActive={isActive('/journey')}/>
+                <MenuItem path="/about" label="About" isActive={isActive('/about')}/>
+                <MenuItem path="/badges" label="Badges" isActive={isActive('/badges')}/>
                 <CircularProgressBar progress={35} />
             </HeaderMenu>
         </HeaderContainer>
     );
 }
+
+interface MenuItemProps {
+    path: string;
+    label: string;
+    isActive: boolean;
+}
+
+const MenuItem: React.FC<MenuItemProps> = ({ path, label, isActive }) => {
+    const [hover, setHover] = useState(false);
+
+    return (
+        <Link to={path} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <HeaderItem
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+            >
+                {label}
+                <IconContainer>
+                    {(isActive || hover) && <Icon />}
+                </IconContainer>
+            </HeaderItem>
+        </Link>
+    );
+};
 
 export default Header;
