@@ -15,7 +15,7 @@ export const BookContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    margin-top: 120px;
+    margin-top: 140px;
 `;
 
 export const BookClosedImage = styled.div`
