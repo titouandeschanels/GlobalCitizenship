@@ -14,28 +14,33 @@ export const JourneyLayout = styled.div`
 
 export const Title = styled.div`
     position: relative;
-    margin-left: 200px;
+    margin-left: 100px;
     padding-top: 50px;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 40px;
     height: 75px;
     width: 217px;
 `;
-export const Description = styled.div`
-    color : ${Gray};
-    font-size: 22px;
-    font-weight: 550;
-    width: 50%;
-    margin-top: 50px;
-    margin-left: 200px;
-`
+
 export const TitleIconWrapper = styled(TitleIcon)`
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: auto;
-    padding-top: 55px;
+    padding-top: 50px;
     left: 0;
 `;
+
+export const Description = styled.div`
+    font-family: Arial, sans-serif;
+    font-size: calc(1vw + 5px);
+    font-weight: lighter;
+    color: ${Gray};
+    position: absolute;
+    padding-top: 130px;
+    margin-left: 100px;
+    user-select: none;
+`;
+
 export const JourneyBox = styled.div`
     display: flex;
     flex-direction: column;

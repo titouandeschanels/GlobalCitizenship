@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import waveBackground from '../../assets/wave-badgesbook.png';
-import { White, Indigo, Gray, Black } from "../../colors";
+import { ReactComponent as TitleIcon } from "../../assets/icons/title-icon.svg";
+import { White, Gray } from "../../colors";
 
 export const BackgroundPicture = styled.div`
     background-image: url("${waveBackground}");
@@ -13,21 +14,22 @@ export const BackgroundPicture = styled.div`
     overflow: hidden;
 `;
 
-export const TextStyleBig = styled.div`
-    font-family: Arial, sans-serif;
-    font-size: calc(2vw + 5px);
-    font-weight: bold;
-    color: ${Indigo};
-    position: absolute;
-    top: 3vh;
-    left: 10vw;
-    user-select: none;
+export const Title = styled.div`
+    position: relative;
+    margin-left: 100px;
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 40px;
+    height: 75px;
+    width: 400px;
 `;
 
-export const UnderlinedText = styled.span`
-    color: ${Black};
-    text-decoration: underline;
-    user-select: none;
+export const TitleIconWrapper = styled(TitleIcon)`
+    position: absolute;
+    width: 80%;
+    height: auto;
+    padding-top: 50px;
+    left: 0;
 `;
 
 export const Subtitle = styled.div`
@@ -36,7 +38,7 @@ export const Subtitle = styled.div`
     font-weight: lighter;
     color: ${Gray};
     position: absolute;
-    top: 9vh;
-    left: 10vw;
+    margin-left: 100px;
+    padding-top: 5px;
     user-select: none;
 `;

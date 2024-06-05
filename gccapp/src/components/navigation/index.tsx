@@ -31,7 +31,7 @@ const Navigation: React.FC<NavigationProps> = () => {
                     <p>Introduction</p>
                 </List>
                 <List>
-                    <button onClick={() => onClickHandler("/background")}>
+                    <button onClick={() => onClickHandler("/background-theories")}>
                         <Arrow />
                     </button>
                     <p>Background</p>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BackgroundPictureAbout, Subtitle, TextStyleBig, UnderlinedText} from "./elements";
+import { BackgroundPictureAbout, Subtitle, TitleAbout, TitleIconWrapperAbout } from "./elements";
 
 interface BackgroundAboutpageProps {
     name: string;
@@ -9,14 +9,15 @@ const BackgroundAboutpage: React.FC<BackgroundAboutpageProps> = () => {
     return (
         <BackgroundPictureAbout>
             <div>
-                <TextStyleBig>
-                    <UnderlinedText>About!</UnderlinedText>
-                </TextStyleBig>
+                <TitleAbout>
+                    About
+                    <TitleIconWrapperAbout />
+                </TitleAbout>
             </div>
             <div>
                 <Subtitle>
                     Practical information about the Global-U program,
-                    <br/>
+                    <br />
                     upcoming classes, and related matters.
                 </Subtitle>
             </div>

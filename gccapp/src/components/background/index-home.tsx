@@ -1,5 +1,5 @@
 import React from "react";
-import { BackgroundPictureHome, TextStyleSmall, TextStyleBig, ColoredText, MapContainer, MapImage } from "./elements";
+import { BackgroundPictureHome, TextStyleSmall, ColoredText, MapContainer, MapImage, TitleHome, TitleIconWrapperHome } from "./elements";
 import backgroundMap from '../../assets/homepage/background-map.png';
 
 interface BackgroundHomepageProps {
@@ -17,9 +17,12 @@ const BackgroundHomepage: React.FC<BackgroundHomepageProps> = ({ name }) => {
                 <TextStyleSmall>Welcome, {name}!</TextStyleSmall>
             </div>
             <div>
-                <TextStyleBig>
-                    Your journey to become a <br /><ColoredText>global citizen</ColoredText> starts now!
-                </TextStyleBig>
+            <TitleHome>
+                    Your journey to become a <br />
+                    <ColoredText>global citizen </ColoredText> 
+                    <TitleIconWrapperHome />
+                    starts now!
+                    </TitleHome>
             </div>
         </BackgroundPictureHome>
     )
