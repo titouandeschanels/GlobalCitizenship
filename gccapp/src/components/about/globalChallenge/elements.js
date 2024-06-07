@@ -14,8 +14,7 @@ export const CenteredImage = styled.img`
     height: auto;
     object-fit: contain;
     padding-top: 20px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid lightgrey;
+    padding-bottom: 5px;
 `;
 
 export const List = styled.ul`
@@ -57,4 +56,13 @@ export const StyledButton = styled.button`
     &:hover {
         box-shadow: 2px 2px 4px ${Gray};
     }
+`;
+
+export const HeaderCenter = styled.h2`
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    width: 80%;
+    text-align: center;
 `;
