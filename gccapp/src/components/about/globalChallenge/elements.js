@@ -14,8 +14,7 @@ export const CenteredImage = styled.img`
     height: auto;
     object-fit: contain;
     padding-top: 20px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid lightgrey;
+    padding-bottom: 5px;
 `;
 
 export const List = styled.ul`

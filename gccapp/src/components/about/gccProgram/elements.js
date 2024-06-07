@@ -1,15 +1,6 @@
 import styled from "styled-components";
 import { White, Blue } from '../../../colors';
 
-export const SubHeaderWithLine = styled.h3`
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding-top: 50px;
-    border-top: 1px solid lightgrey;
-`;
-
 export const TextWithLine = styled.p`
     font-size: 15px;
     width: 80%;
@@ -22,6 +13,7 @@ export const TextWithLine = styled.p`
 
 // Blue Containers
 export const BoxContainer = styled.div`
+    padding-top: 10px;
     display: flex;
     justify-content: space-around;
     width: 70%;
