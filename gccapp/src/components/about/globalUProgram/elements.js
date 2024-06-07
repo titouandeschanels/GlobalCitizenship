@@ -1,16 +1,6 @@
 import styled from "styled-components";
 import { White, Blue } from '../../../colors';
 
-export const TextWithLine = styled.p`
-    font-size: 15px;
-    width: 80%;
-    margin: 10px auto 50px;
-    line-height: 1.6;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid lightgrey;
-`;
-
 // Blue Containers
 export const BoxContainer = styled.div`
     padding-top: 10px;

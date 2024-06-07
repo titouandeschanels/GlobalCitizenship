@@ -23,9 +23,6 @@ const GCCResit: React.FC<GCCResitProps> = () => {
             </ImageWrapper>
             <TextAll>
                 You will receive 2 different Certificates upon accomplishment of these modules and the 4 ECTS of the ES-program.
-                <br/>
-                Deadline to complete final GC-assignment → <b>26th of January 2024</b> (exact date will be published on due date)
-                / RESIT 1st of May 2024.
             </TextAll>
         </ContentWrapper>
     )
