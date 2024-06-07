@@ -1,5 +1,5 @@
 import React from "react";
-import {BoxContainer, Box, Text, IconColumn, TextColumn, TextWithLine } from "./elements";
+import {BoxContainer, Box, Text, IconColumn, TextColumn } from "./elements";
 import { Header, SubHeader, SubHeaderWithLine, TextAll, ContentWrapper } from "../elements"
 import checkListIcon from '../../../assets/aboutpage/gccProgram/checkListIcon.png';
 import checkFileIcon from '../../../assets/aboutpage/gccProgram/checkFileIcon.png';
